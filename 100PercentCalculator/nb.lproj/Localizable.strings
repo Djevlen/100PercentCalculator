@@ -1,0 +1,92 @@
+/*
+ Localizable.strings NORWEGIAN
+ Percentages
+ 
+ Created by Thomas Andre Johansen on 03/02/16.
+ Copyright © 2016 Appkokeriet. All rights reserved.
+ */
+//MenuTableViewController
+MENU_TITLE_TEXT="100% Percent Calculator";
+DISCOUNT="Rabatt";
+RATIOS="Mengder";
+SALES_TAX="Merverdiavgift";
+BREAK_EVEN_ANALYSIS="Dekningsgrad";
+GRATUITY="Tips";
+ABOUT="Om appen";
+UNKNOWN_HEADER="Ukjent overskrift";
+CELL_TEXT_CREATE_ERROR="Problemer med å lage celler. Restart appen.";
+//MenuCell
+DEFAULT_LABEL_TITLE="Default toptitle";
+DEFAULT_LABEL_NUMBER_ONE="Default LabelNumberOne";
+DEFAULT_LABEL_NUMBER_TWO="Default LabelNumberTWO";
+DEFAULT_LABEL_RESULT="Default ResultLabel";
+DEFAULT_CALCULATE_FUNCTION="defaultFunction";
+CELL_0_0_TITLE="Pris etter rabatt";
+CELL_0_0_LABELONE="Pris før rabatt";
+CELL_0_0_LABELTWO="Rabatt";
+CELL_0_0_RESULT="Den nye prisen er";
+CELL_0_1_TITLE="Hva var rabatten?";
+CELL_0_1_LABELONE="Pris";
+CELL_0_1_LABELTWO="Pris etter rabatt";
+CELL_0_1_RESULT="Rabatten var";
+CELL_1_0_TITLE="Hvor mange prosent er...?";
+CELL_1_0_LABELONE="Hvor mange prosent er";
+CELL_1_0_LABELTWO="Av";
+CELL_1_0_RESULT="Det er ...";
+CELL_1_1_TITLE="Hvor mye er...?";
+CELL_1_1_LABELONE="Hva er";
+CELL_1_1_LABELTWO="Av";
+CELL_1_1_RESULT="Det er ...";
+CELL_1_2_TITLE="Hvor mange prosent å legge til?";
+CELL_1_2_LABELONE="Hvis jeg har";
+CELL_1_2_LABELTWO="Men vil ha";
+CELL_1_2_RESULT="Da må jeg legge til";
+CELL_2_0_TITLE="Vis pris med MVA";
+CELL_2_0_LABELONE="Pris uten MVA";
+CELL_2_0_LABELTWO="MVA";
+CELL_2_0_RESULT="Pris med MVA";
+CELL_2_1_TITLE="Vis pris uten MVA";
+CELL_2_1_LABELONE="Pris";
+CELL_2_1_LABELTWO="MVA";
+CELL_2_1_RESULT="Pris uten MVA";
+CELL_3_0_TITLE="Hvor mye skal jeg tipse?";
+CELL_3_0_LABELONE="Å betale";
+CELL_3_0_LABELTWO="Tips";
+CELL_3_0_RESULT="Jeg tipser";
+CELL_3_1_TITLE="Hvor mye tips fikk jeg?";
+CELL_3_1_LABELONE="Sum uten tips";
+CELL_3_1_LABELTWO="Sum med tips";
+CELL_3_1_RESULT="Tips mottatt";
+CELL_4_0_TITLE="100% Prosentkalkulator";
+CELL_4_0_LABELONE="Ikke noe annet. Kun en prosentkalkulator.";
+CELL_4_0_LABELTWO="Version 1 1.3.0 Seacontrarian";
+CELL_4_0_RESULT="Utviklet av Thomas André Johansen og Appkokeriet";
+
+CONTRIBUTION_MARGIN_TITLE="Finn dekningsbidrag og dekningsgrad";
+CONTRIBUTION_MARGIN_LABELONE="Innkjøp / Produksjonskonstand";
+CONTRIBUTION_MARGIN_LABELTWO="Utsalgspris (uten MVA)";
+CONTRIBUTION_MARGIN_RESULT="Dekningsbidrag";
+CONTRIBUTION_MARGIN_RESULT_SUBTITLE="Dekningsgraden er ";
+
+CONTRIBUTION_MARGIN_RATIO_TITLE="Pris med dekningsgrad";
+CONTRIBUTION_MARGIN_RATIO_LABELONE="Dekningsgrad";
+CONTRIBUTION_MARGIN_RATIO_LABELTWO="Innkjøp / Produksjonskostnad";
+CONTRIBUTION_MARGIN_RATIO_RESULT="Pris";
+CONTRIBUTION_MARGIN_RATIO_RESULT_SUBTITLE="Dekningsbidraget er ";
+//Calculate
+CALCULATE_NEW_PRICE="Hvor rabatten var ";
+CALCULATE_DISCOUNT="Jeg sparte ";
+ADD_TAX="MVA-summen er ";
+REMOVE_TAX="Du fjernet MVA-summen ";
+CALCULATE_TIP="Den totale summen blir ";
+CALCULATE_TIP_RECEIVED="Hvor tipset tilsvarer ";
+FEEDBACK_REPORT_TEXT="Feil og tilbakemeldinger: ";
+//EditView
+SAVE_TEXT_ONE="Lagret verdi %@ for %@";
+SAVE_TEXT_TWO="Lagret verdi %@ for %@";
+SAVED_VALUES="Lagret nye verdier";
+NO_SAVED_VALUES="Fant ikke noe å lagre";
+VALUES_RESET="Nullstilt verdier";
+DEFAULT_VALUE_LABEL="Standardverdier";
+RESTORE_DEFAULT_BUTTON="Nullstill verdier";
+SAVE_VALUES_BUTTON="Lagre";

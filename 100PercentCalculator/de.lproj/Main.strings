@@ -1,0 +1,24 @@
+
+/* Class = "UITextField"; placeholder = "25"; ObjectID = "96m-uL-Cbt"; */
+"96m-uL-Cbt.placeholder" = "25";
+
+/* Class = "UITextField"; placeholder = "100"; ObjectID = "Dan-6d-seC"; */
+"Dan-6d-seC.placeholder" = "100";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "KB5-nR-42A"; */
+"KB5-nR-42A.text" = "Price";
+
+/* Class = "UILabel"; text = "Result"; ObjectID = "Lwt-7k-wLn"; */
+"Lwt-7k-wLn.text" = "Result";
+
+/* Class = "UILabel"; text = "Rebate"; ObjectID = "YXQ-HN-5WA"; */
+"YXQ-HN-5WA.text" = "Rebate";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lgs-4y-1Ip"; */
+"lgs-4y-1Ip.text" = "Label";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "sSW-KX-TGH"; */
+"sSW-KX-TGH.text" = "%";
+
+/* Class = "UILabel"; text = "topTitle"; ObjectID = "tdf-gz-1X6"; */
+"tdf-gz-1X6.text" = "topTitle";

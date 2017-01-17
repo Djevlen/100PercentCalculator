@@ -1,0 +1,91 @@
+/*
+ Localizable.strings DUTCH
+ Percentages
+ 
+ Created by Thomas Andre Johansen on 03/02/16.
+ Copyright © 2016 Appkokeriet. All rights reserved.
+ */
+//MenuTableViewController
+MENU_TITLE_TEXT="100% Percent Calculator";
+DISCOUNT="Korting";
+RATIOS="Verhoudingen";
+SALES_TAX="Omzetbelasting (btw)";
+BREAK_EVEN_ANALYSIS="Break-Even Analyse";
+GRATUITY="Fooi";
+ABOUT="Informatie";
+UNKNOWN_HEADER="Onbekende Rubriek";
+CELL_TEXT_CREATE_ERROR="Probleem met het maken van de cell. Probeer de app te herstarten.";
+//MenuCell
+DEFAULT_LABEL_TITLE="Standaard toptitel";
+DEFAULT_LABEL_NUMBER_ONE="Standaard LabelNummerEen";
+DEFAULT_LABEL_NUMBER_TWO="Standaard LabelNummerTWEE";
+DEFAULT_LABEL_RESULT="Standaard ResultaatLabel";
+DEFAULT_CALCULATE_FUNCTION="standaardFunctie";
+CELL_0_0_TITLE="Prijs met korting";
+CELL_0_0_LABELONE="Prijs zonder korting";
+CELL_0_0_LABELTWO="Korting";
+CELL_0_0_RESULT="Nieuwe prijs is";
+CELL_0_1_TITLE="Hoe groot was de korting?";
+CELL_0_1_LABELONE="Prijs";
+CELL_0_1_LABELTWO="Prijs met korting";
+CELL_0_1_RESULT="De korting was";
+CELL_1_0_TITLE="Welk percentage is...?";
+CELL_1_0_LABELONE="Welk percentage is";
+CELL_1_0_LABELTWO="Van";
+CELL_1_0_RESULT="Het is ...";
+CELL_1_1_TITLE="Hoe veel is...?";
+CELL_1_1_LABELONE="Wat is";
+CELL_1_1_LABELTWO="Van";
+CELL_1_1_RESULT="Het is ...";
+CELL_1_2_TITLE="Hoeveel procent toe te voegen?";
+CELL_1_2_LABELONE="Wanneer ik beschik over";
+CELL_1_2_LABELTWO="Maar ik wil";
+CELL_1_2_RESULT="Dan is de hoeveelheid die ik moet toevoegen";
+CELL_2_0_TITLE="Laat Prijs Inclusief Belasting Zien";
+CELL_2_0_LABELONE="Prijs zonder belasting";
+CELL_2_0_LABELTWO="Belastingpercentage";
+CELL_2_0_RESULT="Prijs inclusief belasting";
+CELL_2_1_TITLE="Laat Prijs Zonder Belasting Zien";
+CELL_2_1_LABELONE="Prijs";
+CELL_2_1_LABELTWO="Belastingpercentage";
+CELL_2_1_RESULT="Prijs zonder belasting";
+CELL_3_0_TITLE="Hoeveel Fooi Moet Ik Geven?";
+CELL_3_0_LABELONE="Te betalen";
+CELL_3_0_LABELTWO="Fooi";
+CELL_3_0_RESULT="De hoeveelheid fooi die ik geef is";
+CELL_3_1_TITLE="Hoeveel Fooi Heb Ik Gekregen";
+CELL_3_1_LABELONE="Bedrag zonder fooi";
+CELL_3_1_LABELTWO="Bedrag inclusief fooi";
+CELL_3_1_RESULT="Hoeveelheid gekregen fooi";
+CELL_4_0_TITLE="100% Procent Calculator";
+CELL_4_0_LABELONE="Meer is het niet. Enkel een Procent Calculator";
+CELL_4_0_LABELTWO="Versie 1 1.3.0 Seacontrarian";
+CELL_4_0_RESULT="Ontwikkeld door Thomas André Johansen en Appkokeriet";
+CONTRIBUTION_MARGIN_TITLE="Find Dekkingsbijdrage En Ratio";
+CONTRIBUTION_MARGIN_LABELONE="Aankoop / Productiekosten";
+CONTRIBUTION_MARGIN_LABELTWO="Selling Prijs (ex. BTW)";
+CONTRIBUTION_MARGIN_RESULT="Bijdrage Margin";
+CONTRIBUTION_MARGIN_RESULT_SUBTITLE="De verhouding is";
+
+CONTRIBUTION_MARGIN_RATIO_TITLE="Prijs Met Dekkingsbijdrage Ratio";
+CONTRIBUTION_MARGIN_RATIO_LABELONE="Dekkingsbijdrage Ratio";
+CONTRIBUTION_MARGIN_RATIO_LABELTWO="Aankoop / Productiekosten";
+CONTRIBUTION_MARGIN_RATIO_RESULT="Eenheid prijs";
+CONTRIBUTION_MARGIN_RATIO_RESULT_SUBTITLE="De Dekkingsbijdrage is";
+//Calculate
+CALCULATE_NEW_PRICE="Met een korting van ";
+CALCULATE_DISCOUNT="Ik bespaar ";
+ADD_TAX="De totale belasting daarvan is";
+REMOVE_TAX="De totale hoeveelheid aan belasting die U verwijderd heeft is";
+CALCULATE_TIP="Leidend tot een totaalbedrag van";
+CALCULATE_TIP_RECEIVED="De hoeveelheid gekregen fooi is ";
+FEEDBACK_REPORT_TEXT="Feedback en bug report: ";
+//EditView
+SAVE_TEXT_ONE="Waarden %@ voor %@ opgeslagen";
+SAVE_TEXT_TWO="Waarden %@ voor %@ opgeslagen";
+SAVED_VALUES="Opgeslagen waarden";
+NO_SAVED_VALUES="Niets opgeslagen";
+VALUES_RESET="Resetten standaard waarden";
+DEFAULT_VALUE_LABEL="Standaard waarden";
+RESTORE_DEFAULT_BUTTON="Resetten";
+SAVE_VALUES_BUTTON="Opgeslagen";

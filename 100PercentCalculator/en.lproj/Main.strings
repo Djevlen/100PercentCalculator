@@ -1,0 +1,48 @@
+
+/* Class = "UIButton"; normalTitle = "Restore Defaults"; ObjectID = "4Vi-p2-cWD"; */
+"4Vi-p2-cWD.normalTitle" = "Restore Defaults";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "643-Gf-ofG"; */
+"643-Gf-ofG.normalTitle" = "Save";
+
+/* Class = "UITextField"; placeholder = "25"; ObjectID = "96m-uL-Cbt"; */
+"96m-uL-Cbt.placeholder" = "25";
+
+/* Class = "UITextField"; placeholder = "100"; ObjectID = "Dan-6d-seC"; */
+"Dan-6d-seC.placeholder" = "100";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "KB5-nR-42A"; */
+"KB5-nR-42A.text" = "Price";
+
+/* Class = "UILabel"; text = "Result"; ObjectID = "Lwt-7k-wLn"; */
+"Lwt-7k-wLn.text" = "Result";
+
+/* Class = "UILabel"; text = "Rebate"; ObjectID = "OJK-f0-B3m"; */
+"OJK-f0-B3m.text" = "Rebate";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "OU1-gS-9Pu"; */
+"OU1-gS-9Pu.text" = "Price";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QF3-Y7-ej5"; */
+"QF3-Y7-ej5.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "100"; ObjectID = "RvX-YP-l5m"; */
+"RvX-YP-l5m.placeholder" = "100";
+
+/* Class = "UITextField"; placeholder = "25"; ObjectID = "ShH-Q4-66o"; */
+"ShH-Q4-66o.placeholder" = "25";
+
+/* Class = "UILabel"; text = "Rebate"; ObjectID = "YXQ-HN-5WA"; */
+"YXQ-HN-5WA.text" = "Rebate";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lgs-4y-1Ip"; */
+"lgs-4y-1Ip.text" = "Label";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "sSW-KX-TGH"; */
+"sSW-KX-TGH.text" = "%";
+
+/* Class = "UILabel"; text = "topTitle"; ObjectID = "tdf-gz-1X6"; */
+"tdf-gz-1X6.text" = "topTitle";
+
+/* Class = "UILabel"; text = "Default Values"; ObjectID = "wRE-Hb-vOe"; */
+"wRE-Hb-vOe.text" = "Default Values";

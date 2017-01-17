@@ -1,0 +1,91 @@
+/* 
+  Localizable.strings ENGLISH
+  Percentages
+
+  Created by Thomas Andre Johansen on 03/02/16.
+  Copyright © 2016 Appkokeriet. All rights reserved.
+*/
+//MenuTableViewController
+MENU_TITLE_TEXT="100% Percent Calculator";
+DISCOUNT="Discount";
+RATIOS="Ratios";
+SALES_TAX="Sales Tax";
+BREAK_EVEN_ANALYSIS="Break-Even Analysis";
+GRATUITY="Gratuity";
+ABOUT="About";
+UNKNOWN_HEADER="Unknown header";
+CELL_TEXT_CREATE_ERROR="Problem creating cell. Try restarting app.";
+//MenuCell
+DEFAULT_LABEL_TITLE="Default toptitle";
+DEFAULT_LABEL_NUMBER_ONE="Default LabelNumberOne";
+DEFAULT_LABEL_NUMBER_TWO="Default LabelNumberTWO";
+DEFAULT_LABEL_RESULT="Default ResultLabel";
+DEFAULT_CALCULATE_FUNCTION="defaultFunction";
+CELL_0_0_TITLE="Price After Discount";
+CELL_0_0_LABELONE="Price before discount";
+CELL_0_0_LABELTWO="Discount";
+CELL_0_0_RESULT="New price is";
+CELL_0_1_TITLE="How Large Was The Discount?";
+CELL_0_1_LABELONE="Price";
+CELL_0_1_LABELTWO="Price after discount";
+CELL_0_1_RESULT="The discount was";
+CELL_1_0_TITLE="What Percentage Is...?";
+CELL_1_0_LABELONE="What percentage is";
+CELL_1_0_LABELTWO="Of";
+CELL_1_0_RESULT="It's ...";
+CELL_1_1_TITLE="How Much Is...?";
+CELL_1_1_LABELONE="What is";
+CELL_1_1_LABELTWO="Of";
+CELL_1_1_RESULT="It's ...";
+CELL_1_2_TITLE="How Many Percent To Add?";
+CELL_1_2_LABELONE="If I have";
+CELL_1_2_LABELTWO="But Want";
+CELL_1_2_RESULT="Then I have to add";
+CELL_2_0_TITLE="Show Price With Tax";
+CELL_2_0_LABELONE="Price without tax";
+CELL_2_0_LABELTWO="Tax Rate";
+CELL_2_0_RESULT="Price with tax";
+CELL_2_1_TITLE="Show Price Without Tax";
+CELL_2_1_LABELONE="Price";
+CELL_2_1_LABELTWO="Tax Rate";
+CELL_2_1_RESULT="Price without tax";
+CELL_3_0_TITLE="How Much Should I Tip?";
+CELL_3_0_LABELONE="To pay";
+CELL_3_0_LABELTWO="Tip";
+CELL_3_0_RESULT="I tip";
+CELL_3_1_TITLE="How Much Tip Did I Get";
+CELL_3_1_LABELONE="Sum without tip";
+CELL_3_1_LABELTWO="Sum with tip";
+CELL_3_1_RESULT="Tip Received";
+CELL_4_0_TITLE="100% Percent Calculator";
+CELL_4_0_LABELONE="It's nothing more. Just a percent calculator.";
+CELL_4_0_LABELTWO="Version 1 1.3.0 Seacontrarian";
+CELL_4_0_RESULT="Developed by Thomas André Johansen and Appkokeriet";
+CONTRIBUTION_MARGIN_TITLE="Find Contribution Margin And Ratio";
+CONTRIBUTION_MARGIN_LABELONE="Purchase / Manufacturing Cost";
+CONTRIBUTION_MARGIN_LABELTWO="Selling Price (ex. Tax)";
+CONTRIBUTION_MARGIN_RESULT="Contribution Margin";
+CONTRIBUTION_MARGIN_RESULT_SUBTITLE="The Ratio is ";
+
+CONTRIBUTION_MARGIN_RATIO_TITLE="Price With Contribution Margin Ratio";
+CONTRIBUTION_MARGIN_RATIO_LABELONE="Contribution Margin Ratio";
+CONTRIBUTION_MARGIN_RATIO_LABELTWO="Purchase / Manufacturing Cost";
+CONTRIBUTION_MARGIN_RATIO_RESULT="Unit Price";
+CONTRIBUTION_MARGIN_RATIO_RESULT_SUBTITLE="The Contribution Margin is ";
+//Calculate
+CALCULATE_NEW_PRICE="With a discount of ";
+CALCULATE_DISCOUNT="I saved ";
+ADD_TAX="Of which the tax total is ";
+REMOVE_TAX="You removed the tax total of";
+CALCULATE_TIP="For a total of ";
+CALCULATE_TIP_RECEIVED="Of which the tip was ";
+FEEDBACK_REPORT_TEXT="Feedback and bug report: ";
+//EditView
+SAVE_TEXT_ONE="Value %@ for %@ stored";
+SAVE_TEXT_TWO="Value %@ for %@ stored";
+SAVED_VALUES="Saved new values";
+NO_SAVED_VALUES="Nothing saved";
+VALUES_RESET="Reset values to default";
+DEFAULT_VALUE_LABEL="Default Values";
+RESTORE_DEFAULT_BUTTON="Restore Defaults";
+SAVE_VALUES_BUTTON="Save";

@@ -1,0 +1,92 @@
+/* 
+  Localizable.strings GERMAN
+  Percentages
+
+  Created by Thomas Andre Johansen on 03/02/16.
+  Copyright © 2016 Appkokeriet. All rights reserved.
+*/
+//MenuTableViewController
+MENU_TITLE_TEXT="100% Percent Calculator";
+DISCOUNT="Rabatt";
+RATIOS="Verhältnis";
+BREAK_EVEN_ANALYSIS="Gewinnschwellenanalyse";
+SALES_TAX="Mehrwertsteuer";
+GRATUITY="Trinkgeld";
+ABOUT="Informationen";
+UNKNOWN_HEADER="Unbekannt Header";
+CELL_TEXT_CREATE_ERROR="Problem beim Erstellen Cell. Starten Sie den App.";
+//MenuCell
+DEFAULT_LABEL_TITLE="Default toptitle";
+DEFAULT_LABEL_NUMBER_ONE="Default LabelNumberOne";
+DEFAULT_LABEL_NUMBER_TWO="Default LabelNumberTWO";
+DEFAULT_LABEL_RESULT="Default ResultLabel";
+DEFAULT_CALCULATE_FUNCTION="defaultFunction";
+CELL_0_0_TITLE="Preis nach Rabatt";
+CELL_0_0_LABELONE="Preis vor Rabatt";
+CELL_0_0_LABELTWO="Rabatt";
+CELL_0_0_RESULT="Neuer Preis";
+CELL_0_1_TITLE="Wie groß war der Rabatt?";
+CELL_0_1_LABELONE="Preis";
+CELL_0_1_LABELTWO="Preis nach Rabatt";
+CELL_0_1_RESULT="Der Rabatt war";
+CELL_1_0_TITLE="Wie viel Prozent ist...?";
+CELL_1_0_LABELONE="Wie viel Prozent ist";
+CELL_1_0_LABELTWO="Von";
+CELL_1_0_RESULT="Es ist ...";
+CELL_1_1_TITLE="Wie viel ist...?";
+CELL_1_1_LABELONE="Was ist";
+CELL_1_1_LABELTWO="Von";
+CELL_1_1_RESULT="Es ist ...";
+CELL_1_2_TITLE="Wieviel Prozent auf hinzufügen?";
+CELL_1_2_LABELONE="Wenn ich habe";
+CELL_1_2_LABELTWO="Aber ich will";
+CELL_1_2_RESULT="Dann muss ich hinzufügen";
+CELL_2_0_TITLE="Zeigen den Preis mit MwSt";
+CELL_2_0_LABELONE="Preis ohne MwSt";
+CELL_2_0_LABELTWO="Steuerrate";
+CELL_2_0_RESULT="Preis mit MwSt";
+CELL_2_1_TITLE="Zeigen den Preis ohne MwSt";
+CELL_2_1_LABELONE="Preis";
+CELL_2_1_LABELTWO="Steuerrate";
+CELL_2_1_RESULT="Preis ohne MwSt";
+CELL_3_0_TITLE="Wie viel sollte ich ein Trinkgeld?";
+CELL_3_0_LABELONE="Zu bezahlen";
+CELL_3_0_LABELTWO="Trinkgeld";
+CELL_3_0_RESULT="Sum Trinkgeld";
+CELL_3_1_TITLE="Wie viel Trinkgeld habe ich bekommen?";
+CELL_3_1_LABELONE="Summe ohne Trinkgeld";
+CELL_3_1_LABELTWO="Summe mit Trinkgeld";
+CELL_3_1_RESULT="Trinkgeld erhalten";
+CELL_4_0_TITLE="100% Prozent Rechner";
+CELL_4_0_LABELONE="Es ist nichts mehr. Nur ein Prozent Rechner.";
+CELL_4_0_LABELTWO="Version 1 1.3.0 Seacontrarian";
+CELL_4_0_RESULT="Entwickelt von Thomas André Johansen und Appkokeriet";
+
+CONTRIBUTION_MARGIN_TITLE="Deckungsbeitrag finden und Ratio";
+CONTRIBUTION_MARGIN_LABELONE="Kauf / Herstellungskosten ";
+CONTRIBUTION_MARGIN_LABELTWO="Verkaufspreis (ohne Steuer.)";
+CONTRIBUTION_MARGIN_RESULT="Deckungsbeitrag ";
+CONTRIBUTION_MARGIN_RESULT_SUBTITLE="Das Verhältnis wird ";
+
+CONTRIBUTION_MARGIN_RATIO_TITLE="Preis mit Deckungsbeitragsquote ";
+CONTRIBUTION_MARGIN_RATIO_LABELONE="Deckungsbeitrag Ratio";
+CONTRIBUTION_MARGIN_RATIO_LABELTWO="Kauf / Herstellungskosten ";
+CONTRIBUTION_MARGIN_RATIO_RESULT="Einheitspreis ";
+CONTRIBUTION_MARGIN_RATIO_RESULT_SUBTITLE="Der Deckungsbeitrag ist";
+//Calculate
+CALCULATE_NEW_PRICE="Mit einem Rabatt von ";
+CALCULATE_DISCOUNT="Ich sparte ";
+ADD_TAX="Von denen die MwSt insgesamt ist ";
+REMOVE_TAX="Sie entfernen die MwSt insgesamt";
+CALCULATE_TIP="Für die insgesamt von ";
+CALCULATE_TIP_RECEIVED="Von denen die Trinkgeld war ";
+FEEDBACK_REPORT_TEXT="Feedback und Bug-Report: ";
+//EditView
+SAVE_TEXT_ONE="Value %@ for %@ stored";
+SAVE_TEXT_TWO="Value %@ for %@ stored";
+SAVED_VALUES="Saved new values";
+NO_SAVED_VALUES="Nothing saved";
+VALUES_RESET="Reset values to default";
+DEFAULT_VALUE_LABEL="Default Values";
+RESTORE_DEFAULT_BUTTON="Restore Defaults";
+SAVE_VALUES_BUTTON="Save";
