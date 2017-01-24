@@ -13,7 +13,6 @@
 		E9EFD13C1E2B7EF9003714DD /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD1311E2B7EF9003714DD /* Calculate.swift */; };
 		E9EFD13D1E2B7EF9003714DD /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD1321E2B7EF9003714DD /* CalculateViewController.swift */; };
 		E9EFD13E1E2B7EF9003714DD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD1331E2B7EF9003714DD /* EditViewController.swift */; };
-		E9EFD13F1E2B7EF9003714DD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD1341E2B7EF9003714DD /* Info.plist */; };
 		E9EFD1401E2B7EF9003714DD /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EFD1351E2B7EF9003714DD /* libAdapterIAd.a */; };
 		E9EFD1411E2B7EF9003714DD /* LogoAppkokeriet-small.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD1361E2B7EF9003714DD /* LogoAppkokeriet-small.png */; };
 		E9EFD1421E2B7EF9003714DD /* LogoAppkokeriet.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD1371E2B7EF9003714DD /* LogoAppkokeriet.png */; };
@@ -61,7 +60,7 @@
 		E9EFD15F1E2B813A003714DD /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = LaunchScreen.strings; sourceTree = "<group>"; };
 		E9EFD1611E2B813A003714DD /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Localizable.strings; sourceTree = "<group>"; };
 		E9EFD1631E2B813A003714DD /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Main.strings; sourceTree = "<group>"; };
-		E9EFD16D1E2B823D003714DD /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = 100PercentCalculator/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		E9EFD16D1E2B823D003714DD /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = /Users/thomas/Projects/code/Appkokeriet/100PercentCalculator/100PercentCalculator/frameworks/GoogleMobileAds.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +224,6 @@
 				E9EFD1661E2B813A003714DD /* Main.strings in Resources */,
 				E9EFD14E1E2B8120003714DD /* Main.strings in Resources */,
 				E9EFD1411E2B7EF9003714DD /* LogoAppkokeriet-small.png in Resources */,
-				E9EFD13F1E2B7EF9003714DD /* Info.plist in Resources */,
 				E9EFD14D1E2B8120003714DD /* Localizable.strings in Resources */,
 				E9EFD1651E2B813A003714DD /* Localizable.strings in Resources */,
 				E9EFD1671E2B813A003714DD /* LaunchScreen.strings in Resources */,
@@ -467,6 +465,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/100PercentCalculator",
+					"$(PROJECT_DIR)/100PercentCalculator/frameworks",
 				);
 				INFOPLIST_FILE = 100PercentCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -487,6 +486,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/100PercentCalculator",
+					"$(PROJECT_DIR)/100PercentCalculator/frameworks",
 				);
 				INFOPLIST_FILE = 100PercentCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

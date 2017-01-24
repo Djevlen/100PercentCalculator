@@ -102,7 +102,7 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor(red: 0.81, green: 0.89, blue: 0.95, alpha: 1.0)
         cell.selectedBackgroundView = backgroundView
-        cell.createCell(indexPath.section, row: indexPath.row, cell: cell)
+        _ = cell.createCell(indexPath.section, row: indexPath.row, cell: cell)
         return cell
     }
     

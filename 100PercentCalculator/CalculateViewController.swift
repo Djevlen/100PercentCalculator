@@ -221,7 +221,11 @@ class CalculateViewController: UIViewController, UITextFieldDelegate, GADBannerV
     
     func openUrl(_ sender: UIButton){
         if let url = URL(string: "http://www.appkokeriet.no") {
-            UIApplication.shared.openURL(url) //deprecated, must be changed.
+            if #available(iOS 10.0, *){
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }else {
+                UIApplication.shared.openURL(url)
+            }
         }
     }
     
