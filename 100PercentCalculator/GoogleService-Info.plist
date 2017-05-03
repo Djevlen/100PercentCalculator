@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>872698743909-maq5ier4j2p6045qhrv7sim9iqbdi414.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.872698743909-maq5ier4j2p6045qhrv7sim9iqbdi414</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDKWORbqEbOyDu8XNf7njZEjOT2IdCkk0g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>872698743909</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Appkokeriet.100PercentCalculator</string>
+	<key>PROJECT_ID</key>
+	<string>percentcalculator-49900</string>
+	<key>STORAGE_BUCKET</key>
+	<string>percentcalculator-49900.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:872698743909:ios:fd51b7399dd99345</string>
+	<key>DATABASE_URL</key>
+	<string>https://percentcalculator-49900.firebaseio.com</string>
+</dict>
+</plist>
