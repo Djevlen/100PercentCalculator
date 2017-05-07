@@ -98,9 +98,10 @@ class CalculateViewController: UIViewController, UITextFieldDelegate, GADBannerV
         adMobBannerView.frame.size.width = UIScreen.main.bounds.width //kGADAdSizeBanner.size.width
         
         let request = GADRequest()
-        //request.testDevices = ["b0e0523adf777aea3cbaf0728bb2e747"]
+//      request.testDevices = [kGADSimulatorID]
         adMobBannerView.isHidden = false
         adMobBannerView.load(request)
+        
         
         //MARK: inputAccessoryView
         let keyboardButtons =  UIView(frame: CGRect(x: 0,y: 0,width: UIScreen.main.bounds.width, height: 50))
@@ -280,14 +281,14 @@ class CalculateViewController: UIViewController, UITextFieldDelegate, GADBannerV
     }
     
     // MARK : banner
-    func adViewDidReceiveAd(_ bannerView: GADBannerView!) {
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         //print("Did receive ad! Adder subview: \(bannerView.adNetworkClassName)")
         view.addSubview(adMobBannerView)
 
     }
 
-    func adView(_ bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
-         print("didFailToReceiveAdWithError \(error) + \(bannerView.adNetworkClassName)")
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+         print("didFailToReceiveAdWithError \(error) + \(bannerView.adNetworkClassName as Optional)")
         adMobBannerView.isHidden = true
     }
     func openEdit(_ sender: AnyObject?){

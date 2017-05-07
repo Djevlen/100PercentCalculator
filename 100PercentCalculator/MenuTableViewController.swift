@@ -14,7 +14,6 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var footer: UIView!
     
     //setup table with sections and cells
-    let numberOfSections = 6
     let numberOfRowsInSection = [2,3,2,2,2,1]
     let titleForHeaderInSection =
        [NSLocalizedString("DISCOUNT", comment: "discountHeader"),
@@ -62,16 +61,14 @@ class MenuTableViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
-
      func numberOfSections(in tableView: UITableView) -> Int {
-        return numberOfSections
+        return titleForHeaderInSection.count
     }
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

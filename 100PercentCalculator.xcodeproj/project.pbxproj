@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6912B9347BD33387AE02629 /* Pods_100PercentCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A9AA0D0A25F0756A9A95D3 /* Pods_100PercentCalculator.framework */; };
+		E9C394E11EBA4B0A00E6359B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9C394E01EBA4B0A00E6359B /* GoogleService-Info.plist */; };
 		E9EFD1241E2B7D34003714DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD1221E2B7D34003714DD /* Main.storyboard */; };
 		E9EFD1261E2B7D34003714DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD1251E2B7D34003714DD /* Assets.xcassets */; };
 		E9EFD1291E2B7D34003714DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD1271E2B7D34003714DD /* LaunchScreen.storyboard */; };
@@ -30,10 +32,13 @@
 		E9EFD16A1E2B813A003714DD /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD15E1E2B813A003714DD /* LaunchScreen.strings */; };
 		E9EFD16B1E2B813A003714DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD1601E2B813A003714DD /* Localizable.strings */; };
 		E9EFD16C1E2B813A003714DD /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD1621E2B813A003714DD /* Main.strings */; };
-		E9EFD16E1E2B823D003714DD /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EFD16D1E2B823D003714DD /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66A9AA0D0A25F0756A9A95D3 /* Pods_100PercentCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_100PercentCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF59E6438CFC7CEEDD56EFC5 /* Pods-100PercentCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-100PercentCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-100PercentCalculator/Pods-100PercentCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		DD1E1CFB31A22DBBACAB93EA /* Pods-100PercentCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-100PercentCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-100PercentCalculator/Pods-100PercentCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		E9C394E01EBA4B0A00E6359B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9EFD11B1E2B7D34003714DD /* 100PercentCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100PercentCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD1231E2B7D34003714DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9EFD1251E2B7D34003714DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +65,6 @@
 		E9EFD15F1E2B813A003714DD /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = LaunchScreen.strings; sourceTree = "<group>"; };
 		E9EFD1611E2B813A003714DD /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Localizable.strings; sourceTree = "<group>"; };
 		E9EFD1631E2B813A003714DD /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Main.strings; sourceTree = "<group>"; };
-		E9EFD16D1E2B823D003714DD /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = /Users/thomas/Projects/code/Appkokeriet/100PercentCalculator/100PercentCalculator/frameworks/GoogleMobileAds.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,20 +72,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9EFD16E1E2B823D003714DD /* GoogleMobileAds.framework in Frameworks */,
 				E9EFD1401E2B7EF9003714DD /* libAdapterIAd.a in Frameworks */,
+				C6912B9347BD33387AE02629 /* Pods_100PercentCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98C40B50B542FFC610C93D65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD1E1CFB31A22DBBACAB93EA /* Pods-100PercentCalculator.debug.xcconfig */,
+				CF59E6438CFC7CEEDD56EFC5 /* Pods-100PercentCalculator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEC868E3B39807E51F6246A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66A9AA0D0A25F0756A9A95D3 /* Pods_100PercentCalculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E9EFD1121E2B7D34003714DD = {
 			isa = PBXGroup;
 			children = (
-				E9EFD16D1E2B823D003714DD /* GoogleMobileAds.framework */,
 				E9EFD11D1E2B7D34003714DD /* 100PercentCalculator */,
 				E9EFD11C1E2B7D34003714DD /* Products */,
+				98C40B50B542FFC610C93D65 /* Pods */,
+				CEC868E3B39807E51F6246A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +118,7 @@
 		E9EFD11D1E2B7D34003714DD /* 100PercentCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				E9C394E01EBA4B0A00E6359B /* GoogleService-Info.plist */,
 				E9EFD1311E2B7EF9003714DD /* Calculate.swift */,
 				E9EFD1321E2B7EF9003714DD /* CalculateViewController.swift */,
 				E9EFD1331E2B7EF9003714DD /* EditViewController.swift */,
@@ -164,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9EFD12D1E2B7D34003714DD /* Build configuration list for PBXNativeTarget "100PercentCalculator" */;
 			buildPhases = (
+				134FBB9D70BECBB3AAA8C7D7 /* [CP] Check Pods Manifest.lock */,
 				E9EFD1171E2B7D34003714DD /* Sources */,
 				E9EFD1181E2B7D34003714DD /* Frameworks */,
 				E9EFD1191E2B7D34003714DD /* Resources */,
+				566FFF90BC6A16CC71C22010 /* [CP] Embed Pods Frameworks */,
+				9B66ED426EC06EE99647076D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,7 +210,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Thomas Andre Johansen";
 				TargetAttributes = {
 					E9EFD11A1E2B7D34003714DD = {
@@ -232,6 +258,7 @@
 				E9EFD1261E2B7D34003714DD /* Assets.xcassets in Resources */,
 				E9EFD16C1E2B813A003714DD /* Main.strings in Resources */,
 				E9EFD1691E2B813A003714DD /* Main.strings in Resources */,
+				E9C394E11EBA4B0A00E6359B /* GoogleService-Info.plist in Resources */,
 				E9EFD1641E2B813A003714DD /* LaunchScreen.strings in Resources */,
 				E9EFD16B1E2B813A003714DD /* Localizable.strings in Resources */,
 				E9EFD16A1E2B813A003714DD /* LaunchScreen.strings in Resources */,
@@ -240,6 +267,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		134FBB9D70BECBB3AAA8C7D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		566FFF90BC6A16CC71C22010 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-100PercentCalculator/Pods-100PercentCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B66ED426EC06EE99647076D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-100PercentCalculator/Pods-100PercentCalculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9EFD1171E2B7D34003714DD /* Sources */ = {
@@ -369,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -405,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -419,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -449,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -460,6 +537,7 @@
 		};
 		E9EFD12E1E2B7D34003714DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1E1CFB31A22DBBACAB93EA /* Pods-100PercentCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -481,6 +559,7 @@
 		};
 		E9EFD12F1E2B7D34003714DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF59E6438CFC7CEEDD56EFC5 /* Pods-100PercentCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
