@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMobileAds
 import iAd
+import Firebase
 
 class CalculateViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate   {
 
@@ -55,7 +56,11 @@ class CalculateViewController: UIViewController, UITextFieldDelegate, GADBannerV
         textFieldOne.delegate = self
         textFieldTwo.delegate = self
         
-       
+        //logging event when opening an item in the menu table in Firebase Analytics
+        FIRAnalytics.logEvent(withName: kFIREventSelectContent, parameters: [
+            kFIRParameterItemID: "id-\(passedCell.labelTitle)" as NSObject,
+            kFIRParameterItemName: "\(passedCell.labelTitle)" as NSObject,
+            ])
         
         
         bottomBorder.frame = CGRect(x: 0.0, y: textFieldOne.frame.size.height - 1, width: textFieldOne.frame.size.width, height: 1.0);

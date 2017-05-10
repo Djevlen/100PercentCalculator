@@ -8,6 +8,8 @@
 // TODO: THIS ENTIRE VIEW SHOULD BE INTEGRATED INTO THE CalculateViewController
 
 import UIKit
+import Firebase
+import GoogleMobileAds
 
 class EditViewController: UIViewController, UITextFieldDelegate {
     
@@ -73,6 +75,12 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         keyboardButtons.backgroundColor = UIColor.blue
         textFieldOne.inputAccessoryView = keyboardButtons
         textFieldTwo.inputAccessoryView = keyboardButtons
+        
+        //logging event opened in Firebase Analytics
+        FIRAnalytics.logEvent(withName: kFIREventSelectContent, parameters: [
+            kFIRParameterItemID: "id-EDIT_\(passedCell.labelTitle)" as NSObject,
+            kFIRParameterItemName: "EDIT_\(passedCell.labelTitle)" as NSObject,
+            ])
     }
     override func viewWillAppear(_ animated: Bool) {
         //try to add default values to textFields
