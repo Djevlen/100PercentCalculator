@@ -59,7 +59,7 @@ CELL_3_1_LABELTWO="Sum med tips";
 CELL_3_1_RESULT="Tips mottatt";
 CELL_4_0_TITLE="100% Prosentkalkulator";
 CELL_4_0_LABELONE="Ikke noe annet. Kun en prosentkalkulator.";
-CELL_4_0_LABELTWO="Version 1 1.3.0 Seacontrarian";
+CELL_4_0_LABELTWO="Version 1 1.4.0";
 CELL_4_0_RESULT="Utviklet av Thomas André Johansen og Appkokeriet";
 
 CONTRIBUTION_MARGIN_TITLE="Finn dekningsbidrag og dekningsgrad";

@@ -56,11 +56,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate, GADBannerV
         textFieldOne.delegate = self
         textFieldTwo.delegate = self
         
-        //logging event when opening an item in the menu table in Firebase Analytics
-        FIRAnalytics.logEvent(withName: kFIREventSelectContent, parameters: [
-            kFIRParameterItemID: "id-\(passedCell.labelTitle)" as NSObject,
-            kFIRParameterItemName: "\(passedCell.labelTitle)" as NSObject,
-            ])
+        
         
         
         bottomBorder.frame = CGRect(x: 0.0, y: textFieldOne.frame.size.height - 1, width: textFieldOne.frame.size.width, height: 1.0);
@@ -77,13 +73,24 @@ class CalculateViewController: UIViewController, UITextFieldDelegate, GADBannerV
         
         
         if(passedCell.calculateFunction == "about"){
+            //logging event when opening an item in the menu table in Firebase Analytics
+            FIRAnalytics.logEvent(withName: kFIREventSelectContent, parameters: [
+                kFIRParameterItemID: "id-about" as NSObject,
+                kFIRParameterItemName: "about" as NSObject,
+                ])
+            
             let image = UIImage(named: "aboutLogo-Small") as UIImage?
             urlButton.frame = CGRect(x: 0,y: 0,width: UIScreen.main.bounds.width,height: (image?.size.height)!)
             urlButton.addTarget(self, action: #selector(CalculateViewController.openUrl(_:)), for: .touchUpInside)
             urlButton.isEnabled = true
             urlButton.setImage(image, for: UIControlState())
             view.addSubview(urlButton)
-
+        }else{
+            //logging event when opening an item in the menu table in Firebase Analytics
+            FIRAnalytics.logEvent(withName: kFIREventSelectContent, parameters: [
+                kFIRParameterItemID: "id-\(passedCell.labelTitle)" as NSObject,
+                kFIRParameterItemName: "\(passedCell.labelTitle)" as NSObject,
+                ])
         }
         
         

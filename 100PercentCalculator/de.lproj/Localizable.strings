@@ -59,7 +59,7 @@ CELL_3_1_LABELTWO="Summe mit Trinkgeld";
 CELL_3_1_RESULT="Trinkgeld erhalten";
 CELL_4_0_TITLE="100% Prozent Rechner";
 CELL_4_0_LABELONE="Es ist nichts mehr. Nur ein Prozent Rechner.";
-CELL_4_0_LABELTWO="Version 1 1.3.0 Seacontrarian";
+CELL_4_0_LABELTWO="Version 1 1.4.0";
 CELL_4_0_RESULT="Entwickelt von Thomas André Johansen und Appkokeriet";
 
 CONTRIBUTION_MARGIN_TITLE="Deckungsbeitrag finden und Ratio";
