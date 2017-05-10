@@ -22,8 +22,6 @@ class MenuCell: UITableViewCell{
     var percent = false
     var calculateFunction = NSLocalizedString("DEFAULT_CALCULATE_FUNCTION", comment:"defaultCalculateFunction")
     
-    
-    
     func createCell(_ section: Int, row: Int, cell: MenuCell) -> MenuCell{
         switch(section){
         //Discount

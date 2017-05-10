@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					E9EFD11A1E2B7D34003714DD = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4Z57UTV2LU;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -540,6 +541,7 @@
 			baseConfigurationReference = DD1E1CFB31A22DBBACAB93EA /* Pods-100PercentCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4Z57UTV2LU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/100PercentCalculator",
@@ -562,6 +564,7 @@
 			baseConfigurationReference = CF59E6438CFC7CEEDD56EFC5 /* Pods-100PercentCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4Z57UTV2LU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/100PercentCalculator",
