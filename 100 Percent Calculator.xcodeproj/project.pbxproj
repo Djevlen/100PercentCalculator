@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90CD7C72420E4C000BA5274 /* Calculations.JSON in Resources */ = {isa = PBXBuildFile; fileRef = E90CD7C62420E4C000BA5274 /* Calculations.JSON */; };
 		E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */; };
 		E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */; };
 		E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E4B2420C7BC00DE8BC5 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E90CD7C62420E4C000BA5274 /* Calculations.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Calculations.JSON; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "100 Percent Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E90CD7C52420E47300BA5274 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E90CD7C62420E4C000BA5274 /* Calculations.JSON */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		E9B13E3B2420C7BC00DE8BC5 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		E9B13E462420C7BC00DE8BC5 /* 100 Percent Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E90CD7C52420E47300BA5274 /* Data */,
 				E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */,
 				E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */,
 				E9B13E4B2420C7BC00DE8BC5 /* ContentView.swift */,
@@ -191,6 +202,7 @@
 				E9B13E542420C7BF00DE8BC5 /* LaunchScreen.storyboard in Resources */,
 				E9B13E512420C7BF00DE8BC5 /* Preview Assets.xcassets in Resources */,
 				E9B13E4E2420C7BF00DE8BC5 /* Assets.xcassets in Resources */,
+				E90CD7C72420E4C000BA5274 /* Calculations.JSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Appkokeriet.-00-Percent-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -391,7 +403,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Appkokeriet.-00-Percent-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
