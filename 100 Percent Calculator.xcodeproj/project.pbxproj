@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */; };
+		E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */; };
+		E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E4B2420C7BC00DE8BC5 /* ContentView.swift */; };
+		E9B13E4E2420C7BF00DE8BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E4D2420C7BF00DE8BC5 /* Assets.xcassets */; };
+		E9B13E512420C7BF00DE8BC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E502420C7BF00DE8BC5 /* Preview Assets.xcassets */; };
+		E9B13E542420C7BF00DE8BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E522420C7BF00DE8BC5 /* LaunchScreen.storyboard */; };
+		E9B13E5F2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9B13E5B2420C7BF00DE8BC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9B13E3C2420C7BC00DE8BC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9B13E432420C7BC00DE8BC5;
+			remoteInfo = "100 Percent Calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "100 Percent Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E9B13E4B2420C7BC00DE8BC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9B13E4D2420C7BF00DE8BC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9B13E502420C7BF00DE8BC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9B13E532420C7BF00DE8BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9B13E552420C7BF00DE8BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B13E5A2420C7BF00DE8BC5 /* 100 Percent CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "100 Percent CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00_Percent_CalculatorTests.swift; sourceTree = "<group>"; };
+		E9B13E602420C7BF00DE8BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9B13E412420C7BC00DE8BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9B13E572420C7BF00DE8BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9B13E3B2420C7BC00DE8BC5 = {
+			isa = PBXGroup;
+			children = (
+				E9B13E462420C7BC00DE8BC5 /* 100 Percent Calculator */,
+				E9B13E5D2420C7BF00DE8BC5 /* 100 Percent CalculatorTests */,
+				E9B13E452420C7BC00DE8BC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9B13E452420C7BC00DE8BC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */,
+				E9B13E5A2420C7BF00DE8BC5 /* 100 Percent CalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9B13E462420C7BC00DE8BC5 /* 100 Percent Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */,
+				E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */,
+				E9B13E4B2420C7BC00DE8BC5 /* ContentView.swift */,
+				E9B13E4D2420C7BF00DE8BC5 /* Assets.xcassets */,
+				E9B13E522420C7BF00DE8BC5 /* LaunchScreen.storyboard */,
+				E9B13E552420C7BF00DE8BC5 /* Info.plist */,
+				E9B13E4F2420C7BF00DE8BC5 /* Preview Content */,
+			);
+			path = "100 Percent Calculator";
+			sourceTree = "<group>";
+		};
+		E9B13E4F2420C7BF00DE8BC5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E9B13E502420C7BF00DE8BC5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9B13E5D2420C7BF00DE8BC5 /* 100 Percent CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */,
+				E9B13E602420C7BF00DE8BC5 /* Info.plist */,
+			);
+			path = "100 Percent CalculatorTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9B13E432420C7BC00DE8BC5 /* 100 Percent Calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9B13E632420C7BF00DE8BC5 /* Build configuration list for PBXNativeTarget "100 Percent Calculator" */;
+			buildPhases = (
+				E9B13E402420C7BC00DE8BC5 /* Sources */,
+				E9B13E412420C7BC00DE8BC5 /* Frameworks */,
+				E9B13E422420C7BC00DE8BC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "100 Percent Calculator";
+			productName = "100 Percent Calculator";
+			productReference = E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9B13E592420C7BF00DE8BC5 /* 100 Percent CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9B13E662420C7BF00DE8BC5 /* Build configuration list for PBXNativeTarget "100 Percent CalculatorTests" */;
+			buildPhases = (
+				E9B13E562420C7BF00DE8BC5 /* Sources */,
+				E9B13E572420C7BF00DE8BC5 /* Frameworks */,
+				E9B13E582420C7BF00DE8BC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9B13E5C2420C7BF00DE8BC5 /* PBXTargetDependency */,
+			);
+			name = "100 Percent CalculatorTests";
+			productName = "100 Percent CalculatorTests";
+			productReference = E9B13E5A2420C7BF00DE8BC5 /* 100 Percent CalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9B13E3C2420C7BC00DE8BC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Appkokeriet;
+				TargetAttributes = {
+					E9B13E432420C7BC00DE8BC5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					E9B13E592420C7BF00DE8BC5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E9B13E432420C7BC00DE8BC5;
+					};
+				};
+			};
+			buildConfigurationList = E9B13E3F2420C7BC00DE8BC5 /* Build configuration list for PBXProject "100 Percent Calculator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9B13E3B2420C7BC00DE8BC5;
+			productRefGroup = E9B13E452420C7BC00DE8BC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9B13E432420C7BC00DE8BC5 /* 100 Percent Calculator */,
+				E9B13E592420C7BF00DE8BC5 /* 100 Percent CalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9B13E422420C7BC00DE8BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B13E542420C7BF00DE8BC5 /* LaunchScreen.storyboard in Resources */,
+				E9B13E512420C7BF00DE8BC5 /* Preview Assets.xcassets in Resources */,
+				E9B13E4E2420C7BF00DE8BC5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9B13E582420C7BF00DE8BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9B13E402420C7BC00DE8BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */,
+				E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */,
+				E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9B13E562420C7BF00DE8BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B13E5F2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9B13E5C2420C7BF00DE8BC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9B13E432420C7BC00DE8BC5 /* 100 Percent Calculator */;
+			targetProxy = E9B13E5B2420C7BF00DE8BC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9B13E522420C7BF00DE8BC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9B13E532420C7BF00DE8BC5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9B13E612420C7BF00DE8BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9B13E622420C7BF00DE8BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9B13E642420C7BF00DE8BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"100 Percent Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Z57UTV2LU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "100 Percent Calculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Appkokeriet.-00-Percent-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9B13E652420C7BF00DE8BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"100 Percent Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Z57UTV2LU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "100 Percent Calculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Appkokeriet.-00-Percent-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E9B13E672420C7BF00DE8BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Z57UTV2LU;
+				INFOPLIST_FILE = "100 Percent CalculatorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Appkokeriet.-00-Percent-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/100 Percent Calculator.app/100 Percent Calculator";
+			};
+			name = Debug;
+		};
+		E9B13E682420C7BF00DE8BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Z57UTV2LU;
+				INFOPLIST_FILE = "100 Percent CalculatorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Appkokeriet.-00-Percent-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/100 Percent Calculator.app/100 Percent Calculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9B13E3F2420C7BC00DE8BC5 /* Build configuration list for PBXProject "100 Percent Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B13E612420C7BF00DE8BC5 /* Debug */,
+				E9B13E622420C7BF00DE8BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9B13E632420C7BF00DE8BC5 /* Build configuration list for PBXNativeTarget "100 Percent Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B13E642420C7BF00DE8BC5 /* Debug */,
+				E9B13E652420C7BF00DE8BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9B13E662420C7BF00DE8BC5 /* Build configuration list for PBXNativeTarget "100 Percent CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B13E672420C7BF00DE8BC5 /* Debug */,
+				E9B13E682420C7BF00DE8BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9B13E3C2420C7BC00DE8BC5 /* Project object */;
+}
