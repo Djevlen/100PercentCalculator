@@ -15,8 +15,8 @@ import SwiftUI
 struct Calculation: Hashable, Codable, Identifiable {
     var id: Int
     var title: String
-    var firstString: String
-    var secondString: String
+    var firstOperandString: String
+    var secondOperandString: String
     var resultString: String
     var additionalString: String
     var showCurrencySymbol: Bool
@@ -33,7 +33,7 @@ struct Calculation: Hashable, Codable, Identifiable {
  */
 struct CalculationCategory: Hashable, Codable, Identifiable {
     var id: Int
-    var categoryTitle: String
+    var title: String
     var isFavorite: Bool
     var isHidden: Bool
     var calculations: [Calculation]

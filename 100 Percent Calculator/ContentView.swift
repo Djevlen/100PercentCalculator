@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTab){
             
-            CalculationsView()
+            CalculationsListView()
                 .tabItem{
                     Image(systemName: "percent")
                     Text("Calculations")

@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E90CD7C72420E4C000BA5274 /* CalculationsData.json in Resources */ = {isa = PBXBuildFile; fileRef = E90CD7C62420E4C000BA5274 /* CalculationsData.json */; };
-		E90CD7CD2420EBD100BA5274 /* CalculationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CC2420EBD100BA5274 /* CalculationsView.swift */; };
+		E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */; };
 		E90CD7D02421026400BA5274 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CF2421026400BA5274 /* Calculation.swift */; };
 		E90CD7D92421126400BA5274 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7D82421126400BA5274 /* JsonData.swift */; };
+		E90CD7DB24214DB600BA5274 /* CalculationsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7DA24214DB600BA5274 /* CalculationsHeader.swift */; };
+		E90CD7DD24214DF100BA5274 /* CalculationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7DC24214DF100BA5274 /* CalculationsCell.swift */; };
 		E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */; };
 		E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */; };
 		E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E4B2420C7BC00DE8BC5 /* ContentView.swift */; };
@@ -18,6 +20,7 @@
 		E9B13E512420C7BF00DE8BC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E502420C7BF00DE8BC5 /* Preview Assets.xcassets */; };
 		E9B13E542420C7BF00DE8BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E522420C7BF00DE8BC5 /* LaunchScreen.storyboard */; };
 		E9B13E5F2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */; };
+		E9D3DDBB24220C400009DF21 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3DDBA24220C400009DF21 /* CalculationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +35,11 @@
 
 /* Begin PBXFileReference section */
 		E90CD7C62420E4C000BA5274 /* CalculationsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CalculationsData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
-		E90CD7CC2420EBD100BA5274 /* CalculationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsView.swift; sourceTree = "<group>"; };
+		E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListView.swift; sourceTree = "<group>"; };
 		E90CD7CF2421026400BA5274 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		E90CD7D82421126400BA5274 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		E90CD7DA24214DB600BA5274 /* CalculationsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsHeader.swift; sourceTree = "<group>"; };
+		E90CD7DC24214DF100BA5274 /* CalculationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsCell.swift; sourceTree = "<group>"; };
 		E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "100 Percent Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		E9B13E5A2420C7BF00DE8BC5 /* 100 Percent CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "100 Percent CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00_Percent_CalculatorTests.swift; sourceTree = "<group>"; };
 		E9B13E602420C7BF00DE8BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9D3DDBA24220C400009DF21 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +93,10 @@
 		E90CD7C92420EBB400BA5274 /* Calculations */ = {
 			isa = PBXGroup;
 			children = (
-				E90CD7CC2420EBD100BA5274 /* CalculationsView.swift */,
+				E9D3DDB924220C350009DF21 /* Calculation */,
+				E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */,
+				E90CD7DA24214DB600BA5274 /* CalculationsHeader.swift */,
+				E90CD7DC24214DF100BA5274 /* CalculationsCell.swift */,
 			);
 			path = Calculations;
 			sourceTree = "<group>";
@@ -165,6 +174,14 @@
 				E9B13E602420C7BF00DE8BC5 /* Info.plist */,
 			);
 			path = "100 Percent CalculatorTests";
+			sourceTree = "<group>";
+		};
+		E9D3DDB924220C350009DF21 /* Calculation */ = {
+			isa = PBXGroup;
+			children = (
+				E9D3DDBA24220C400009DF21 /* CalculationView.swift */,
+			);
+			path = Calculation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +293,12 @@
 				E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */,
 				E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */,
 				E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */,
+				E90CD7DD24214DF100BA5274 /* CalculationsCell.swift in Sources */,
 				E90CD7D92421126400BA5274 /* JsonData.swift in Sources */,
-				E90CD7CD2420EBD100BA5274 /* CalculationsView.swift in Sources */,
+				E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */,
 				E90CD7D02421026400BA5274 /* Calculation.swift in Sources */,
+				E9D3DDBB24220C400009DF21 /* CalculationView.swift in Sources */,
+				E90CD7DB24214DB600BA5274 /* CalculationsHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
