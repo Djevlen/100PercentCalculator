@@ -1,0 +1,237 @@
+[{
+        "title": "Rabatt",
+        "id": 1,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Pris etter rabatt",
+                "id": 11,
+                "firstOperandString": "Pris før rabatt",
+                "secondOperandString": "Rabatt",
+                "resultString": "Den nye prisen er",
+                "additionalString": "Hvor rabatten var",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "secondOperandString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "Hva var rabatten?",
+                "id": 12,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "title": "Mengder",
+        "id": 2,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "asdasdas",
+                "id": 21,
+                "firstOperandString": "Pris før rabatt",
+                "secondOperandString": "Rabatt",
+                "resultString": "Den nye prisen er",
+                "additionalString": "Hvor rabatten var",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "secondOperandString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "qweqwewq",
+                "id": 22,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "we",
+                "id": 22,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "title": "Merverdiavgift",
+        "id": 3,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "asdasdas",
+                "id": 31,
+                "firstOperandString": "Pris før rabatt",
+                "secondOperandString": "Rabatt",
+                "resultString": "Den nye prisen er",
+                "additionalString": "Hvor rabatten var",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "secondOperandString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "qweqwewq",
+                "id": 32,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "we",
+                "id": 22,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "title": "Dekningsgrad",
+        "id": 4,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "asdasdas",
+                "id": 41,
+                "firstOperandString": "Pris før rabatt",
+                "secondOperandString": "Rabatt",
+                "resultString": "Den nye prisen er",
+                "additionalString": "Hvor rabatten var",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "secondOperandString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "qweqwewq",
+                "id": 42,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "we",
+                "id": 22,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            }
+        ]
+    },
+    {
+        "title": "Tips",
+        "id": 5,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "asdasdas",
+                "id": 51,
+                "firstOperandString": "Pris før rabatt",
+                "secondOperandString": "Rabatt",
+                "resultString": "Den nye prisen er",
+                "additionalString": "Hvor rabatten var",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "secondOperandString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "qweqwewq",
+                "id": 52,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            },
+            {
+                "title": "we",
+                "id": 22,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "resultString",
+                "defaultValue1": null,
+                "defaultValue2": null,
+                "isFavorite": false,
+                "isHidden": false
+            }
+        ]
+    }
+]
