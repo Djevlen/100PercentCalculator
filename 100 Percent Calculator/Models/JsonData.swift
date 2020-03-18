@@ -8,7 +8,7 @@ Helpers for loading images and data.
 import UIKit
 import SwiftUI
 
-let calculationsData: [CalculationCategory] = load("CalculationsData.json")
+var calculationsData: [CalculationCategory] = load("CalculationsData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

@@ -10,12 +10,13 @@ import SwiftUI
 
 struct CalculationsHeader: View {
     var title: String
-    var isFavorite: Bool
+    //var isFavorite: Bool
     
     #warning("The star needs to be a button, toggling isFavorite, if sections should be favoritable")
     var body: some View {
         HStack{
             Text(title)
+                .font(.headline)
 //            Spacer()
 //            Image(systemName: isFavorite ? "star.fill" : "star")
 //                .foregroundColor(.yellow)

@@ -8,32 +8,49 @@
 
 import SwiftUI
 
-struct ExampleRow: View {
-    var body: some View {
-        Text("Example Row")
-    }
-}
-
 struct CalculationsListView: View {
+    @EnvironmentObject private var userSettings: UserSettings
     
     var body: some View {
         NavigationView{
             List(){
-                ForEach(calculationsData) { category in
-                    Section(header:
-                        CalculationsHeader(title: category.title, isFavorite: category.isFavorite)
-                    ) {
-                        ForEach(category.calculations){ calc in
-                            NavigationLink(destination: CalculationView(calculation: calc)) {
-                                CalculationsCell(title: calc.title, isFavorite: calc.isFavorite)
+                ForEach(self.userSettings.data) { category in
+                    if(category.isHidden == false){
+                        Section(header:
+                            CalculationsHeader(title: category.title)
+                        ) {
+                            ForEach(category.calculations){ calc in
+                                if(calc.isHidden == false){
+                                    
+                                    NavigationLink(destination: CalculationView( calculation: calc, section: self.getSection(from: category))) {
+                                        CalculationsCell( calculation: calc, section: self.getSection(from: category))
+                                    }
+                                }
                             }
+                            .onDelete{self.hideCalculation(at: $0, in: category) }
+                            
                         }
+                        
                     }
+                    
                 }
                 
             }
-            .listStyle(DefaultListStyle())
+            .listStyle(GroupedListStyle())
             .navigationBarTitle("100% Percent Calculator", displayMode: .inline)
+        }
+    }
+    
+    func getSection(from category: CalculationCategory) -> Int{
+        return self.userSettings.data.firstIndex(of: category)!
+    }
+    
+    func hideCalculation(at offsets: IndexSet, in category: CalculationCategory){
+        let section = self.getSection(from: category)
+        self.userSettings.data[section].calculations[offsets.first!].isHidden = true
+        
+        if (self.userSettings.data[section].calculations.allSatisfy({$0.isHidden == true})) {
+            self.userSettings.data[section].isHidden = true
         }
     }
 }

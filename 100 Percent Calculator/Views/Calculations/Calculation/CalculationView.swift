@@ -9,17 +9,25 @@
 import SwiftUI
 
 struct CalculationView: View {
-    let calculation: Calculation
-//    let header: String
-//    let firstOperand: String
-//    let secondOperand: String
+    @EnvironmentObject private var userSettings: UserSettings
+    var calculation: Calculation
+    var section: Int
+
+    var calculationIndex: Int {
+        userSettings.data[section].calculations.firstIndex(where: { $0.id == calculation.id })!
+    }
     
     var body: some View {
         VStack {
-            Text(calculation.title)
+            Button(action: {self.userSettings.toggleFavorite(section: self.section, calculationIndex: self.calculationIndex, calculation: self.calculation)}){
+                Image(systemName: self.userSettings.data[self.section].calculations[self.calculationIndex].isFavorite ? "star.fill" : "star")
+                .foregroundColor(.yellow)
+            }
+            .font(.title)
+            Text(self.userSettings.data[self.section].calculations[self.calculationIndex].title)
             .font(.largeTitle)
-            Text(calculation.firstOperandString)
-            Text(calculation.secondOperandString)
+            Text(self.userSettings.data[self.section].calculations[self.calculationIndex].firstOperandString)
+            Text(self.userSettings.data[self.section].calculations[self.calculationIndex].secondOperandString)
         }
         .font(.title)
     }
@@ -27,6 +35,7 @@ struct CalculationView: View {
 
 struct CalculationView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculationView(calculation: calculationsData[0].calculations[0])
+        let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation](), startingTab: "Favorites")
+        return CalculationView(calculation: userSettings.data[0].calculations[0], section: 0).environmentObject(userSettings)
     }
 }

@@ -10,10 +10,11 @@ import SwiftUI
 
 struct ContentView: View {
     #warning("get selectedTab from user settings, favs by default")
-    @State private var selectedTab = "Calculations"
-    
+    @EnvironmentObject private var userSettings: UserSettings
+
+
     var body: some View {
-        TabView(selection: $selectedTab){
+        TabView(selection: $userSettings.startingTab){
             
             CalculationsListView()
                 .tabItem{
@@ -22,7 +23,7 @@ struct ContentView: View {
             }
             .tag("Calculations")
             
-            Text("Favorites")
+            FavoritesView()
                 .tabItem{
                     Image(systemName: "star.fill")
                     Text("Favorites")
@@ -55,6 +56,7 @@ extension UITabBarController {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation](), startingTab: "Settings")
+        return ContentView().environmentObject(userSettings)
     }
 }
