@@ -13,6 +13,8 @@
 		E90CD7D92421126400BA5274 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7D82421126400BA5274 /* JsonData.swift */; };
 		E90CD7DB24214DB600BA5274 /* CalculationsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7DA24214DB600BA5274 /* CalculationsHeader.swift */; };
 		E90CD7DD24214DF100BA5274 /* CalculationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7DC24214DF100BA5274 /* CalculationsCell.swift */; };
+		E951B3022423584000316662 /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3012423584000316662 /* FavoriteCellView.swift */; };
+		E951B3052423597800316662 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3042423597800316662 /* StarButton.swift */; };
 		E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */; };
 		E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */; };
 		E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E4B2420C7BC00DE8BC5 /* ContentView.swift */; };
@@ -42,6 +44,8 @@
 		E90CD7D82421126400BA5274 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
 		E90CD7DA24214DB600BA5274 /* CalculationsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsHeader.swift; sourceTree = "<group>"; };
 		E90CD7DC24214DF100BA5274 /* CalculationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsCell.swift; sourceTree = "<group>"; };
+		E951B3012423584000316662 /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
+		E951B3042423597800316662 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 		E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "100 Percent Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				E9CC79282422B0930016D1A0 /* FavoritesView.swift */,
+				E951B3012423584000316662 /* FavoriteCellView.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -128,6 +133,14 @@
 				E9D3DDBC24221E590009DF21 /* UserSettings.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E951B30624235B5600316662 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E951B3042423597800316662 /* StarButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E9B13E3B2420C7BC00DE8BC5 = {
@@ -151,6 +164,7 @@
 		E9B13E462420C7BC00DE8BC5 /* 100 Percent Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E951B30624235B5600316662 /* Components */,
 				E90CD7CE2420FF6C00BA5274 /* Models */,
 				E90CD7C82420EBA800BA5274 /* Views */,
 				E90CD7C52420E47300BA5274 /* Data */,
@@ -296,6 +310,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E951B3052423597800316662 /* StarButton.swift in Sources */,
+				E951B3022423584000316662 /* FavoriteCellView.swift in Sources */,
 				E9CC79292422B0930016D1A0 /* FavoritesView.swift in Sources */,
 				E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */,
 				E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */,

@@ -19,11 +19,9 @@ struct CalculationView: View {
     
     var body: some View {
         VStack {
-            Button(action: {self.userSettings.toggleFavorite(section: self.section, calculationIndex: self.calculationIndex, calculation: self.calculation)}){
-                Image(systemName: self.userSettings.data[self.section].calculations[self.calculationIndex].isFavorite ? "star.fill" : "star")
-                .foregroundColor(.yellow)
-            }
+            StarButton(section: self.section, calcIndex: self.calculationIndex, calculation: self.calculation)
             .font(.title)
+            
             Text(self.userSettings.data[self.section].calculations[self.calculationIndex].title)
             .font(.largeTitle)
             Text(self.userSettings.data[self.section].calculations[self.calculationIndex].firstOperandString)

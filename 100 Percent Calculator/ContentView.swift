@@ -56,7 +56,7 @@ extension UITabBarController {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation](), startingTab: "Settings")
+        let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation](), startingTab: "Calculations")
         return ContentView().environmentObject(userSettings)
     }
 }
