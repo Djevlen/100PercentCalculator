@@ -25,11 +25,6 @@ struct Calculation: Hashable, Codable, Identifiable {
     var defaultValue2: Double?
     var isFavorite: Bool
     var isHidden: Bool
-    
-    func calculateNewPrice(_ numberOne: Double, numberTwo: Double) -> (String, String){
-        return (String(format:"%.2f",numberOne - ( (numberTwo/100) * numberOne )) , NSLocalizedString("CALCULATE_NEW_PRICE", comment: "calculateNewPrice")+String(format:"%.2f",(numberTwo/100) * numberOne))
-    }
-
 }
 
 /*

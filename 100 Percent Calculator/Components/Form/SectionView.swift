@@ -10,16 +10,20 @@ import SwiftUI
 
 
 struct SectionView: View{
-    @Binding var operand: String
-    var operandString: String
+    @Binding var textfieldString: String
+    var headerTitle: String
+    var textFieldDisabled: Bool = false
+    var footer: String = ""
     
     var body: some View {
-        Section(header: Text(self.operandString)
+        Section(header: Text(self.headerTitle)
             .font(.title)
-            .fontWeight(.black)) {
-                TextField(self.operandString, text: $operand)
+            .fontWeight(.black),
+                footer: self.footer.count > 0 ? Text(self.footer) : nil) {
+                TextField(self.headerTitle, text: $textfieldString)
                 .multilineTextAlignment(.trailing)
                 .keyboardType(.decimalPad)
+                    .disabled(self.textFieldDisabled)
                 
         }
     }
@@ -27,7 +31,7 @@ struct SectionView: View{
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(operand: .constant("lol"), operandString: "lol")
+        SectionView(textfieldString: .constant("lol"), headerTitle: "lol")
     }
 }
 

@@ -12,6 +12,8 @@ struct CalculationView: View {
     @EnvironmentObject private var userSettings: UserSettings
     var calculation: Calculation
     var section: Int
+    @ObservedObject var calculator = Calculator(result:  "",additionalResult: "")
+    
     
     var calculationIndex: Int {
         userSettings.data[section].calculations.firstIndex(where: { $0.id == calculation.id })!
@@ -28,6 +30,31 @@ struct CalculationView: View {
     @State private var operand1: String = ""
     @State private var operand2: String = ""
     @State private var calculationDone: Bool = false
+    @State private var numbersOnly = false
+    @State private var missingOperand = false
+
+    
+    
+    func canCalculate() -> Bool{
+        print("i cancalculate")
+        guard self.operand1.count > 0 && self.operand2.count > 0 else{
+            return false
+        }
+        guard let operand1 = Double(self.operand1), let operand2 = Double(self.operand2) else{
+                   numbersOnly = false
+                   return false
+               }
+        print("result: \(self.calculator.result)")
+        print("additional: \(self.calculator.additionalResult)")
+        self.calculator.calculateNewPrice(operand1: operand1, operand2: operand2)
+        print("result: \(self.calculator.result)")
+               print("additional: \(self.calculator.additionalResult)")
+        return true
+    }
+    
+    func missingNumberError() -> Bool {
+        return missingOperand
+    }
     
     var body: some View {
         VStack {
@@ -41,13 +68,11 @@ struct CalculationView: View {
             }.padding(.horizontal)
             
             Form{
-                SectionView(operand: $operand1, operandString: self.firstOperandString)
-                SectionView(operand: $operand2, operandString: self.secondOperandString)
-                ResultView(operand1: self.$operand1, operand2: self.$operand2, calculation: self.calculation )
-                //check to see if it's time to calculate
-//                checkCalculation() ?
-//                    ResultView(operand1: self.$operand1, operand2: self.$operand2, calculation: self.calculation) :
-//                    nil
+                SectionView(textfieldString: $operand1, headerTitle: self.firstOperandString)
+                SectionView(textfieldString: $operand2, headerTitle: self.secondOperandString)
+                if(canCalculate()){
+                    ResultView(calculation: self.calculation, result: self.calculator.result, additionalResult: self.calculator.additionalResult)
+                }
             }
         }
         .font(.title)
