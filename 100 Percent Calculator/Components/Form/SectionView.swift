@@ -14,16 +14,22 @@ struct SectionView: View{
     var headerTitle: String
     var textFieldDisabled: Bool = false
     var footer: String = ""
+    var withPercentage: Bool = false
+    
     
     var body: some View {
         Section(header: Text(self.headerTitle)
             .font(.title)
             .fontWeight(.black),
                 footer: self.footer.count > 0 ? Text(self.footer) : nil) {
-                TextField(self.headerTitle, text: $textfieldString)
-                .multilineTextAlignment(.trailing)
-                .keyboardType(.decimalPad)
-                    .disabled(self.textFieldDisabled)
+                    HStack {
+                        TextField(self.headerTitle, text: $textfieldString)
+                            .multilineTextAlignment(.trailing)
+                    .keyboardType(.decimalPad)
+                            .disabled(self.textFieldDisabled)
+                        withPercentage ?
+                            Text("%") : nil
+                    }
                 
         }
     }

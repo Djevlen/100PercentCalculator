@@ -12,7 +12,7 @@
                 "resultString": "Den nye prisen er",
                 "additionalString": "Hvor rabatten var",
                 "showCurrencySymbol": true,
-                "placePercentagesSymbolOn": "secondOperandString",
+                "placePercentagesSymbolOn": "Rabatt",
                 "defaultValue1": null,
                 "defaultValue2": null,
                 "isFavorite": false,

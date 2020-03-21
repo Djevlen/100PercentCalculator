@@ -25,7 +25,6 @@ struct ResultView: View{
         return self.calculation.additionalString
     }
     
-    
     var body: some View{
         Group{
             SectionView(textfieldString: self.bindableResult, headerTitle: self.resultString, textFieldDisabled: true, footer: self.additionalString + self.additionalResult)
