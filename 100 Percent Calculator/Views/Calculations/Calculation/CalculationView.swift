@@ -44,11 +44,7 @@ struct CalculationView: View {
                    numbersOnly = false
                    return false
                }
-        print("result: \(self.calculator.result)")
-        print("additional: \(self.calculator.additionalResult)")
         self.calculator.calculateNewPrice(operand1: operand1, operand2: operand2)
-        print("result: \(self.calculator.result)")
-               print("additional: \(self.calculator.additionalResult)")
         return true
     }
     
