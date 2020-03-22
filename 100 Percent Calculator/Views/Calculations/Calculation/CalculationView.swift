@@ -12,7 +12,7 @@ struct CalculationView: View {
     @EnvironmentObject private var userSettings: UserSettings
     var calculation: Calculation
     var section: Int
-    @ObservedObject var calculator = Calculator(result:  "",additionalResult: "")
+    //@ObservedObject var calculator = Calculator(result:  "",additionalResult: "")
     
     
     var calculationIndex: Int {
@@ -32,6 +32,9 @@ struct CalculationView: View {
     @State private var calculationDone: Bool = false
     @State private var numbersOnly = false
     @State private var missingOperand = false
+    
+    @State private var result = ""
+    @State private var additionalResult = ""
 
     
     
@@ -40,11 +43,10 @@ struct CalculationView: View {
         guard self.operand1.count > 0 && self.operand2.count > 0 else{
             return false
         }
-        guard let operand1 = Double(self.operand1), let operand2 = Double(self.operand2) else{
+        guard let _ = Double(self.operand1), let _ = Double(self.operand2) else{
                    numbersOnly = false
                    return false
                }
-        self.calculator.calculateNewPrice(operand1: operand1, operand2: operand2)
         return true
     }
     
@@ -67,7 +69,9 @@ struct CalculationView: View {
                 SectionView(textfieldString: $operand1, headerTitle: self.firstOperandString, withPercentage: self.calculation.placePercentagesSymbolOn.elementsEqual(self.calculation.firstOperandString))
                 SectionView(textfieldString: $operand2, headerTitle: self.secondOperandString, withPercentage: self.calculation.placePercentagesSymbolOn.elementsEqual(self.calculation.secondOperandString))
                 if(canCalculate()){
-                    ResultView(calculation: self.calculation, result: self.calculator.result, additionalResult: self.calculator.additionalResult)
+//                    ResultView(calculation: self.calculation, result: self.calc2.result, additionalResult: self.calc2.additionalResult)
+//
+                    ResultView(calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
                 }
             }
         }

@@ -1,52 +1,47 @@
 //
-//  ResultView.swift
+//  NewResult.swift
 //  100 Percent Calculator
 //
-//  Created by Thomas Andre Johansen on 19/03/2020.
+//  Created by Thomas Andre Johansen on 22/03/2020.
 //  Copyright © 2020 Appkokeriet. All rights reserved.
 //
 
 import SwiftUI
 
-struct ResultView: View{
+struct ResultView: View {
+    @ObservedObject var calculator: Calculator = Calculator()
     var calculation: Calculation
-    var result: String
-    var additionalResult: String
+    @Binding var operand1: String
+    @Binding var operand2: String
     
     var resultString: String {
         return self.calculation.resultString
     }
-    private var bindableResult: Binding<String> { Binding (
-        get: { self.currencyFormatted(input: self.result) },
-        set: { _ in }
-        )
-    }
     var additionalString: String {
         return self.calculation.additionalString
     }
-    func currencyFormatted(input: String) -> String {
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.usesGroupingSeparator = true
-        currencyFormatter.numberStyle = .currency
-        currencyFormatter.locale = Locale.current
+    private var bindableResult: Binding<String> { Binding (
+        get: {  self.calculator.result },
+        set: { _ in }
+        )
+    }
 
-        #warning("sjekk ut om dette kan gjøres penere")
-        // We'll force unwrap with the !, if you've got defined data you may need more error checking
-        let priceString = currencyFormatter.string(from: Double(input)! as NSNumber)
-        return priceString!
-        
+    init(calculation: Calculation, operand1: Binding<String>, operand2: Binding<String>) {
+        self.calculation = calculation
+        self._operand1 = operand1
+        self._operand2 = operand2
+        self.calculator.calculateNewPrice(operand1: self.operand1, operand2: self.operand2)
     }
     
-    
-    var body: some View{
+    var body: some View {
         Group{
-            SectionView(textfieldString: self.bindableResult, headerTitle: self.resultString, textFieldDisabled: true, footer: self.additionalString + self.additionalResult)
+            SectionView(textfieldString: self.bindableResult, headerTitle: self.resultString, textFieldDisabled: true, footer: self.additionalString + self.calculator.additionalResult)
         }
     }
 }
 
-//struct ResultView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResultView(calculation: calculationsData[0].calculations[0], result: "10", additionalResult: "10")
-//    }
-//}
+struct ResultView_Previews: PreviewProvider {
+    static var previews: some View {
+        ResultView(calculation: calculationsData[0].calculations[0], operand1: .constant("10"), operand2: .constant("10"))
+    }
+}

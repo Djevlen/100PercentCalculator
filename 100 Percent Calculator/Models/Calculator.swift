@@ -10,15 +10,13 @@ import SwiftUI
 import Combine
 
 class Calculator: ObservableObject{
-    var result: String
-    var additionalResult: String
+    @Published var result: String = ""
+    @Published var additionalResult: String = ""
 
-    init(result: String, additionalResult: String) {
-        self.result = result
-        self.additionalResult = additionalResult
-    }
+    func calculateNewPrice(operand1: String, operand2: String){
+        #warning("This goes to the future 'determineFunctionCall' funcion")
+        guard let operand1 = Double(operand1), let operand2 = Double(operand2) else{return}
 
-    func calculateNewPrice(operand1: Double, operand2: Double){
         let result = operand1 - ((operand2/100) * operand1 )
         let additionalResult = (operand2 / 100) * operand1
 

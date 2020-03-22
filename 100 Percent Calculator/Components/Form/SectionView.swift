@@ -16,6 +16,7 @@ struct SectionView: View{
     var footer: String = ""
     var withPercentage: Bool = false
     
+        #warning("lag en currencyFormatter for å formatere resultsatet")
     
     var body: some View {
         Section(header: Text(self.headerTitle)
