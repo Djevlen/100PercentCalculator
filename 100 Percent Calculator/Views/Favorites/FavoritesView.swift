@@ -15,8 +15,7 @@ struct FavoritesView: View {
         Group {
             //user has no favorites
             if(userSettings.favoriteCalculations.isEmpty){
-                Text("fav.title")
-                //NoFavoriteCalculationView
+                NoFavoritesView()
             }else{
                 List(userSettings.favoriteCalculations){ favorite in
                     FavoriteCellView(favorite: favorite)
