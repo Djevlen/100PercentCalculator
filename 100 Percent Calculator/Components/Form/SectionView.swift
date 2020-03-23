@@ -38,9 +38,12 @@ struct SectionView: View{
                 self.withPercentage ?
                     Text("%") : nil
             }
-            Text(self.footer)
+            HStack{
+                Spacer()
+                Text(self.footer)
                 .font(.caption)
                 .fontWeight(.light)
+            }
         }
     }
 }
