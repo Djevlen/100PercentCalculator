@@ -24,11 +24,10 @@ struct FavoriteCellView: View {
             SectionView(textfieldString: $operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString)
             SectionView(textfieldString: $operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString)
             if(self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
-                VStack{
+                VStack(alignment: .trailing){
                      ResultView(calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2)
-                    
+                    ButtonRow()
                 }
-               
             }
             
         }
