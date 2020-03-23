@@ -17,9 +17,15 @@ struct FavoritesView: View {
             if(userSettings.favoriteCalculations.isEmpty){
                 NoFavoritesView()
             }else{
-                List(userSettings.favoriteCalculations){ favorite in
-                    FavoriteCellView(favorite: favorite)
+                NavigationView{
+                    List(userSettings.favoriteCalculations){ favorite in
+                        FavoriteCellView(favorite: favorite)
+                    }
+                    
+                    .listStyle(DefaultListStyle())
+                    .navigationBarTitle(Text("Favorites"), displayMode: .inline).navigationBarItems(trailing: EditButton())
                 }
+                
             }
         }
         

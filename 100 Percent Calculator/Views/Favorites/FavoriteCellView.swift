@@ -27,10 +27,9 @@ struct FavoriteCellView: View {
                 ResultView(calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2)
             }
             
-    }
+        }
         .padding()
-    
-}
+    }
 }
 
 struct FavoriteCellView_Previews: PreviewProvider {
