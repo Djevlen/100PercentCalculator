@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct CalculationView: View {
-    @EnvironmentObject private var userSettings: UserSettings
+    @EnvironmentObject var userSettings: UserSettings
+    @ObservedObject var calculator: Calculator = Calculator()
     var calculation: Calculation
     var section: Int
     
@@ -46,25 +47,27 @@ struct CalculationView: View {
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 Spacer()
-                StarButton(section: self.section, calcIndex: self.calculationIndex, calculation: self.calculation)
+                StarButton(calculation: self.calculation)
                     .font(.title)
-            }.padding(.horizontal)
-            
-            Form{
-                SectionView(textfieldString: $operand1, headerTitle: self.firstOperandString, calculation: self.calculation)
-                SectionView(textfieldString: $operand2, headerTitle: self.secondOperandString, calculation: self.calculation)
-                if(canCalculate()){
+            }
+                Group{
+                    SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
+                    SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
+                    if(self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
                     ResultView(calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
                 }
             }
         }
-        .font(.title)
+            .font(.title)
+            .padding(.horizontal)
+        
     }
 }
 
 struct CalculationView_Previews: PreviewProvider {
     static var previews: some View {
         let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation](), startingTab: "Favorites")
-        return CalculationView(calculation: userSettings.data[0].calculations[0], section: 0).environmentObject(userSettings)
+        let calculator = Calculator()
+        return CalculationView(calculation: userSettings.data[0].calculations[0], section: 0).environmentObject(userSettings).environmentObject(calculator)
     }
 }

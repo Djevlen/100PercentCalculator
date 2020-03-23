@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CalculationsCell: View {
-    @EnvironmentObject private var userSettings: UserSettings
+    @EnvironmentObject var userSettings: UserSettings
     var calculation: Calculation
     var section: Int
 
@@ -19,7 +19,7 @@ struct CalculationsCell: View {
     var body: some View {
         HStack {
             Spacer()
-            StarButton(section: self.section, calcIndex: self.calculationIndex, calculation: self.calculation)
+            StarButton(calculation: self.calculation)
             .font(.title)
             
             Text(calculation.title)

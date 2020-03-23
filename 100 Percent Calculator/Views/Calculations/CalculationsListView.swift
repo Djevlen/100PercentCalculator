@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CalculationsListView: View {
-    @EnvironmentObject private var userSettings: UserSettings
+    @EnvironmentObject var userSettings: UserSettings
     
     var body: some View {
         NavigationView{

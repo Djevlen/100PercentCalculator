@@ -21,16 +21,21 @@ final class UserSettings: ObservableObject {
         self.startingTab = startingTab
     }
     
-    func toggleFavorite(section: Int, calculationIndex: Int, calculation: Calculation) {
-        self.data[section].calculations[calculationIndex].isFavorite.toggle()
-        if(self.data[section].calculations[calculationIndex].isFavorite == true){
+    func toggleFavoriteFromCalculation(calculation: Calculation){
+        guard let section = self.data.firstIndex(where: {$0.calculations.contains(calculation)}) else {
+            return
+        }
+        guard let calcIndex = self.data[section].calculations.firstIndex(where: {$0.id == calculation.id}) else {
+            return
+        }
+        self.data[section].calculations[calcIndex].isFavorite.toggle()
+        if(self.data[section].calculations[calcIndex].isFavorite == true){
             self.favoriteCalculations.append(calculation)
         }else{
             if let index = self.favoriteCalculations.firstIndex(where: { $0.id == calculation.id }) {
                 self.favoriteCalculations.remove(at: index)
             }
         }
-        
     }
 }
 

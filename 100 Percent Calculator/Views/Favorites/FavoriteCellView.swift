@@ -9,16 +9,28 @@
 import SwiftUI
 
 struct FavoriteCellView: View {
+    @ObservedObject var calculator: Calculator = Calculator()
     var favorite: Calculation
+    @State var operand1: String = ""
+    @State var operand2: String = ""
     
     var body: some View {
-        HStack{
-            Text(favorite.title)
-            Spacer()
+        VStack{
+            HStack{
+                Text(favorite.title)
+                Spacer()
+                StarButton(calculation: self.favorite)
+            }
+            SectionView(textfieldString: $operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString)
+            SectionView(textfieldString: $operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString)
+            if(self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
+                ResultView(calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2)
+            }
             
-        }
-        
     }
+        .padding()
+    
+}
 }
 
 struct FavoriteCellView_Previews: PreviewProvider {

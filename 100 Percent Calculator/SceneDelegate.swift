@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation](), startingTab: "Favorites")
-            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(userSettings))
+            window.rootViewController = UIHostingController(rootView: contentView .environmentObject(userSettings))
             
             self.window = window
             window.makeKeyAndVisible()

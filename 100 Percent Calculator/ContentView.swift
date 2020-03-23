@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     #warning("get selectedTab from user settings, favs by default")
-    @EnvironmentObject private var userSettings: UserSettings
+    @EnvironmentObject var userSettings: UserSettings
 
 
     var body: some View {

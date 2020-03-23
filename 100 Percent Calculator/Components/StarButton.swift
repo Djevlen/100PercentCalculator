@@ -10,13 +10,11 @@ import SwiftUI
 
 struct StarButton: View {
     @EnvironmentObject var userSettings: UserSettings
-    var section: Int
-    var calcIndex: Int
     var calculation: Calculation
     
     var body: some View {
-        Button(action: {self.userSettings.toggleFavorite(section: self.section, calculationIndex: self.calcIndex, calculation: self.calculation)}){
-        Image(systemName: self.userSettings.data[self.section].calculations[self.calcIndex].isFavorite ? "star.fill" : "star")
+        Button(action: {self.userSettings.toggleFavoriteFromCalculation(calculation: self.calculation)}){
+        Image(systemName: self.calculation.isFavorite ? "star.fill" : "star")
         .foregroundColor(.yellow)
     }
     }
@@ -24,6 +22,6 @@ struct StarButton: View {
 
 struct StarButton_Previews: PreviewProvider {
     static var previews: some View {
-        StarButton(section: 0, calcIndex: 0, calculation: calculationsData[0].calculations[0]).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation](), startingTab: "lol"))
+        StarButton(calculation: calculationsData[0].calculations[0]).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation](), startingTab: "lol"))
     }
 }
