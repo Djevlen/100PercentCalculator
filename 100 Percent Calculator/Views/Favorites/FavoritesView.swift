@@ -18,8 +18,11 @@ struct FavoritesView: View {
                 NoFavoritesView()
             }else{
                 NavigationView{
-                    List(userSettings.favoriteCalculations){ favorite in
-                        FavoriteCellView(favorite: favorite)
+                    List{
+                        ForEach(userSettings.favoriteCalculations){ favorite in
+                            FavoriteCellView(favorite: favorite)
+                        }
+                    .onMove(perform: moveCell)
                     }
                     
                     .listStyle(DefaultListStyle())
@@ -31,6 +34,10 @@ struct FavoritesView: View {
         
         
         
+    }
+    
+    func moveCell(from source: IndexSet, to destination: Int){
+        userSettings.favoriteCalculations.move(fromOffsets: source, toOffset: destination)
     }
 }
 
