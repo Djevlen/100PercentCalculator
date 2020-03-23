@@ -12,8 +12,6 @@ struct CalculationView: View {
     @EnvironmentObject private var userSettings: UserSettings
     var calculation: Calculation
     var section: Int
-    //@ObservedObject var calculator = Calculator(result:  "",additionalResult: "")
-    
     
     var calculationIndex: Int {
         userSettings.data[section].calculations.firstIndex(where: { $0.id == calculation.id })!
@@ -29,29 +27,16 @@ struct CalculationView: View {
     
     @State private var operand1: String = ""
     @State private var operand2: String = ""
-    @State private var calculationDone: Bool = false
-    @State private var numbersOnly = false
-    @State private var missingOperand = false
-    
-    @State private var result = ""
-    @State private var additionalResult = ""
-
     
     
     func canCalculate() -> Bool{
-        print("i cancalculate")
         guard self.operand1.count > 0 && self.operand2.count > 0 else{
             return false
         }
         guard let _ = Double(self.operand1), let _ = Double(self.operand2) else{
-                   numbersOnly = false
                    return false
                }
         return true
-    }
-    
-    func missingNumberError() -> Bool {
-        return missingOperand
     }
     
     var body: some View {
@@ -69,8 +54,6 @@ struct CalculationView: View {
                 SectionView(textfieldString: $operand1, headerTitle: self.firstOperandString, withPercentage: self.calculation.placePercentagesSymbolOn.elementsEqual(self.calculation.firstOperandString))
                 SectionView(textfieldString: $operand2, headerTitle: self.secondOperandString, withPercentage: self.calculation.placePercentagesSymbolOn.elementsEqual(self.calculation.secondOperandString))
                 if(canCalculate()){
-//                    ResultView(calculation: self.calculation, result: self.calc2.result, additionalResult: self.calc2.additionalResult)
-//
                     ResultView(calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
                 }
             }
