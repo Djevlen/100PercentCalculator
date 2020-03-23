@@ -14,7 +14,10 @@ struct SectionView: View{
     var headerTitle: String
     var textFieldDisabled: Bool = false
     var footer: String = ""
-    var withPercentage: Bool = false
+    var calculation: Calculation
+    var withPercentage: Bool {
+         return self.calculation.placePercentagesSymbolOn.elementsEqual(self.headerTitle)
+    }
     
         #warning("lag en currencyFormatter for å formatere resultsatet")
     
@@ -28,7 +31,7 @@ struct SectionView: View{
                             .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)
                             .disabled(self.textFieldDisabled)
-                        withPercentage ?
+                        self.withPercentage ?
                             Text("%") : nil
                     }
                 
@@ -38,7 +41,7 @@ struct SectionView: View{
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(textfieldString: .constant("lol"), headerTitle: "lol")
+        SectionView(textfieldString: .constant("lol"), headerTitle: "lol", calculation: calculationsData[0].calculations[0])
     }
 }
 

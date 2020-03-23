@@ -35,7 +35,7 @@ struct ResultView: View {
     
     var body: some View {
         Group{
-            SectionView(textfieldString: self.bindableResult, headerTitle: self.resultString, textFieldDisabled: true, footer: self.additionalString + self.calculator.additionalResult)
+            SectionView(textfieldString: self.bindableResult, headerTitle: self.resultString, textFieldDisabled: true, footer: self.additionalString + self.calculator.additionalResult, calculation: self.calculation)
         }
     }
 }

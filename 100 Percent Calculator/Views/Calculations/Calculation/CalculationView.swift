@@ -51,8 +51,8 @@ struct CalculationView: View {
             }.padding(.horizontal)
             
             Form{
-                SectionView(textfieldString: $operand1, headerTitle: self.firstOperandString, withPercentage: self.calculation.placePercentagesSymbolOn.elementsEqual(self.calculation.firstOperandString))
-                SectionView(textfieldString: $operand2, headerTitle: self.secondOperandString, withPercentage: self.calculation.placePercentagesSymbolOn.elementsEqual(self.calculation.secondOperandString))
+                SectionView(textfieldString: $operand1, headerTitle: self.firstOperandString, calculation: self.calculation)
+                SectionView(textfieldString: $operand2, headerTitle: self.secondOperandString, calculation: self.calculation)
                 if(canCalculate()){
                     ResultView(calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
                 }
