@@ -25,10 +25,9 @@ struct SectionView: View{
     var body: some View {
         VStack{
             HStack{
-                self.header.count > 0 ? Text(self.header)
+                Text(self.header)
                 .font(.title)
                 .fontWeight(.black)
-                 : nil
                 Spacer()
                 }
             HStack {
@@ -39,17 +38,16 @@ struct SectionView: View{
                 self.withPercentage ?
                     Text("%") : nil
             }
-            self.footer.count > 0 ? Text(self.footer)
-            .font(.title)
-            .fontWeight(.black)
-             : nil
+            Text(self.footer)
+                .font(.caption)
+                .fontWeight(.light)
         }
     }
 }
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(textfieldString: .constant("lol"), header: "lol", calculation: calculationsData[0].calculations[0])
+        SectionView(textfieldString: .constant("lol"), header: "header",footer: "footer", calculation: calculationsData[0].calculations[0])
     }
 }
 
