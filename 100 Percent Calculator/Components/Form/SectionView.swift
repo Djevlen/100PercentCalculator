@@ -11,37 +11,45 @@ import SwiftUI
 
 struct SectionView: View{
     @Binding var textfieldString: String
-    var headerTitle: String
+    var header: String = ""
     var textFieldDisabled: Bool = false
     var footer: String = ""
     var calculation: Calculation
+    var placeholder: String = ""
     var withPercentage: Bool {
-         return self.calculation.placePercentagesSymbolOn.elementsEqual(self.headerTitle)
+         return self.calculation.placePercentagesSymbolOn.elementsEqual(self.placeholder)
     }
     
         #warning("lag en currencyFormatter for å formatere resultsatet")
     
     var body: some View {
-        Section(header: Text(self.headerTitle)
+        VStack{
+            HStack{
+                self.header.count > 0 ? Text(self.header)
+                .font(.title)
+                .fontWeight(.black)
+                 : nil
+                Spacer()
+                }
+            HStack {
+                TextField(self.placeholder, text: $textfieldString)
+                    .multilineTextAlignment(.trailing)
+            .keyboardType(.decimalPad)
+                    .disabled(self.textFieldDisabled)
+                self.withPercentage ?
+                    Text("%") : nil
+            }
+            self.footer.count > 0 ? Text(self.footer)
             .font(.title)
-            .fontWeight(.black),
-                footer: self.footer.count > 0 ? Text(self.footer) : nil) {
-                    HStack {
-                        TextField(self.headerTitle, text: $textfieldString)
-                            .multilineTextAlignment(.trailing)
-                    .keyboardType(.decimalPad)
-                            .disabled(self.textFieldDisabled)
-                        self.withPercentage ?
-                            Text("%") : nil
-                    }
-                
+            .fontWeight(.black)
+             : nil
         }
     }
 }
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(textfieldString: .constant("lol"), headerTitle: "lol", calculation: calculationsData[0].calculations[0])
+        SectionView(textfieldString: .constant("lol"), header: "lol", calculation: calculationsData[0].calculations[0])
     }
 }
 
