@@ -24,8 +24,7 @@ struct FavoritesView: View {
                         }
                     .onMove(perform: moveCell)
                     }
-                    
-                    .listStyle(DefaultListStyle())
+                    .listStyle(PlainListStyle())
                     .navigationBarTitle(Text("Favorites"), displayMode: .inline).navigationBarItems(trailing: EditButton())
                 }
                 
