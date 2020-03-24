@@ -39,9 +39,7 @@ struct CalculationsListView: View {
             .listStyle(GroupedListStyle())
             .navigationBarTitle("100% Percent Calculator", displayMode: .inline)
             .navigationBarItems(trailing: EditButton())
-
         }
-    
     }
     
     func getSection(from category: CalculationCategory) -> Int{
