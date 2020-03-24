@@ -10,32 +10,49 @@ import SwiftUI
 
 struct ButtonRow: View {
     @EnvironmentObject var userSettings: UserSettings
+    var calculation: Calculation
+    @Binding var operand1: String
+    @Binding var operand2: String
+    @Binding var result: String
 
     
-    var calculation: Calculation
     var body: some View {
         HStack{
+
             Button(action: {
-                print("Button")
+                self.copyResult()
             }, label: {
-                Text("Copy")
+                Image(systemName: "doc.on.doc")
+                .padding()
+                .border(Color.blue, width: 2)
             })
+
             Button(action: {
-                print("Button")
+                
             }, label: {
-                Text("Reset")
-            })
-            Button(action: {
-                print("Button")
-            }, label: {
-                Text("Done")
+                Image(systemName: "checkmark")
+                    .padding()
+                    .border(Color.blue, width: 2)
+                    .onTapGesture {
+                        self.done()
+                }
             })
         }
+    }
+    
+    func copyResult(){
+        let copyResult = UIPasteboard.general
+        copyResult.string = self.result
+    }
+    
+    func done(){
+        self.operand1 = ""
+        self.operand2 = ""
     }
 }
 
 struct ButtonRow_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonRow(calculation: calculationsData[0].calculations[0])
+        ButtonRow(calculation: calculationsData[0].calculations[0], operand1: .constant("10"), operand2: .constant("10"), result: .constant("20")).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation](), startingTab: "lol"))
     }
 }
