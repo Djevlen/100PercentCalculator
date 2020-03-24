@@ -21,8 +21,8 @@ struct Calculation: Hashable, Codable, Identifiable {
     var additionalString: String
     var showCurrencySymbol: Bool
     var placePercentagesSymbolOn: String
-    var defaultValue1: Double?
-    var defaultValue2: Double?
+    var defaultValue1: String?
+    var defaultValue2: String?
     var isFavorite: Bool
     var isHidden: Bool
 }

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CalculationView: View {
+    @Environment(\.editMode) var mode
     @EnvironmentObject var userSettings: UserSettings
     @ObservedObject var calculator: Calculator = Calculator()
     var calculation: Calculation
@@ -25,46 +26,40 @@ struct CalculationView: View {
         return self.calculation.secondOperandString
     }
     
-    
     @State private var operand1: String = ""
     @State private var operand2: String = ""
     
-    
-    func canCalculate() -> Bool{
-        guard self.operand1.count > 0 && self.operand2.count > 0 else{
-            return false
-        }
-        guard let _ = Double(self.operand1), let _ = Double(self.operand2) else{
-            return false
-        }
-        return true
-    }
-    
     var body: some View {
         NavigationView {
-            VStack {
-                HStack{
-                    Text(self.userSettings.data[self.section].calculations[self.calculationIndex].title)
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                    Spacer()
-                    StarButton(calculation: self.calculation)
-                        .font(.largeTitle)
-                }
-                Group{
-                    SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
-                    SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
-                    if(self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
-                        ResultView(calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
+            if self.mode?.wrappedValue == .inactive {
+                VStack {
+                    HStack{
+                        Text(self.userSettings.data[self.section].calculations[self.calculationIndex].title)
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                        Spacer()
+                        StarButton(calculation: self.calculation)
+                            .font(.largeTitle)
+                    }
+                    Group{
+                        SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
+                        SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
+                        if(self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
+                            ResultView(calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
+                        }
                     }
                 }
+                
+            } else {
+                EditDefaultsView(calculation: self.calculation)
             }
-            .font(.title)
-            .navigationBarTitle(Text(self.calculation.title), displayMode: .inline)
-            .padding(.horizontal)
+            
 
         }
-
+        .font(.title)
+        .navigationBarTitle(Text(self.calculation.title), displayMode: .inline)
+        .navigationBarItems(trailing: EditButton())
+        .padding(.horizontal)
         
     }
 }
