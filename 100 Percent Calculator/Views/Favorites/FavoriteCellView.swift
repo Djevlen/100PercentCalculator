@@ -11,8 +11,8 @@ import SwiftUI
 struct FavoriteCellView: View {
     @ObservedObject var calculator: Calculator = Calculator()
     var favorite: Calculation
-    @State var operand1: String = "10"
-    @State var operand2: String = "10"
+    @State var operand1: String = ""
+    @State var operand2: String = ""
     
     var body: some View {
         VStack{
@@ -21,12 +21,15 @@ struct FavoriteCellView: View {
                 Spacer()
                 StarButton(calculation: self.favorite)
             }
-            SectionView(textfieldString: $operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString)
-            SectionView(textfieldString: $operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString)
+            Group{
+                SectionView(textfieldString: self.$operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString)
+                SectionView(textfieldString: self.$operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString)
+                
+            }
+            
             if(self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
                 VStack(alignment: .trailing){
                      ResultView(calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2)
-                    ButtonRow()
                 }
             }
             

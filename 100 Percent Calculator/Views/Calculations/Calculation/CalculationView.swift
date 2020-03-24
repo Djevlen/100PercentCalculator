@@ -48,7 +48,7 @@ struct CalculationView: View {
                     .fontWeight(.heavy)
                 Spacer()
                 StarButton(calculation: self.calculation)
-                    .font(.title)
+                    .font(.largeTitle)
             }
                 Group{
                     SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
