@@ -15,42 +15,60 @@ struct SectionView: View{
     var textFieldDisabled: Bool = false
     var footer: String = ""
     var calculation: Calculation
-    var placeholder: String = ""
+    var placeholder: String
     var withPercentage: Bool {
-         return self.calculation.placePercentagesSymbolOn.elementsEqual(self.placeholder)
+        return self.calculation.placePercentagesSymbolOn.elementsEqual(self.placeholder)
     }
     
-        #warning("lag en currencyFormatter for å formatere resultsatet")
-    
+    #warning("lag en currencyFormatter for å formatere resultsatet")
+    #warning("animate this")
+
     var body: some View {
         VStack{
             HStack{
                 Text(self.header)
-                .font(.title)
-                .fontWeight(.black)
+                    .font(.title)
+                    .fontWeight(.black)
                 Spacer()
-                }
+            }
             HStack {
-                TextField(self.placeholder, text: $textfieldString)
-                    .multilineTextAlignment(.trailing)
-            .keyboardType(.decimalPad)
-                    .disabled(self.textFieldDisabled)
-                self.withPercentage ?
-                    Text("%") : nil
+                if(textfieldString.isEmpty || textFieldDisabled){
+                    TextField(self.placeholder, text: $textfieldString)
+                        .multilineTextAlignment(.trailing)
+                        .keyboardType(.decimalPad)
+                        .disabled(self.textFieldDisabled)
+                    self.withPercentage ?
+                        Text("%") : nil
+                }else{
+                    HStack{
+                        Text(self.placeholder)
+                            .font(.footnote)
+                        TextField(self.placeholder, text: $textfieldString)
+                            .multilineTextAlignment(.trailing)
+                            .keyboardType(.decimalPad)
+                            .disabled(self.textFieldDisabled)
+                        self.withPercentage ?
+                            Text("%") : nil
+                    }
+                    
+                }
+                
             }
-            HStack{
-                Spacer()
-                Text(self.footer)
-                .font(.caption)
-                .fontWeight(.light)
-            }
+            self.footer.count > 0 ?
+                HStack{
+                    Spacer()
+                    Text(self.footer)
+                        .font(.caption)
+                        .fontWeight(.light)
+                }
+                : nil
         }
     }
 }
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(textfieldString: .constant("lol"), header: "header",footer: "footer", calculation: calculationsData[0].calculations[0])
+        SectionView(textfieldString: .constant("lol"), header: "header",footer: "footer", calculation: calculationsData[0].calculations[0], placeholder: "placeholder")
     }
 }
 
