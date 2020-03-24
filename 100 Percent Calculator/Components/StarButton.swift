@@ -13,10 +13,13 @@ struct StarButton: View {
     var calculation: Calculation
     
     var body: some View {
-        Button(action: {self.userSettings.toggleFavoriteFromCalculation(calculation: self.calculation)}){
         Image(systemName: self.calculation.isFavorite ? "star.fill" : "star")
-        .foregroundColor(.yellow)
-    }
+            .resizable()
+            .frame(width: 50, height: 50, alignment: .trailing)
+            .foregroundColor(.yellow)
+            .onTapGesture {
+                self.userSettings.toggleFavoriteFromCalculation(calculation: self.calculation)
+            }
     }
 }
 

@@ -18,25 +18,19 @@ struct ButtonRow: View {
     
     var body: some View {
         HStack{
-
-            Button(action: {
-                self.copyResult()
-            }, label: {
                 Image(systemName: "doc.on.doc")
                 .padding()
                 .border(Color.blue, width: 2)
-            })
-
-            Button(action: {
-                
-            }, label: {
+                    .onTapGesture {
+                         self.copyResult()
+                }
                 Image(systemName: "checkmark")
                     .padding()
                     .border(Color.blue, width: 2)
                     .onTapGesture {
                         self.done()
                 }
-            })
+
         }
     }
     
