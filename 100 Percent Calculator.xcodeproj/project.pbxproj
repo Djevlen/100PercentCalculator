@@ -20,6 +20,7 @@
 		E938011E2424B94E00BA196F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938011D2424B94E00BA196F /* Calculator.swift */; };
 		E940F0F4242B3F0000BA2090 /* CalculationHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */; };
 		E940F0F6242B650200BA2090 /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940F0F5242B650200BA2090 /* SettingsListView.swift */; };
+		E940F0F8242B67FA00BA2090 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940F0F7242B67FA00BA2090 /* PrivacyPolicyView.swift */; };
 		E951B3022423584000316662 /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3012423584000316662 /* FavoriteCellView.swift */; };
 		E951B3052423597800316662 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3042423597800316662 /* StarButton.swift */; };
 		E9664E8D24290447007C67C8 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9664E8C24290447007C67C8 /* ButtonRow.swift */; };
@@ -60,6 +61,7 @@
 		E938011D2424B94E00BA196F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHost.swift; sourceTree = "<group>"; };
 		E940F0F5242B650200BA2090 /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
+		E940F0F7242B67FA00BA2090 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		E951B3012423584000316662 /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
 		E951B3042423597800316662 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 		E9664E8C24290447007C67C8 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E940F0F5242B650200BA2090 /* SettingsListView.swift */,
+				E940F0F7242B67FA00BA2090 /* PrivacyPolicyView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				E90CD7DD24214DF100BA5274 /* CalculationsCell.swift in Sources */,
 				E940F0F6242B650200BA2090 /* SettingsListView.swift in Sources */,
 				E90CD7D92421126400BA5274 /* JsonData.swift in Sources */,
+				E940F0F8242B67FA00BA2090 /* PrivacyPolicyView.swift in Sources */,
 				E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */,
 				E90F7AB22423849A00C31994 /* SectionView.swift in Sources */,
 				E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */,

@@ -13,17 +13,20 @@ struct SettingsListView: View {
         NavigationView{
             List{
                 Section{
-                    Text("lol")
                     Text("Use Currency")
                     Text("Show timer removing favorites")
                     Text("Default Tab")
                     Text("Restore deleted calculations")
+                    
                 }
                 Section{
                     Text("iAP View")
                 }
-                Section{
+                Section(footer: Text("(C) Appbryggeriet 2020")){
                     Text("About View")
+                    NavigationLink(destination: PrivacyPolicyView()) {
+                        Text("Privacy Policy")
+                    }
                 }
                 
                 //AboutView
