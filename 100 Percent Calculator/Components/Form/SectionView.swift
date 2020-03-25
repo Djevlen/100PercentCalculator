@@ -22,7 +22,7 @@ struct SectionView: View{
     
     #warning("lag en currencyFormatter for å formatere resultsatet")
     #warning("animate this")
-
+    
     var body: some View {
         VStack{
             HStack{
@@ -32,27 +32,23 @@ struct SectionView: View{
                 Spacer()
             }
             HStack {
-                if(textfieldString.isEmpty || textFieldDisabled){
-                    TextField(self.placeholder, text: $textfieldString)
-                        .multilineTextAlignment(.trailing)
-                        .keyboardType(.decimalPad)
-                        .disabled(self.textFieldDisabled)
-                    self.withPercentage ?
-                        Text("%") : nil
-                }else{
-                    HStack{
-                        Text(self.placeholder)
-                            .font(.footnote)
-                        TextField(self.placeholder, text: $textfieldString)
-                            .multilineTextAlignment(.trailing)
-                            .keyboardType(.decimalPad)
-                            .disabled(self.textFieldDisabled)
-                        self.withPercentage ?
-                            Text("%") : nil
-                    }
-                    
+                if(!textfieldString.isEmpty && !self.textFieldDisabled){
+                    Text(self.placeholder)
+                    .font(.footnote)
+                    Spacer()
+                }
+                if(self.textFieldDisabled){
+                    Text(self.placeholder)
+                    .font(.largeTitle)
+                    Spacer()
                 }
                 
+                TextField(self.placeholder, text: $textfieldString)
+                    .multilineTextAlignment(.trailing)
+                    .keyboardType(.decimalPad)
+                    .disabled(self.textFieldDisabled)
+                self.withPercentage ?
+                    Text("%") : nil
             }
             self.footer.count > 0 ?
                 HStack{

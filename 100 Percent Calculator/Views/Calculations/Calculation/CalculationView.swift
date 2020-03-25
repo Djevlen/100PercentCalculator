@@ -43,9 +43,12 @@ struct CalculationView: View {
                     ResultView(calculation: calculation, operand1: self.$operand1, operand2: self.$operand2)
                 }
             }
+            Spacer()
+
         }
         .font(.title)
         .padding(.horizontal)
+        
     }
     
 }
