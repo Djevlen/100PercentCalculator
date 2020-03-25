@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EditDefaultsView: View {
     @EnvironmentObject var userSettings: UserSettings
-
+    
     var calculation: Calculation
     
     @State var operand1: String = ""
@@ -25,10 +25,12 @@ struct EditDefaultsView: View {
     
     var body: some View {
         VStack{
-           HStack{
+            Text("Default Values")
+                .font(.largeTitle)
+            HStack{
                 Text(self.calculation.firstOperandString)
                     .font(.footnote)
-            TextField(self.calculation.firstOperandString, text: $operand1)
+                TextField(self.calculation.firstOperandString, text: $operand1)
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)
             }
@@ -43,13 +45,14 @@ struct EditDefaultsView: View {
                 Spacer()
                 Text("Save")
                     .onTapGesture {
-                            self.save()
-                    }
+                        self.save()
+                }
                 .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 10).foregroundColor(.green).opacity(0.3))
-                    
-            
+                .overlay(RoundedRectangle(cornerRadius: 10).foregroundColor(.green).opacity(0.3))
+                
+                
             }
+            Spacer()
         }
         .padding(.horizontal)
     }
