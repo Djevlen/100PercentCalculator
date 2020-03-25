@@ -9,10 +9,19 @@
 import SwiftUI
 
 struct EditDefaultsView: View {
+    @EnvironmentObject var userSettings: UserSettings
+
     var calculation: Calculation
     
     @State var operand1: String = ""
     @State var operand2: String = ""
+    
+    private func save(){
+        guard operand1.count > 0 || operand2.count > 0 else{
+            return
+        }
+        self.userSettings.saveDefaultOperandValue(calculation: self.calculation, operands: (operand1, operand2))
+    }
     
     var body: some View {
         VStack{
@@ -30,30 +39,24 @@ struct EditDefaultsView: View {
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)
             }
-            VStack(alignment: .trailing){
-                Button(action: {
-                    print("SAVE!")
-                }) {
-                    Image(systemName: "wand.and.stars")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .background(Color.red)
-
-
-                }
-                
+            HStack{
+                Spacer()
+                Text("Save")
+                    .onTapGesture {
+                            self.save()
+                    }
+                .padding()
+                    .overlay(RoundedRectangle(cornerRadius: 10).foregroundColor(.green).opacity(0.3))
+                    
+            
             }
-            
         }
-        
-            
-        
-        
+        .padding(.horizontal)
     }
 }
 
 struct EditDefaultsView_Previews: PreviewProvider {
     static var previews: some View {
-        EditDefaultsView(calculation: calculationsData[0].calculations[0])
+        EditDefaultsView(calculation: calculationsData[0].calculations[0]).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation](), startingTab: "lol"))
     }
 }

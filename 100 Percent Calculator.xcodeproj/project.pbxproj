@@ -18,6 +18,8 @@
 		E91260852428059E00B2C8A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E91260842428059E00B2C8A2 /* .gitignore */; };
 		E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93388FD242A5120007B7A51 /* EditDefaultsView.swift */; };
 		E938011E2424B94E00BA196F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938011D2424B94E00BA196F /* Calculator.swift */; };
+		E940F0F4242B3F0000BA2090 /* CalculationHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */; };
+		E940F0F6242B650200BA2090 /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940F0F5242B650200BA2090 /* SettingsListView.swift */; };
 		E951B3022423584000316662 /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3012423584000316662 /* FavoriteCellView.swift */; };
 		E951B3052423597800316662 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3042423597800316662 /* StarButton.swift */; };
 		E9664E8D24290447007C67C8 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9664E8C24290447007C67C8 /* ButtonRow.swift */; };
@@ -56,6 +58,8 @@
 		E91260842428059E00B2C8A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E93388FD242A5120007B7A51 /* EditDefaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDefaultsView.swift; sourceTree = "<group>"; };
 		E938011D2424B94E00BA196F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHost.swift; sourceTree = "<group>"; };
+		E940F0F5242B650200BA2090 /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
 		E951B3012423584000316662 /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
 		E951B3042423597800316662 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 		E9664E8C24290447007C67C8 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		E90CD7CB2420EBC000BA5274 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				E940F0F5242B650200BA2090 /* SettingsListView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			children = (
 				E9D3DDBA24220C400009DF21 /* CalculationView.swift */,
 				E93388FD242A5120007B7A51 /* EditDefaultsView.swift */,
+				E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */,
 			);
 			path = Calculation;
 			sourceTree = "<group>";
@@ -349,9 +355,11 @@
 				E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */,
 				E938011E2424B94E00BA196F /* Calculator.swift in Sources */,
 				E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */,
+				E940F0F4242B3F0000BA2090 /* CalculationHost.swift in Sources */,
 				E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */,
 				E9D3DDBD24221E590009DF21 /* UserSettings.swift in Sources */,
 				E90CD7DD24214DF100BA5274 /* CalculationsCell.swift in Sources */,
+				E940F0F6242B650200BA2090 /* SettingsListView.swift in Sources */,
 				E90CD7D92421126400BA5274 /* JsonData.swift in Sources */,
 				E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */,
 				E90F7AB22423849A00C31994 /* SectionView.swift in Sources */,

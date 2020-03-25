@@ -18,10 +18,9 @@ struct CalculationsCell: View {
     }
     var body: some View {
         HStack {
-            Spacer()
             StarButton(calculation: self.calculation)
-            .font(.title)
-            
+                .font(.title)
+
             Text(calculation.title)
                 .font(.body)
         }

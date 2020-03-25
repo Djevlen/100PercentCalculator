@@ -21,9 +21,8 @@ struct CalculationsListView: View {
                         ) {
                             ForEach(category.calculations){ calc in
                                 if(calc.isHidden == false){
-                                    
-                                    NavigationLink(destination: CalculationView( calculation: calc, section: self.getSection(from: category))) {
-                                        CalculationsCell( calculation: calc, section: self.getSection(from: category))
+                                    NavigationLink(destination: CalculationHost(calculation: calc)) {
+                                        CalculationsCell(calculation: calc, section: self.getSection(from: category))
                                     }
                                 }
                             }

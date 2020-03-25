@@ -13,8 +13,8 @@
                 "additionalString": "Hvor rabatten var",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Rabatt",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": "20",
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             },
@@ -27,8 +27,8 @@
                 "additionalString": "Jeg sparte",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Rabatten var",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             }
@@ -49,8 +49,8 @@
                 "additionalString": "",
                 "showCurrencySymbol": false,
                 "placePercentagesSymbolOn": "Hvor mange prosent er",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             },
@@ -63,8 +63,8 @@
                 "additionalString": "",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Det er ...",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             },
@@ -77,8 +77,8 @@
                 "additionalString": "",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Da må jeg legge til",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             }
@@ -99,8 +99,8 @@
                 "additionalString": "MVA-summen er",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "MVA",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             },
@@ -113,8 +113,8 @@
                 "additionalString": "Jeg sparte",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "MVA",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             }
@@ -135,8 +135,8 @@
                 "additionalString": "Dekningsgraden er",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Dekningsgraden er",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             },
@@ -149,8 +149,8 @@
                 "additionalString": "Dekningsbidraget er",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Dekningsgrad",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             }
@@ -171,8 +171,8 @@
                 "additionalString": "Den totale summen blir",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Tips",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             },
@@ -185,8 +185,8 @@
                 "additionalString": "Hvor tipset tilsvarer",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Tips mottatt",
-                "defaultValue1": null,
-                "defaultValue2": null,
+                "defaultOperand1": null,
+                "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false
             }

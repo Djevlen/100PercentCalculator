@@ -37,6 +37,22 @@ final class UserSettings: ObservableObject {
             }
         }
     }
+    
+    func saveDefaultOperandValue(calculation: Calculation, operands: (operand1: String, operand2: String)){
+        guard let section = self.data.firstIndex(where: {$0.calculations.contains(calculation)}) else {
+            return
+        }
+        guard let calcIndex = self.data[section].calculations.firstIndex(where: {$0.id == calculation.id}) else {
+            return
+        }
+        if(operands.operand1.count > 0 && operands.operand1 != nil){
+            self.data[section].calculations[calcIndex].defaultOperand1 = operands.operand1
+        }
+        if(operands.operand2.count > 0 && operands.operand2 != nil){
+            self.data[section].calculations[calcIndex].defaultOperand2 = operands.operand2
+        }
+        
+    }
 }
 
 //enum StartingTabs {
