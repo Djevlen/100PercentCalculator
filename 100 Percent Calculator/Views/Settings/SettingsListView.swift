@@ -22,28 +22,20 @@ struct SettingsListView: View {
                     Toggle(isOn: $userSettings.startOnFavorites) {
                         Text("Open app in Favorites view")
                     }
-                    Text("Restore deleted calculations")                    
+                    Text("Restore deleted calculations")
+                        .onTapGesture {
+                            self.userSettings.restoreCalculations()
+                    }
                 }
                 Section{
                     Text("iAP View")
                 }
                 Section(footer: Text("(C) Appbryggeriet 2020")){
-                    Text("About View + Contact Info")
+                    Text("About View + Contact Info ")
                     NavigationLink(destination: PrivacyPolicyView()) {
                         Text("Privacy Policy")
                     }
                 }
-                
-                //AboutView
-                //iAPView
-                //Privacy Policy
-                /*SettingsView
-                 Use Currency:
-                 Currency: default/choose
-                 Timer to unfav
-                 Default Starting Tab
-                 Restore Deleted Calculations
-                 */
             }
             .navigationBarTitle(Text("Settings"))
             .listStyle(GroupedListStyle())

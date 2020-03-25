@@ -17,7 +17,7 @@ final class UserSettings: ObservableObject {
     @Published var selectedTab = "Favorites"
     @Published var useCurrency: Bool = true
     @Published var startOnFavorites: Bool = true
-
+    
     @Published var deletionWarningDismissed: Bool = false
     
     
@@ -59,8 +59,8 @@ final class UserSettings: ObservableObject {
         }
         
     }
+    func restoreCalculations(){
+    }
+    
+    
 }
-
-//enum StartingTabs {
-//    case "Favorites":
-//}
