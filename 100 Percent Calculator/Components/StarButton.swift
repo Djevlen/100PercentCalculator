@@ -14,8 +14,6 @@ struct StarButton: View {
     
     var body: some View {
         Image(systemName: self.calculation.isFavorite ? "star.fill" : "star")
-            .resizable()
-            .frame(width: 50, height: 50, alignment: .trailing)
             .foregroundColor(.yellow)
             .onTapGesture {
                 self.userSettings.toggleFavoriteFromCalculation(calculation: self.calculation)
