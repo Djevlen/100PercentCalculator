@@ -57,6 +57,6 @@ struct EditDefaultsView: View {
 
 struct EditDefaultsView_Previews: PreviewProvider {
     static var previews: some View {
-        EditDefaultsView(calculation: calculationsData[0].calculations[0]).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation](), startingTab: "lol"))
+        EditDefaultsView(calculation: calculationsData[0].calculations[0]).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation]()))
     }
 }

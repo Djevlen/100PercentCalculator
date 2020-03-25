@@ -42,7 +42,7 @@ struct FavoritesView: View {
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
-        let userSettings = UserSettings(data: calculationsData, favoriteCalculations: calculationsData[0].calculations, startingTab: "Favorites")
+        let userSettings = UserSettings(data: calculationsData, favoriteCalculations: calculationsData[0].calculations)
         return FavoritesView().environmentObject(userSettings)
     }
 }

@@ -23,6 +23,6 @@ struct StarButton: View {
 
 struct StarButton_Previews: PreviewProvider {
     static var previews: some View {
-        StarButton(calculation: calculationsData[0].calculations[0]).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation](), startingTab: "lol"))
+        StarButton(calculation: calculationsData[0].calculations[0]).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation]()))
     }
 }

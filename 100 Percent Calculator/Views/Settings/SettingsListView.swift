@@ -9,21 +9,26 @@
 import SwiftUI
 
 struct SettingsListView: View {
+    @EnvironmentObject var userSettings: UserSettings
+
+    
     var body: some View {
         NavigationView{
             List{
                 Section{
-                    Text("Use Currency")
-                    Text("Show timer removing favorites")
-                    Text("Default Tab")
-                    Text("Restore deleted calculations")
-                    
+                    Toggle(isOn: $userSettings.useCurrency) {
+                        Text("Use Currency")
+                    }
+                    Toggle(isOn: $userSettings.startOnFavorites) {
+                        Text("Open app in Favorites view")
+                    }
+                    Text("Restore deleted calculations")                    
                 }
                 Section{
                     Text("iAP View")
                 }
                 Section(footer: Text("(C) Appbryggeriet 2020")){
-                    Text("About View")
+                    Text("About View + Contact Info")
                     NavigationLink(destination: PrivacyPolicyView()) {
                         Text("Privacy Policy")
                     }
@@ -33,14 +38,14 @@ struct SettingsListView: View {
                 //iAPView
                 //Privacy Policy
                 /*SettingsView
-                    Use Currency:
-                    Currency: default/choose
-                    Timer to unfav
-                    Default Starting Tab
-                    Restore Deleted Calculations
-                */
+                 Use Currency:
+                 Currency: default/choose
+                 Timer to unfav
+                 Default Starting Tab
+                 Restore Deleted Calculations
+                 */
             }
-        .navigationBarTitle(Text("Settings"))
+            .navigationBarTitle(Text("Settings"))
             .listStyle(GroupedListStyle())
         }
     }
@@ -48,6 +53,7 @@ struct SettingsListView: View {
 
 struct SettingsListView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsListView()
+        let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation]())
+        return SettingsListView().environmentObject(userSettings)
     }
 }

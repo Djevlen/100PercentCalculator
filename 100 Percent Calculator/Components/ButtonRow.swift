@@ -47,6 +47,6 @@ struct ButtonRow: View {
 
 struct ButtonRow_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonRow(calculation: calculationsData[0].calculations[0], operand1: .constant("10"), operand2: .constant("10"), result: .constant("20")).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation](), startingTab: "lol"))
+        ButtonRow(calculation: calculationsData[0].calculations[0], operand1: .constant("10"), operand2: .constant("10"), result: .constant("20")).environmentObject(UserSettings(data: calculationsData, favoriteCalculations: [Calculation]()))
     }
 }

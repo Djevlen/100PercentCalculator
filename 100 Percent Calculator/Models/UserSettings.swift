@@ -13,12 +13,18 @@ import SwiftUI
 final class UserSettings: ObservableObject {
     @Published var data = calculationsData
     @Published var favoriteCalculations: [Calculation]
-    @Published var startingTab = "Calculations"
+    @Published var tabs = ["Calculations", "Favorites", "Settings"]
+    @Published var selectedTab = "Favorites"
+    @Published var useCurrency: Bool = true
+    @Published var startOnFavorites: Bool = true
+
+    @Published var deletionWarningDismissed: Bool = false
     
-    init(data: [CalculationCategory], favoriteCalculations: [Calculation], startingTab: String) {
+    
+    init(data: [CalculationCategory], favoriteCalculations: [Calculation]) {
         self.data = data
         self.favoriteCalculations = favoriteCalculations
-        self.startingTab = startingTab
+        self.selectedTab = self.startOnFavorites ? "Favorites" : "Calculations"
     }
     
     func toggleFavoriteFromCalculation(calculation: Calculation){
