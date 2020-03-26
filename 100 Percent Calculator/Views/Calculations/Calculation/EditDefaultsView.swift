@@ -43,14 +43,12 @@ struct EditDefaultsView: View {
             }
             HStack{
                 Spacer()
-                Text("Save")
-                    .onTapGesture {
-                        self.save()
+                Button(action: {
+                    self.save()
+                }) {
+                    Text("Save")
+                    .padding()
                 }
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 10).foregroundColor(.green).opacity(0.3))
-                
-                
             }
             Spacer()
         }
