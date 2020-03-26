@@ -20,8 +20,15 @@ struct SectionView: View{
         return self.calculation.placePercentagesSymbolOn.elementsEqual(self.placeholder)
     }
     
-    #warning("lag en currencyFormatter for å formatere resultsatet")
-    #warning("animate this")
+    #warning("gjør om textfield til double for å kunne legge på currencyFormatter")
+    #warning("animate this placeholder -> Text transition")
+    
+//    private var currencyFormatter: NumberFormatter = {
+//        let currencyFormatter = NumberFormatter()
+//        currencyFormatter.numberStyle = .currency
+//        currencyFormatter.locale = Locale.current
+//        return currencyFormatter
+//    }()
     
     var body: some View {
         VStack{
@@ -35,14 +42,13 @@ struct SectionView: View{
                 if(!textfieldString.isEmpty && !self.textFieldDisabled){
                     Text(self.placeholder)
                     .font(.footnote)
-                    Spacer()
                 }
                 if(self.textFieldDisabled){
                     Text(self.placeholder)
                     .font(.largeTitle)
-                    Spacer()
                 }
                 
+                //TextField(self.placeholder, value: $textfieldString, formatter: currencyFormatter)
                 TextField(self.placeholder, text: $textfieldString)
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)
@@ -64,7 +70,7 @@ struct SectionView: View{
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(textfieldString: .constant("lol"), header: "header",footer: "footer", calculation: calculationsData[0].calculations[0], placeholder: "placeholder")
+        SectionView(textfieldString: .constant("811"), header: "header",footer: "footer", calculation: calculationsData[0].calculations[0], placeholder: "placeholder")
     }
 }
 
