@@ -17,6 +17,7 @@ final class UserSettings: ObservableObject {
     @Published var selectedTab = "Favorites"
     @Published var useCurrency: Bool = true
     @Published var startOnFavorites: Bool = true
+    @Published var unfavoriteTimer: Bool = true
     
     @Published var deletionWarningDismissed: Bool = false
     
@@ -60,7 +61,15 @@ final class UserSettings: ObservableObject {
         
     }
     func restoreCalculations(){
+        for (indexCategory, category) in self.data.enumerated() {
+            for (indexCalc, calc) in self.data[indexCategory].calculations.enumerated() {
+                if calc.isHidden {
+                    self.data[indexCategory].calculations[indexCalc].isHidden.toggle()
+                }
+            }
+            if category.isHidden {
+                self.data[indexCategory].isHidden.toggle()
+            }
+        }
     }
-    
-    
 }

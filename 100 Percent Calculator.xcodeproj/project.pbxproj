@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9081158242CA34C00835623 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081157242CA34B00835623 /* AboutView.swift */; };
 		E90CD7C72420E4C000BA5274 /* CalculationsData.json in Resources */ = {isa = PBXBuildFile; fileRef = E90CD7C62420E4C000BA5274 /* CalculationsData.json */; };
 		E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */; };
 		E90CD7D02421026400BA5274 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CF2421026400BA5274 /* Calculation.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9081157242CA34B00835623 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E90CD7C62420E4C000BA5274 /* CalculationsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CalculationsData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListView.swift; sourceTree = "<group>"; };
 		E90CD7CF2421026400BA5274 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				E940F0F5242B650200BA2090 /* SettingsListView.swift */,
 				E940F0F7242B67FA00BA2090 /* PrivacyPolicyView.swift */,
+				E9081157242CA34B00835623 /* AboutView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */,
 				E9D3DDBD24221E590009DF21 /* UserSettings.swift in Sources */,
 				E90CD7DD24214DF100BA5274 /* CalculationsCell.swift in Sources */,
+				E9081158242CA34C00835623 /* AboutView.swift in Sources */,
 				E940F0F6242B650200BA2090 /* SettingsListView.swift in Sources */,
 				E90CD7D92421126400BA5274 /* JsonData.swift in Sources */,
 				E940F0F8242B67FA00BA2090 /* PrivacyPolicyView.swift in Sources */,

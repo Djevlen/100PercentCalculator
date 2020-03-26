@@ -7,10 +7,11 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SettingsListView: View {
     @EnvironmentObject var userSettings: UserSettings
-
+    
     
     var body: some View {
         NavigationView{
@@ -22,16 +23,37 @@ struct SettingsListView: View {
                     Toggle(isOn: $userSettings.startOnFavorites) {
                         Text("Open app in Favorites view")
                     }
-                    Text("Restore deleted calculations")
-                        .onTapGesture {
-                            self.userSettings.restoreCalculations()
+                    Toggle(isOn: $userSettings.unfavoriteTimer) {
+                        Text("Unfavorite Timer")
+                    }
+                    Button(action: {
+                        self.userSettings.restoreCalculations()
+                    }) {
+                        Text("Restore deleted calculations")
                     }
                 }
-                Section{
-                    Text("iAP View")
+                Section(header: Text("iAP")){
+                    Text("iap View")
                 }
-                Section(footer: Text("(C) Appbryggeriet 2020")){
-                    Text("About View + Contact Info ")
+                Section(header: Text("About"), footer: Text("© Appbryggeriet 2020 🇳🇴")){
+                    AboutView()
+                    Button(action: {
+                        SKStoreReviewController.requestReview()
+                    }) {
+                        Text("Leave a review")
+                    }
+                    Button(action: {
+                        let url = URL(string: "https://www.instagram.com/thomasajajaj/")
+                        UIApplication.shared.open(url!)
+                    }) {
+                        Text("Dent and I on Instagram!")
+                    }
+                    Button(action: {
+                        let url = URL(string: "mailto:thomasaj@gmail.com")
+                        UIApplication.shared.open(url!)
+                    }) {
+                        Text("Report a bug")
+                    }
                     NavigationLink(destination: PrivacyPolicyView()) {
                         Text("Privacy Policy")
                     }
