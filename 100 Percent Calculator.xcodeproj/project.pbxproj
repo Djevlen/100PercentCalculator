@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E9081158242CA34C00835623 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081157242CA34B00835623 /* AboutView.swift */; };
+		E908115B242CD97A00835623 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E908115A242CD97A00835623 /* StoreKit.framework */; };
+		E908115E242CDA2A00835623 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = E908115D242CDA2A00835623 /* Purchases */; };
 		E90CD7C72420E4C000BA5274 /* CalculationsData.json in Resources */ = {isa = PBXBuildFile; fileRef = E90CD7C62420E4C000BA5274 /* CalculationsData.json */; };
 		E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */; };
 		E90CD7D02421026400BA5274 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CF2421026400BA5274 /* Calculation.swift */; };
@@ -50,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		E9081157242CA34B00835623 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		E908115A242CD97A00835623 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E90CD7C62420E4C000BA5274 /* CalculationsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CalculationsData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListView.swift; sourceTree = "<group>"; };
 		E90CD7CF2421026400BA5274 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E908115B242CD97A00835623 /* StoreKit.framework in Frameworks */,
+				E908115E242CDA2A00835623 /* Purchases in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9081159242CD97A00835623 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E908115A242CD97A00835623 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E90CD7C52420E47300BA5274 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +200,7 @@
 				E9B13E462420C7BC00DE8BC5 /* 100 Percent Calculator */,
 				E9B13E5D2420C7BF00DE8BC5 /* 100 Percent CalculatorTests */,
 				E9B13E452420C7BC00DE8BC5 /* Products */,
+				E9081159242CD97A00835623 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +276,7 @@
 			);
 			name = "100 Percent Calculator";
 			packageProductDependencies = (
+				E908115D242CDA2A00835623 /* Purchases */,
 			);
 			productName = "100 Percent Calculator";
 			productReference = E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */;
@@ -314,6 +329,7 @@
 			);
 			mainGroup = E9B13E3B2420C7BC00DE8BC5;
 			packageReferences = (
+				E908115C242CDA2A00835623 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = E9B13E452420C7BC00DE8BC5 /* Products */;
 			projectDirPath = "";
@@ -535,6 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -555,6 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -637,6 +655,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E908115C242CDA2A00835623 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E908115D242CDA2A00835623 /* Purchases */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E908115C242CDA2A00835623 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = Purchases;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9B13E3C2420C7BC00DE8BC5 /* Project object */;
 }
