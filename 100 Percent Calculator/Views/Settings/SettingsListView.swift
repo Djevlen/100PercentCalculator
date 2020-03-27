@@ -33,7 +33,7 @@ struct SettingsListView: View {
                     }
                 }
                 Section(header: Text("iAP")){
-                    Text("iap View")
+                    iAPView()
                 }
                 Section(header: Text("About"), footer: Text("© Appbryggeriet 2020 🇳🇴")){
                     AboutView()

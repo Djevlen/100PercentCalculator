@@ -9,6 +9,7 @@
 
 import Combine
 import SwiftUI
+import StoreKit
 
 final class UserSettings: ObservableObject {
     @Published var data = calculationsData
@@ -19,6 +20,10 @@ final class UserSettings: ObservableObject {
     @Published var startOnFavorites: Bool = true
     @Published var unfavoriteTimer: Bool = true
     
+    //iap values
+    @Published var iapProductsLoaded: Bool = false
+    @Published var iapProducts: [SKProduct]? = nil
+    
     @Published var deletionWarningDismissed: Bool = false
     
     
@@ -26,6 +31,15 @@ final class UserSettings: ObservableObject {
         self.data = data
         self.favoriteCalculations = favoriteCalculations
         self.selectedTab = self.startOnFavorites ? "Favorites" : "Calculations"
+        IAPManager.shared.getProducts { (result) in
+            print("getting products")
+            self.iapProductsLoaded = true
+
+            switch result{
+            case .success(let products): self.iapProducts = products
+            case .failure(let error): print("error: \(error)")
+            }
+        }
     }
     
     func toggleFavoriteFromCalculation(calculation: Calculation){
