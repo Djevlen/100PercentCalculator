@@ -15,8 +15,6 @@ struct iAPView: View {
         Group{
             
             if(userSettings.iapProductsLoaded){
-                Text("iApProduectsLoaded true")
-                //packagesview
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(userSettings.iapProducts!, id:\.self){ product in
@@ -39,6 +37,9 @@ struct iAPView: View {
                 Text("Restore Pro Purchase")
             }
         
-        }
+        }.onAppear(
+            perform: userSettings.getAds
+        )
     }
+
 }

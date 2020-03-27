@@ -15,7 +15,7 @@ struct ProductView: View {
     var body: some View {
             VStack{
                 Button(action: {
-                    print("try to buy")
+                    print("try to buy \(self.product.localizedTitle)")
                 }) {
                     VStack{
                         Text("\(product.localizedTitle)")

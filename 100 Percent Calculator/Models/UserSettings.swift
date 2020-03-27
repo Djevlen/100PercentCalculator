@@ -31,6 +31,9 @@ final class UserSettings: ObservableObject {
         self.data = data
         self.favoriteCalculations = favoriteCalculations
         self.selectedTab = self.startOnFavorites ? "Favorites" : "Calculations"
+    }
+    #warning("this is no good, fix main thread issue")
+    func getAds(){
         IAPManager.shared.getProducts { (result) in
             print("getting products")
             self.iapProductsLoaded = true
