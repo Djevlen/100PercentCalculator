@@ -11,74 +11,58 @@ import StoreKit
 
 struct iAPView: View {
     @EnvironmentObject var userSettings: UserSettings
-    @State private var iapProductsLoaded: Bool  = false
+    
+    @State private var isLoading: Bool  = false
     @State private var iapProducts: [SKProduct] = [SKProduct]()
     
-
     func getProducts(){
+        print("isloading: \(self.isLoading)")
+        self.isLoading = true
         IAPManager.shared.getProducts { (result) in
             print("getting products")
             DispatchQueue.main.async {
-                //show temp view
-                //self.delegate?.didFinishLongProcess()
                 switch result{
                 case .success(let products):
                     self.iapProducts = products
+                    self.isLoading = false
                 case .failure(let error):
                     print("error: \(error)")
                 }
             }
-            self.iapProductsLoaded = true
-
-            
         }
-        
+        print("isloading: \(self.isLoading)")
+
     }
     
     var body: some View {
-        Group{
-            
-            if(self.iapProductsLoaded){
+        HStack{
+            if self.iapProducts.count == 0 {
+                Button(action: {
+                    self.getProducts()
+                }){
+                    VStack(alignment: .center){
+                        Image(systemName: "arrow.clockwise.circle")
+                        Text("Reload")
+                            .multilineTextAlignment(.center)
+                    }
+                    .font(.largeTitle)
+                }
+                .modifier(Card(width: 150, height: 150))
+            }else{
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(self.iapProducts, id:\.self){ product in
                             Group{
                                 ProductView(product: product)
+                                    .padding()
                             }
-                                .frame(width: 150, height: 200)
-                                .foregroundColor(.white)
-                                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.blue))
-                                .shadow(radius: 5)
-                            .padding()
                         }
                     }
                 }
                 .listRowInsets(EdgeInsets())
-
-                
-
-            }else{
-                Button(action: {
-                    self.getProducts()
-                }){
-                    Text("Refresh in-App Purchases")
-                }
-                .frame(width: 150, height: 200)
-                .foregroundColor(.white)
-                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.blue))
-                .shadow(radius: 5)
-
-                //spinnverview?
             }
-            Button(action: {
-                print("lol")
-            }){
-                Text("Restore Pro Purchase")
-            }
-        
-        }.onAppear(
-            perform: self.iapProductsLoaded ? nil : self.getProducts
-        )
+        }.onAppear {
+            //self.getProducts()
+        }
     }
-
 }

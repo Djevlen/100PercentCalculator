@@ -20,7 +20,6 @@ struct ProductView: View {
         return price
     }
     var body: some View {
-        VStack{
             Button(action: {
                 if !self.purchase(product: self.product){
                     self.showBuyError.toggle()
@@ -30,14 +29,15 @@ struct ProductView: View {
                     Text("\(product.localizedTitle)")
                         .font(.title)
                         .padding([.top, .horizontal])
-                    
                     Text("\(self.localizedPrice)")
                         .font(.subheadline)
+                    Spacer()
                     Image(systemName: getImageFrom(productID: product.productIdentifier))
+                        .font(self.applyFontWeight(for: product.productIdentifier))
                     Spacer()
                     Text("\(product.localizedDescription)")
                         .font(.body)
-                        .multilineTextAlignment(.leading)
+                        .multilineTextAlignment(.center)
                         .padding([.bottom, .horizontal])
                 }
                 
@@ -50,24 +50,29 @@ struct ProductView: View {
             .alert(isPresented: $showIAPError){
                 Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
             }
-        }
-        .modifier(Card(width: 150, height: 200))
+        .modifier(Card(width: 150, height: 250))
     }
-    
+    func applyFontWeight(for product: String) -> Font?{
+        switch product {
+        case "100percentPro":
+            return .largeTitle
+        case "smallestTip":
+            return .body
+        case "mediumTip":
+            return .title
+        case "largeTip":
+            return .largeTitle
+        default:
+            return .body
+        }
+    }
     func getImageFrom(productID: String) -> String{
         switch productID {
         case "100percentPro":
             return "heart.fill"
-        case "smallestTip":
-            return "heart"
-        case "mediumTip":
-            return "heart.circle"
-        case "largeTip":
-            return "heart.circle.fill"
         default:
-            return "pencil.slash"
+            return "heart.circle.fill"
         }
-        #warning("fix default pencil.slash")
     }
     
     func purchase(product: SKProduct) -> Bool {

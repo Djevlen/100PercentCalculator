@@ -18,7 +18,7 @@ struct Card: ViewModifier {
             .frame(width: self.width, height: self.height)
             .foregroundColor(.white)
             .background(RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(.blue))
+            .foregroundColor(.blue))
             .shadow(radius: 5)
     }
     
