@@ -20,28 +20,12 @@ class IAPManager: NSObject {
     static let shared = IAPManager()
     var onReceiveProductsHandler: ((Result<[SKProduct], IAPManagerError>) -> Void)?
     var onBuyProductHandler: ((Result<Bool, Error>) -> Void)?
-    
-    //iap values
-    @Published var iapProductsLoaded: Bool = false
-    @Published var iapProducts: [SKProduct]? = nil
 
     
     private override init(){
         super.init()
     }
     
-    #warning("this is no good, fix main thread issue")
-    func loadProductsToEnvironment(){
-        IAPManager.shared.getProducts { (result) in
-            print("getting products")
-            self.iapProductsLoaded = true
-
-            switch result{
-            case .success(let products): self.iapProducts = products
-            case .failure(let error): print("error: \(error)")
-            }
-        }
-    }
 
     func getProducts(withHandler productsReceiveHandler: @escaping (_ result: Result<[SKProduct], IAPManagerError>) -> Void) {
         // Keep the handler (closure) that will be called when requesting for

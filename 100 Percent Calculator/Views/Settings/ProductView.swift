@@ -51,10 +51,7 @@ struct ProductView: View {
                 Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
             }
         }
-        .frame(width: 150, height: 200)
-        .foregroundColor(.white)
-        .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.blue))
-        .shadow(radius: 5)
+        .modifier(Card(width: 150, height: 200))
     }
     
     func getImageFrom(productID: String) -> String{

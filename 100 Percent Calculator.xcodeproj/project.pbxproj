@@ -43,6 +43,7 @@
 		E9CC79292422B0930016D1A0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC79282422B0930016D1A0 /* FavoritesView.swift */; };
 		E9D3DDBB24220C400009DF21 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3DDBA24220C400009DF21 /* CalculationView.swift */; };
 		E9D3DDBD24221E590009DF21 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3DDBC24221E590009DF21 /* UserSettings.swift */; };
+		E9DE21D824325FCB00D6B35F /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE21D724325FCB00D6B35F /* ViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		E9CC79282422B0930016D1A0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		E9D3DDBA24220C400009DF21 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 		E9D3DDBC24221E590009DF21 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		E9DE21D724325FCB00D6B35F /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				E90F7AB02423848A00C31994 /* Form */,
 				E951B3042423597800316662 /* StarButton.swift */,
 				E9664E8C24290447007C67C8 /* ButtonRow.swift */,
+				E9DE21D724325FCB00D6B35F /* ViewModifiers.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				E908116A242E33FA00835623 /* ProductView.swift in Sources */,
 				E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */,
 				E90F7AB22423849A00C31994 /* SectionView.swift in Sources */,
+				E9DE21D824325FCB00D6B35F /* ViewModifiers.swift in Sources */,
 				E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */,
 				E90CD7D02421026400BA5274 /* Calculation.swift in Sources */,
 				E9081162242DD93700835623 /* iAPView.swift in Sources */,
