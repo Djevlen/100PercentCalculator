@@ -53,6 +53,8 @@ struct iAPView: View {
                         }
                     }
                 }
+                .listRowInsets(EdgeInsets())
+
                 
 
             }else{

@@ -34,8 +34,6 @@ struct SettingsListView: View {
                 }
                 Section(header: Text("iAP")){
                     iAPView()
-                    .listRowInsets(EdgeInsets())
-
                 }
                 Section(header: Text("About"), footer: Text("© Appbryggeriet 2020 🇳🇴")){
                     AboutView()
