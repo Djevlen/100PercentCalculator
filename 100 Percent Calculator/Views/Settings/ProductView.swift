@@ -42,11 +42,13 @@ struct ProductView: View {
                 }
                 
             }
+                //alert for when the device is unable to buy stuff
+                //ie parents locking a child's device etc
             .alert(isPresented: $showBuyError) {
                 Alert(title: Text("Error Making Purchase"), message: Text("This device cannot make purchases"), dismissButton: .default(Text("Ok!")))
             }
             .alert(isPresented: $showIAPError){
-                Alert(title: Text("Error"), message: Text("This device cannot make purchases"), dismissButton: .default(Text("Ok!")))
+                Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
             }
         }
         .frame(width: 150, height: 200)
