@@ -10,36 +10,49 @@ import SwiftUI
 import StoreKit
 
 struct ProductView: View {
-    var product: SKProduct
-//    var product: [String: String] = ["localizedTitle": "100% Pro","price": "5", "localizedDescription": "All Pro features. No ads. Forever.", "productIdentifier": "100percentPro"]
-    var body: some View {
-            VStack{
-                Button(action: {
-                    print("try to buy \(self.product.localizedTitle)")
-                }) {
-                    VStack{
-                        Text("\(product.localizedTitle)")
-                            .font(.title)
-                        .padding([.top, .horizontal])
+    @State private var showBuyError: Bool = false
+    @State private var showIAPError: Bool = false
+    @State private var iapErrorString = "An error occured."
 
-                        Text("\(product.price) NOK")
-                            .font(.subheadline)
-                        Image(systemName: getImageFrom(productID: product.productIdentifier))
-                        Spacer()
-                        Text("\(product.localizedDescription)")
-                            .font(.body)
-                            .multilineTextAlignment(.leading)
-                            .padding([.bottom, .horizontal])
-                    }
+    var product: SKProduct
+    var localizedPrice: String {
+        guard let price = IAPManager.shared.getPriceFormatted(for: product) else { return product.price.stringValue}
+        return price
+    }
+    var body: some View {
+        VStack{
+            Button(action: {
+                if !self.purchase(product: self.product){
+                    self.showBuyError.toggle()
+                }
+            }) {
+                VStack{
+                    Text("\(product.localizedTitle)")
+                        .font(.title)
+                        .padding([.top, .horizontal])
                     
+                    Text("\(self.localizedPrice)")
+                        .font(.subheadline)
+                    Image(systemName: getImageFrom(productID: product.productIdentifier))
+                    Spacer()
+                    Text("\(product.localizedDescription)")
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
+                        .padding([.bottom, .horizontal])
                 }
                 
-
             }
-            .frame(width: 150, height: 200)
-            .foregroundColor(.white)
-            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.blue))
-            .shadow(radius: 5)
+            .alert(isPresented: $showBuyError) {
+                Alert(title: Text("Error Making Purchase"), message: Text("This device cannot make purchases"), dismissButton: .default(Text("Ok!")))
+            }
+            .alert(isPresented: $showIAPError){
+                Alert(title: Text("Error"), message: Text("This device cannot make purchases"), dismissButton: .default(Text("Ok!")))
+            }
+        }
+        .frame(width: 150, height: 200)
+        .foregroundColor(.white)
+        .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.blue))
+        .shadow(radius: 5)
     }
     
     func getImageFrom(productID: String) -> String{
@@ -55,8 +68,41 @@ struct ProductView: View {
         default:
             return "pencil.slash"
         }
-        #warning("fix default over")
+        #warning("fix default pencil.slash")
     }
+    
+    func purchase(product: SKProduct) -> Bool {
+        if !IAPManager.shared.canMakePayments() {
+            return false
+        } else {
+            //show timeoutview
+            //delegate?.willStartLongProcess()
+            IAPManager.shared.buy(product: product) { (result) in
+                DispatchQueue.main.async {
+                    //remove timeoutview
+                    //self.delegate?.didFinishLongProcess()
+                    
+                    switch result {
+                    case .success(_): self.userBoughtProduct(product)
+                    case .failure(let error): self.showIAPRelatedError(error)
+                    }
+                }
+            }
+            return true
+        }
+        
+    }
+    
+    func userBoughtProduct(_ product: SKProduct){
+        print("the user bought this: \(product.localizedTitle)")
+    }
+    
+    func showIAPRelatedError(_ error: Error){
+        print("got an error: \(error.localizedDescription)")
+        self.iapErrorString = error.localizedDescription
+        self.showIAPError = true
+    }
+    
 }
 
 

@@ -22,7 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let revenuecat = plist?.object(forKey: "revenuecat") as! String
 //        Purchases.debugLogsEnabled = true
 //        Purchases.configure(withAPIKey: revenuecat)
+        IAPManager.shared.startObserving()
         return true
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        IAPManager.shared.stopObserving()
     }
 
     // MARK: UISceneSession Lifecycle

@@ -7,27 +7,64 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct iAPView: View {
     @EnvironmentObject var userSettings: UserSettings
+    @State private var iapProductsLoaded: Bool  = false
+    @State private var iapProducts: [SKProduct] = [SKProduct]()
+    
+
+    func getProducts(){
+        IAPManager.shared.getProducts { (result) in
+            print("getting products")
+            DispatchQueue.main.async {
+                //show temp view
+                //self.delegate?.didFinishLongProcess()
+                switch result{
+                case .success(let products):
+                    self.iapProducts = products
+                case .failure(let error):
+                    print("error: \(error)")
+                }
+            }
+            self.iapProductsLoaded = true
+
+            
+        }
+        
+    }
     
     var body: some View {
         Group{
             
-            if(userSettings.iapProductsLoaded){
+            if(self.iapProductsLoaded){
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
-                        ForEach(userSettings.iapProducts!, id:\.self){ product in
+                        ForEach(self.iapProducts, id:\.self){ product in
                             Group{
                                 ProductView(product: product)
                             }
+                                .frame(width: 150, height: 200)
+                                .foregroundColor(.white)
+                                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.blue))
+                                .shadow(radius: 5)
                             .padding()
                         }
                     }
                 }
+                
 
             }else{
-                Text("iApProduectsLoaded false")
+                Button(action: {
+                    self.getProducts()
+                }){
+                    Text("Refresh in-App Purchases")
+                }
+                .frame(width: 150, height: 200)
+                .foregroundColor(.white)
+                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.blue))
+                .shadow(radius: 5)
 
                 //spinnverview?
             }
@@ -38,7 +75,7 @@ struct iAPView: View {
             }
         
         }.onAppear(
-            perform: userSettings.getAds
+            perform: self.iapProductsLoaded ? nil : self.getProducts
         )
     }
 

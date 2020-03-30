@@ -20,9 +20,8 @@ final class UserSettings: ObservableObject {
     @Published var startOnFavorites: Bool = true
     @Published var unfavoriteTimer: Bool = true
     
-    //iap values
-    @Published var iapProductsLoaded: Bool = false
-    @Published var iapProducts: [SKProduct]? = nil
+    
+    @Published var isProUser: Bool = false
     
     @Published var deletionWarningDismissed: Bool = false
     
@@ -31,18 +30,6 @@ final class UserSettings: ObservableObject {
         self.data = data
         self.favoriteCalculations = favoriteCalculations
         self.selectedTab = self.startOnFavorites ? "Favorites" : "Calculations"
-    }
-    #warning("this is no good, fix main thread issue")
-    func getAds(){
-        IAPManager.shared.getProducts { (result) in
-            print("getting products")
-            self.iapProductsLoaded = true
-
-            switch result{
-            case .success(let products): self.iapProducts = products
-            case .failure(let error): print("error: \(error)")
-            }
-        }
     }
     
     func toggleFavoriteFromCalculation(calculation: Calculation){
