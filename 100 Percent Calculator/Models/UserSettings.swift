@@ -22,6 +22,8 @@ final class UserSettings: ObservableObject {
     
     
     @Published var isProUser: Bool = false
+    @Published var hasLoadedProducts: Bool = false
+    @Published var products: [SKProduct]? = nil
     
     @Published var deletionWarningDismissed: Bool = false
     
@@ -73,6 +75,22 @@ final class UserSettings: ObservableObject {
             }
             if category.isHidden {
                 self.data[indexCategory].isHidden.toggle()
+            }
+        }
+    }
+    
+    // MARK: In-App Purchases helpers
+    func loadProducts(){
+        IAPManager.shared.getProducts { (result) in
+            print("getting products")
+            DispatchQueue.main.async {
+                switch result{
+                case .success(let products):
+                    self.products = products
+                    self.hasLoadedProducts = true
+                case .failure(let error):
+                    print("error: \(error)")
+                }
             }
         }
     }
