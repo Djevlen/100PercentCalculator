@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FavoriteCellView: View {
+    @EnvironmentObject var userSettings: UserSettings
     @ObservedObject var calculator: Calculator = Calculator()
     var favorite: Calculation
     @State var operand1: String = ""
@@ -19,7 +20,7 @@ struct FavoriteCellView: View {
             HStack{
                 Text(favorite.title)
                 Spacer()
-                StarButton(calculation: self.favorite)
+                StarButton(calculation: favorite)
             }
             Group{
                 SectionView(textfieldString: self.$operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString)

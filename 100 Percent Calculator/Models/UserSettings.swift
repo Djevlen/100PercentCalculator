@@ -65,7 +65,7 @@ final class UserSettings: ObservableObject {
                 self.favoriteLimitReached = true
                 return
             }
-            self.favoriteCalculations.append(calculation)
+            self.favoriteCalculations.append(self.data[section].calculations[calcIndex])
         }else{
             if let index = self.favoriteCalculations.firstIndex(where: { $0.id == calculation.id }) {
                 self.favoriteCalculations.remove(at: index)
