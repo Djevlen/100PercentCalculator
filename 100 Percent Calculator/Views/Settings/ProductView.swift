@@ -10,6 +10,7 @@ import SwiftUI
 import StoreKit
 
 struct ProductView: View {
+    @EnvironmentObject var userSettings: UserSettings
     @State private var showBuyError: Bool = false
     @State private var showIAPError: Bool = false
     @State private var iapErrorString = "An error occured."
@@ -42,6 +43,10 @@ struct ProductView: View {
                 }
                 
             }
+                .alert(isPresented: self.$userSettings.thankUser){
+                    Alert(title: Text("Thank You!"), message: Text("Your help is greatly appreciated! <3"), dismissButton: .default(Text("Dismiss!")))
+                    //TODO : create thank you view?
+                }
                 //alert for when the device is unable to buy stuff
                 //ie parents locking a child's device etc
             .alert(isPresented: $showBuyError) {
@@ -50,6 +55,7 @@ struct ProductView: View {
             .alert(isPresented: $showIAPError){
                 Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
             }
+                
         .modifier(Card(width: 150, height: 250))
     }
     func applyFontWeight(for product: String) -> Font?{
@@ -85,9 +91,8 @@ struct ProductView: View {
                 DispatchQueue.main.async {
                     //remove timeoutview
                     //self.delegate?.didFinishLongProcess()
-                    
                     switch result {
-                    case .success(_): self.userBoughtProduct(product)
+                    case .success(_): self.userSettings.productPurchased(product)
                     case .failure(let error): self.showIAPRelatedError(error)
                     }
                 }
@@ -96,10 +101,7 @@ struct ProductView: View {
         }
         
     }
-    
-    func userBoughtProduct(_ product: SKProduct){
-        print("the user bought this: \(product.localizedTitle)")
-    }
+
     
     func showIAPRelatedError(_ error: Error){
         print("got an error: \(error.localizedDescription)")

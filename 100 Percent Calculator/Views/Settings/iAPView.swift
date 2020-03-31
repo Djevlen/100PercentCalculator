@@ -11,6 +11,10 @@ import StoreKit
 
 struct iAPView: View {
     @EnvironmentObject var userSettings: UserSettings
+    @State private var showIAPError: Bool = false
+    @State private var iapErrorString = "An error occured."
+    @State private var proRestored: Bool = false
+    
     
     var body: some View {
         Group{
@@ -24,10 +28,10 @@ struct iAPView: View {
                                         .padding()
                                 }
                             }
-                            
                         }
                     }
                 }else{
+                    //TODO: dette bør være en automagisk greie som spinner og laster inn stæsj
                     Button(action: {
                         self.userSettings.loadProducts()
                     }){
@@ -46,10 +50,46 @@ struct iAPView: View {
                 self.userSettings.hasLoadedProducts ? nil : self.userSettings.loadProducts()
             }
             Button(action: {
-                print("lol")
+                self.restorePro()
             }){
                 Text("Restore Pro Purchase")
             }
+            .disabled(self.userSettings.isProUser)
         }
+        .alert(isPresented: $showIAPError){
+            Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
+        }
+        .alert(isPresented: $proRestored){
+            Alert(title: Text("Restored"), message: Text("Pro has been restored. Thank you! <3"), dismissButton: .default(Text("Ok!")))
+        }
+    }
+    
+    func restorePro() {
+        print("tryint to restore purchase")
+        IAPManager.shared.restorePurchases { (result) in
+            DispatchQueue.main.async {
+                
+                switch result {
+                case .success(let success):
+                    if success {
+                        self.userSettings.isProUser = true
+                        self.userSettings.hasLoadedProducts = false
+                        self.proRestored = true
+                    } else {
+                        self.iapErrorString = "No Products to Restore"
+                        self.showIAPError = true
+                    }
+                    
+                case .failure(let error): self.showIAPRelatedError(error)
+                }
+            }
+            
+        }
+    }
+    
+    func showIAPRelatedError(_ error: Error){
+        print("got an error: \(error.localizedDescription)")
+        self.iapErrorString = error.localizedDescription
+        self.showIAPError = true
     }
 }

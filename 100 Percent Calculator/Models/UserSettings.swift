@@ -24,6 +24,7 @@ final class UserSettings: ObservableObject {
     @Published var isProUser: Bool = false
     @Published var hasLoadedProducts: Bool = false
     @Published var products: [SKProduct]? = nil
+    @Published var thankUser: Bool = false
     
     @Published var deletionWarningDismissed: Bool = false
     
@@ -79,19 +80,35 @@ final class UserSettings: ObservableObject {
         }
     }
     
-    // MARK: In-App Purchases helpers
+    // MARK: In-App Purchases
     func loadProducts(){
         IAPManager.shared.getProducts { (result) in
             print("getting products")
             DispatchQueue.main.async {
                 switch result{
                 case .success(let products):
-                    self.products = products
+                    if self.isProUser{
+                        self.products = products.filter {!$0.productIdentifier.lowercased().contains("pro")}
+                        print("proUser er true, products er: \(String(describing: self.products))")
+
+                    }else {
+                        self.products = products
+                        print("proUser er false, products er: \(String(describing: self.products))")
+                    }
                     self.hasLoadedProducts = true
                 case .failure(let error):
                     print("error: \(error)")
                 }
             }
+        }
+    }
+    
+    func productPurchased(_ product: SKProduct){
+        print("the user bought this: \(product.localizedTitle)")
+        self.thankUser = true
+        if product.productIdentifier.lowercased().contains("pro"){
+            self.isProUser = true
+            self.hasLoadedProducts = false
         }
     }
 }
