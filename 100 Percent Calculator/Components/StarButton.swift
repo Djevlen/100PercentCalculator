@@ -13,13 +13,24 @@ struct StarButton: View {
     var calculation: Calculation
     
     var body: some View {
-        Image(systemName: self.calculation.isFavorite ? "star.fill" : "star")
+        Button(action: {
+            self.userSettings.toggleFavorite(calculation: self.calculation)
+        }){
+            Image(systemName: self.calculation.isFavorite ? "star.fill" : "star")
             .foregroundColor(.yellow)
-            .onTapGesture {
-                self.userSettings.toggleFavoriteFromCalculation(calculation: self.calculation)
+        }
+        .alert(isPresented: self.$userSettings.favoriteLimitReached) {
+            Alert(title: Text("100% Pro Needed"), message: Text("Buy Pro to get unlimited favorites, and remove ads!"), dismissButton: .default(Text("Ok!")))
             }
+        }
+        
+//        Image(systemName: self.calculation.isFavorite ? "star.fill" : "star")
+//            .foregroundColor(.yellow)
+//            .onTapGesture {
+//                self.userSettings.toggleFavoriteFromCalculation(calculation: self.calculation)
+//            }
     }
-}
+
 
 struct StarButton_Previews: PreviewProvider {
     static var previews: some View {

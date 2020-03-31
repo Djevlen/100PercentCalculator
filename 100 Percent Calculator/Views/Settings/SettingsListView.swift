@@ -17,11 +17,11 @@ struct SettingsListView: View {
         NavigationView{
             List{
                 Section{
-                    Toggle(isOn: $userSettings.useCurrency) {
-                        Text("Use Currency")
-                    }
+//                    Toggle(isOn: $userSettings.useCurrency) {
+//                        Text("Use Currency")
+//                    }
                     Toggle(isOn: $userSettings.startOnFavorites) {
-                        Text("Open app in Favorites view")
+                        Text("Start app in Favorites")
                     }
                     Toggle(isOn: $userSettings.unfavoriteTimer) {
                         Text("Unfavorite Timer")
@@ -30,6 +30,9 @@ struct SettingsListView: View {
                         self.userSettings.restoreCalculations()
                     }) {
                         Text("Restore deleted calculations")
+                    }
+                    .alert(isPresented: self.$userSettings.restoredCalculations){
+                        Alert(title: Text("Reset"), message: Text("All Calculations restored"), dismissButton: .default(Text("Ok!")))
                     }
                 }
                 Section(header: Text("iAP")){

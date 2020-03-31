@@ -20,7 +20,6 @@ struct SectionView: View{
         return self.calculation.placePercentagesSymbolOn.elementsEqual(self.placeholder)
     }
     
-    #warning("gjør om textfield til double for å kunne legge på currencyFormatter")
     #warning("animate this placeholder -> Text transition")
     
 //    private var currencyFormatter: NumberFormatter = {
@@ -47,8 +46,6 @@ struct SectionView: View{
                     Text(self.placeholder)
                     .font(.largeTitle)
                 }
-                
-                //TextField(self.placeholder, value: $textfieldString, formatter: currencyFormatter)
                 TextField(self.placeholder, text: $textfieldString)
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)

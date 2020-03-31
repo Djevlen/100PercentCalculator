@@ -16,15 +16,18 @@ final class UserSettings: ObservableObject {
     @Published var favoriteCalculations: [Calculation]
     @Published var tabs = ["Calculations", "Favorites", "Settings"]
     @Published var selectedTab = "Favorites"
-    @Published var useCurrency: Bool = true
-    @Published var startOnFavorites: Bool = true
-    @Published var unfavoriteTimer: Bool = true
+    @Published var useCurrency: Bool            = true
+    @Published var startOnFavorites: Bool       = true
+    @Published var unfavoriteTimer: Bool        = true
+    @Published var restoredCalculations: Bool  = false
     
     
-    @Published var isProUser: Bool = false
-    @Published var hasLoadedProducts: Bool = false
+    @Published var isProUser: Bool              = false
+    @Published var hasLoadedProducts: Bool      = false
+    @Published var thankUser: Bool              = false
+    @Published var favoriteLimitReached: Bool   = false
     @Published var products: [SKProduct]? = nil
-    @Published var thankUser: Bool = false
+    
     
     @Published var deletionWarningDismissed: Bool = false
     
@@ -33,17 +36,35 @@ final class UserSettings: ObservableObject {
         self.data = data
         self.favoriteCalculations = favoriteCalculations
         self.selectedTab = self.startOnFavorites ? "Favorites" : "Calculations"
+        populateFavorites()
     }
     
-    func toggleFavoriteFromCalculation(calculation: Calculation){
+    //puts favorites from json to favorites array
+    func populateFavorites(){
+        for category in self.data {
+            for calculation in category.calculations {
+                if(calculation.isFavorite){
+                    self.favoriteCalculations.append(calculation)
+                }
+            }
+        }
+    }
+    
+    func toggleFavorite(calculation: Calculation){
         guard let section = self.data.firstIndex(where: {$0.calculations.contains(calculation)}) else {
             return
         }
         guard let calcIndex = self.data[section].calculations.firstIndex(where: {$0.id == calculation.id}) else {
             return
         }
+        
         self.data[section].calculations[calcIndex].isFavorite.toggle()
         if(self.data[section].calculations[calcIndex].isFavorite == true){
+            if self.favoriteCalculations.count >= 1 && !self.isProUser{
+                self.data[section].calculations[calcIndex].isFavorite.toggle()
+                self.favoriteLimitReached = true
+                return
+            }
             self.favoriteCalculations.append(calculation)
         }else{
             if let index = self.favoriteCalculations.firstIndex(where: { $0.id == calculation.id }) {
@@ -78,6 +99,7 @@ final class UserSettings: ObservableObject {
                 self.data[indexCategory].isHidden.toggle()
             }
         }
+        self.restoredCalculations = true
     }
     
     // MARK: In-App Purchases
@@ -90,7 +112,7 @@ final class UserSettings: ObservableObject {
                     if self.isProUser{
                         self.products = products.filter {!$0.productIdentifier.lowercased().contains("pro")}
                         print("proUser er true, products er: \(String(describing: self.products))")
-
+                        
                     }else {
                         self.products = products
                         print("proUser er false, products er: \(String(describing: self.products))")
