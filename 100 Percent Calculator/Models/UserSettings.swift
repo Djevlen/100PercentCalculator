@@ -71,6 +71,7 @@ final class UserSettings: ObservableObject {
                 self.favoriteCalculations.remove(at: index)
             }
         }
+        self.save()
     }
     
     func saveDefaultOperandValue(calculation: Calculation, operands: (operand1: String, operand2: String)){
@@ -133,4 +134,30 @@ final class UserSettings: ObservableObject {
             self.hasLoadedProducts = false
         }
     }
+    
+    // MARK: Saving JSON
+    func save(){
+        let encoder = JSONEncoder()
+        let url = self.getDocumentsDirectory().appendingPathComponent("PersonalCalculationsData.json")
+        
+        if let encoded = try? encoder.encode(self.data) {
+            if let json = String(data: encoded, encoding: .utf8) {
+                do {
+                    try json.write(to: url, atomically: true, encoding: .utf8)
+                    print("tried to write!!")
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        // find all possible documents directories for this user
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        // just send back the first one, which ought to be the only one
+        return paths[0]
+    }
+    
 }

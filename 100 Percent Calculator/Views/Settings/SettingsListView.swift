@@ -13,6 +13,8 @@ struct SettingsListView: View {
     @EnvironmentObject var userSettings: UserSettings
     
     
+    
+    
     var body: some View {
         NavigationView{
             List{
