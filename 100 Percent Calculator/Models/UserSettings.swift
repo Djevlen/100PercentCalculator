@@ -81,13 +81,13 @@ final class UserSettings: ObservableObject {
         guard let calcIndex = self.data[section].calculations.firstIndex(where: {$0.id == calculation.id}) else {
             return
         }
-        if(operands.operand1.count > 0 && operands.operand1 != nil){
+        if(operands.operand1.count > 0){
             self.data[section].calculations[calcIndex].defaultOperand1 = operands.operand1
         }
-        if(operands.operand2.count > 0 && operands.operand2 != nil){
+        if(operands.operand2.count > 0){
             self.data[section].calculations[calcIndex].defaultOperand2 = operands.operand2
         }
-        
+        self.save()
     }
     func restoreCalculations(){
         for (indexCategory, category) in self.data.enumerated() {

@@ -16,12 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        #warning("fix this")
-//        let filePath = Bundle.main.path(forResource: "apiKeys", ofType: "plist")
-//        let plist = NSDictionary(contentsOfFile:filePath!)
-//        let revenuecat = plist?.object(forKey: "revenuecat") as! String
-//        Purchases.debugLogsEnabled = true
-//        Purchases.configure(withAPIKey: revenuecat)
         IAPManager.shared.startObserving()
         return true
     }
