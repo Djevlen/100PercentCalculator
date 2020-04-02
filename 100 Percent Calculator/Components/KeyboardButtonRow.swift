@@ -11,6 +11,7 @@ import SwiftUI
 struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
     var calculator: Calculator
+    
     var body: some View {
         Group{
             if (self.keyboard.isPresent){
@@ -27,7 +28,7 @@ struct KeyboardButtonRow: View {
                 .modifier(Card(width: 100, height: 110))
                 
                 Button(action: {
-                    self.dismissKeyboard()
+                    self.done()
                 }) {
                     VStack{
                         Image(systemName: "checkmark")
@@ -47,7 +48,11 @@ struct KeyboardButtonRow: View {
     func copyResult(){
         let copyResult = UIPasteboard.general
         copyResult.string = self.calculator.result
-        
+    }
+    
+    func done(){
+        self.dismissKeyboard()
+
     }
 }
 
