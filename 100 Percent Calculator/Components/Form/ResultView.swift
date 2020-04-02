@@ -28,7 +28,6 @@ struct ResultView: View {
     
     var body: some View {
         if(!self.operand1.isEmpty && !self.operand2.isEmpty){
-            print("to is empty not")
             self.calculator.calculateNewPrice(operand1: self.operand1, operand2: self.operand2)
         }
         return VStack{
