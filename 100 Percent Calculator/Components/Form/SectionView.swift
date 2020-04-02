@@ -19,7 +19,6 @@ struct SectionView: View{
     var withPercentage: Bool {
         return self.calculation.placePercentagesSymbolOn.elementsEqual(self.placeholder)
     }
-    
     #warning("animate this placeholder -> Text transition")
     
 //    private var currencyFormatter: NumberFormatter = {
@@ -36,22 +35,25 @@ struct SectionView: View{
                     .font(.title)
                     .fontWeight(.black)
                 Spacer()
+                
             }
-            HStack {
-                if(!textfieldString.isEmpty && !self.textFieldDisabled){
-                    Text(self.placeholder)
-                    .font(.footnote)
+            VStack(alignment: .trailing) {
+                HStack {
+                    if(!textfieldString.isEmpty && !self.textFieldDisabled){
+                        Text(self.placeholder)
+                        .font(.footnote)
+                    }
+                    if(self.textFieldDisabled){
+                        Text(self.placeholder)
+                        .font(.largeTitle)
+                    }
+                    TextField(self.placeholder, text: $textfieldString)
+                        .multilineTextAlignment(.trailing)
+                        .keyboardType(.numberPad)
+                        .disabled(self.textFieldDisabled)
+                    self.withPercentage ?
+                        Text("%") : nil
                 }
-                if(self.textFieldDisabled){
-                    Text(self.placeholder)
-                    .font(.largeTitle)
-                }
-                TextField(self.placeholder, text: $textfieldString)
-                    .multilineTextAlignment(.trailing)
-                    .keyboardType(.decimalPad)
-                    .disabled(self.textFieldDisabled)
-                self.withPercentage ?
-                    Text("%") : nil
             }
             self.footer.count > 0 ?
                 HStack{
@@ -70,4 +72,3 @@ struct SectionView_Previews: PreviewProvider {
         SectionView(textfieldString: .constant("811"), header: "header",footer: "footer", calculation: calculationsData[0].calculations[0], placeholder: "placeholder")
     }
 }
-

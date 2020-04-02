@@ -40,6 +40,7 @@ struct ButtonRow: View {
     }
     
     func done(){
+        self.dismissKeyboard()
         self.operand1 = ""
         self.operand2 = ""
     }

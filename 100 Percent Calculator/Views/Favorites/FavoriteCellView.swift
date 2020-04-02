@@ -10,6 +10,7 @@ import SwiftUI
 
 struct FavoriteCellView: View {
     @EnvironmentObject var userSettings: UserSettings
+    @EnvironmentObject var keyboard: KeyboardController
     @ObservedObject var calculator: Calculator = Calculator()
     var favorite: Calculation
     @State var operand1: String = ""
@@ -33,7 +34,8 @@ struct FavoriteCellView: View {
                      ResultView(calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2)
                 }
             }
-            
+            DismissKeyboardButton()
+
         }
         .padding()
     }

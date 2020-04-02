@@ -14,15 +14,14 @@ struct CalculationHost: View {
 
 
     var body: some View {
-        NavigationView {
-            if self.mode?.wrappedValue == .inactive {
-                CalculationView(calculation: self.calculation)
-                
-            } else {
-                EditDefaultsView(calculation: self.calculation)
+            VStack{
+                if self.mode?.wrappedValue == .inactive {
+                    CalculationView(calculation: self.calculation)
+                } else {
+                    EditDefaultsView(calculation: self.calculation)
+                }
+                Spacer()
             }
-            
-        }
         .navigationBarTitle(Text(self.calculation.title), displayMode: .inline)
         .navigationBarItems(trailing: EditButton())
     }

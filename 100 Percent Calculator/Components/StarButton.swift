@@ -23,12 +23,6 @@ struct StarButton: View {
             Alert(title: Text("100% Pro Needed"), message: Text("Buy Pro to get unlimited favorites, and remove ads!"), dismissButton: .default(Text("Ok!")))
             }
         }
-        
-//        Image(systemName: self.calculation.isFavorite ? "star.fill" : "star")
-//            .foregroundColor(.yellow)
-//            .onTapGesture {
-//                self.userSettings.toggleFavoriteFromCalculation(calculation: self.calculation)
-//            }
     }
 
 

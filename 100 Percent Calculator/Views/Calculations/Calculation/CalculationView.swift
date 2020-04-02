@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CalculationView: View {
     @ObservedObject var calculator: Calculator = Calculator()
+    @EnvironmentObject var keyboard: KeyboardController
     var calculation: Calculation
     
     var firstOperandString: String {
@@ -18,7 +19,7 @@ struct CalculationView: View {
     }
     var secondOperandString: String {
         print("default second: \(String(describing: self.calculation.defaultOperand2))")
-
+        
         return self.calculation.secondOperandString
     }
     
@@ -27,28 +28,32 @@ struct CalculationView: View {
     
     
     var body: some View {
-        VStack {
-            HStack{
-                Text(self.calculation.title)
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                Spacer()
-                StarButton(calculation: self.calculation)
-                    .font(.largeTitle)
-            }
-            Group{
-                SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
-                SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
-                if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
-                    ResultView(calculation: calculation, operand1: self.$operand1, operand2: self.$operand2)
+        Group {
+            VStack {
+                HStack{
+                    Text(self.calculation.title)
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    Spacer()
+                    StarButton(calculation: self.calculation)
+                        .font(.largeTitle)
                 }
+                Group{
+                    SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
+                    SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
+                    if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
+                        ResultView(calculation: calculation, operand1: self.$operand1, operand2: self.$operand2)
+                    }
+                }
+                Spacer()
+                DismissKeyboardButton()
+                
             }
+            .font(.title)
+            .padding(.horizontal)
             Spacer()
 
         }
-        .font(.title)
-        .padding(.horizontal)
-        
     }
     
 }
