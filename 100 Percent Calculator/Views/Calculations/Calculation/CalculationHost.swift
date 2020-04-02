@@ -20,7 +20,6 @@ struct CalculationHost: View {
                 } else {
                     EditDefaultsView(calculation: self.calculation)
                 }
-                Spacer()
             }
         .navigationBarTitle(Text(self.calculation.title), displayMode: .inline)
         .navigationBarItems(trailing: EditButton())

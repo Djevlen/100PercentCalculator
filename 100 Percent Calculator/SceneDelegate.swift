@@ -28,7 +28,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation]())
             let keyboardWatcher = KeyboardController()
             window.rootViewController = UIHostingController(rootView: contentView .environmentObject(userSettings).environmentObject(keyboardWatcher))
-            
             self.window = window
             window.makeKeyAndVisible()
         }

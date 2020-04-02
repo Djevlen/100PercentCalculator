@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct CalculationView: View {
-    @ObservedObject var calculator: Calculator = Calculator()
     @EnvironmentObject var keyboard: KeyboardController
+    @ObservedObject var calculator: Calculator = Calculator()
     var calculation: Calculation
     
     var firstOperandString: String {
@@ -23,12 +23,17 @@ struct CalculationView: View {
         return self.calculation.secondOperandString
     }
     
+     var bindableResult: Binding<String> { Binding (
+        get: {  self.calculator.result },
+        set: { _ in }
+        )
+    }
+    
     @State private var operand1: String = ""
     @State private var operand2: String = ""
     
     
     var body: some View {
-        Group {
             VStack {
                 HStack{
                     Text(self.calculation.title)
@@ -38,22 +43,24 @@ struct CalculationView: View {
                     StarButton(calculation: self.calculation)
                         .font(.largeTitle)
                 }
-                Group{
+                VStack{
                     SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
                     SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
                     if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
                         ResultView(calculation: calculation, operand1: self.$operand1, operand2: self.$operand2)
                     }
                 }
-                Spacer()
-                DismissKeyboardButton()
-                
+                VStack(alignment: .trailing){
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        KeyboardButtonRow()
+                    }
+                    
+                }
             }
             .font(.title)
             .padding(.horizontal)
-            Spacer()
-
-        }
     }
     
 }
