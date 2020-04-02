@@ -38,13 +38,8 @@ struct FavoritesView: View {
                         }
                     }
                 }
-                
-                
             }
         }
-        
-        
-        
     }
     
     func moveCell(from source: IndexSet, to destination: Int){

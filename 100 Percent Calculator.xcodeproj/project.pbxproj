@@ -25,7 +25,6 @@
 		E91260852428059E00B2C8A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E91260842428059E00B2C8A2 /* .gitignore */; };
 		E918A0132434CE85006B2BB6 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A0122434CE85006B2BB6 /* ViewExtensions.swift */; };
 		E918A0162435C3ED006B2BB6 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A0152435C3ED006B2BB6 /* KeyboardController.swift */; };
-		E918A0182435E116006B2BB6 /* DismissKeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A0172435E116006B2BB6 /* DismissKeyboardButton.swift */; };
 		E918A01A24360A00006B2BB6 /* KeyboardButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */; };
 		E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93388FD242A5120007B7A51 /* EditDefaultsView.swift */; };
 		E938011E2424B94E00BA196F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938011D2424B94E00BA196F /* Calculator.swift */; };
@@ -34,7 +33,6 @@
 		E940F0F8242B67FA00BA2090 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940F0F7242B67FA00BA2090 /* PrivacyPolicyView.swift */; };
 		E951B3022423584000316662 /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3012423584000316662 /* FavoriteCellView.swift */; };
 		E951B3052423597800316662 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3042423597800316662 /* StarButton.swift */; };
-		E9664E8D24290447007C67C8 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9664E8C24290447007C67C8 /* ButtonRow.swift */; };
 		E99D93042428B74F009305BB /* NoFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D93032428B74F009305BB /* NoFavoritesView.swift */; };
 		E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */; };
 		E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */; };
@@ -78,7 +76,6 @@
 		E91260842428059E00B2C8A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E918A0122434CE85006B2BB6 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		E918A0152435C3ED006B2BB6 /* KeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
-		E918A0172435E116006B2BB6 /* DismissKeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardButton.swift; sourceTree = "<group>"; };
 		E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButtonRow.swift; sourceTree = "<group>"; };
 		E93388FD242A5120007B7A51 /* EditDefaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDefaultsView.swift; sourceTree = "<group>"; };
 		E938011D2424B94E00BA196F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
@@ -87,7 +84,6 @@
 		E940F0F7242B67FA00BA2090 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		E951B3012423584000316662 /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
 		E951B3042423597800316662 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
-		E9664E8C24290447007C67C8 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
 		E99D93032428B74F009305BB /* NoFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoritesView.swift; sourceTree = "<group>"; };
 		E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "100 Percent Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -228,9 +224,7 @@
 			children = (
 				E90F7AB02423848A00C31994 /* Form */,
 				E951B3042423597800316662 /* StarButton.swift */,
-				E9664E8C24290447007C67C8 /* ButtonRow.swift */,
 				E9DE21D724325FCB00D6B35F /* ViewModifiers.swift */,
-				E918A0172435E116006B2BB6 /* DismissKeyboardButton.swift */,
 				E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */,
 			);
 			path = Components;
@@ -416,7 +410,6 @@
 				E951B3022423584000316662 /* FavoriteCellView.swift in Sources */,
 				E99D93042428B74F009305BB /* NoFavoritesView.swift in Sources */,
 				E90F7AB42423B1F200C31994 /* ResultView.swift in Sources */,
-				E9664E8D24290447007C67C8 /* ButtonRow.swift in Sources */,
 				E9CC79292422B0930016D1A0 /* FavoritesView.swift in Sources */,
 				E918A01A24360A00006B2BB6 /* KeyboardButtonRow.swift in Sources */,
 				E9081168242E01BF00835623 /* IAPManager.swift in Sources */,
@@ -434,7 +427,6 @@
 				E908116A242E33FA00835623 /* ProductView.swift in Sources */,
 				E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */,
 				E90F7AB22423849A00C31994 /* SectionView.swift in Sources */,
-				E918A0182435E116006B2BB6 /* DismissKeyboardButton.swift in Sources */,
 				E9DE21D824325FCB00D6B35F /* ViewModifiers.swift in Sources */,
 				E918A0132434CE85006B2BB6 /* ViewExtensions.swift in Sources */,
 				E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */,
