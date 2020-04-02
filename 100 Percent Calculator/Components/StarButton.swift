@@ -17,13 +17,14 @@ struct StarButton: View {
             self.userSettings.toggleFavorite(calculation: self.calculation)
         }){
             Image(systemName: self.calculation.isFavorite ? "star.fill" : "star")
-            .foregroundColor(.yellow)
+                .foregroundColor(.yellow)
         }
+        .buttonStyle(BorderlessButtonStyle())
         .alert(isPresented: self.$userSettings.favoriteLimitReached) {
             Alert(title: Text("100% Pro Needed"), message: Text("Buy Pro to get unlimited favorites, and remove ads!"), dismissButton: .default(Text("Ok!")))
-            }
         }
     }
+}
 
 
 struct StarButton_Previews: PreviewProvider {

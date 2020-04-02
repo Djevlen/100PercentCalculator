@@ -11,44 +11,45 @@ import SwiftUI
 struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
     var calculator: Calculator
-        var body: some View {
-            Group{
-                if (self.keyboard.isPresent){
-                    Button(action: {
-                        self.copyResult()
-                    }) {
-                        VStack{
+    var body: some View {
+        Group{
+            if (self.keyboard.isPresent){
+                Button(action: {
+                    self.copyResult()
+                }) {
+                    VStack{
                         Image(systemName: "doc.on.doc")
                             .padding(.top, 10)
-                            Spacer()
-                        }
+                        Spacer()
                     }
-                    .modifier(Card(width: 100, height: 110))
-
-                    Button(action: {
-                        self.dismissKeyboard()
-                    }) {
-                        VStack{
+                }
+                .buttonStyle(BorderlessButtonStyle())
+                .modifier(Card(width: 100, height: 110))
+                
+                Button(action: {
+                    self.dismissKeyboard()
+                }) {
+                    VStack{
                         Image(systemName: "checkmark")
                             .padding(.top, 10)
-                            Spacer()
-                        }
-                        
+                        Spacer()
                     }
-                    .modifier(Card(width: 100, height: 110))
-
-                    
-                }else{
-                    EmptyView()
                 }
+                .buttonStyle(BorderlessButtonStyle())
+                .modifier(Card(width: 100, height: 110))
+            }else{
+                EmptyView()
             }
-            .padding(.bottom, self.keyboard.height/2)
         }
+        .padding(.bottom, self.keyboard.height/2)
+    }
     
     func copyResult(){
-        print("copy: \(self.calculator.result)")
+        let copyResult = UIPasteboard.general
+        copyResult.string = self.calculator.result
+        
     }
-    }
+}
 
 struct KeyboardButtonRow_Previews: PreviewProvider {
     static var previews: some View {

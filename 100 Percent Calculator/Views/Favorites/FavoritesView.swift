@@ -10,6 +10,8 @@ import SwiftUI
 
 struct FavoritesView: View {
     @EnvironmentObject var userSettings: UserSettings
+    @ObservedObject var calculator: Calculator = Calculator()
+
     
     var body: some View {
         Group {
@@ -18,15 +20,25 @@ struct FavoritesView: View {
                 NoFavoritesView()
             }else{
                 NavigationView{
-                    List{
-                        ForEach(userSettings.favoriteCalculations){ favorite in
-                            FavoriteCellView(favorite: favorite)
+                    ZStack {
+                        List{
+                            ForEach(userSettings.favoriteCalculations){ favorite in
+                                FavoriteCellView(calculator: self.calculator, favorite: favorite)
+                            }
+                        .onMove(perform: moveCell)
                         }
-                    .onMove(perform: moveCell)
+                        .listStyle(PlainListStyle())
+                        .navigationBarTitle(Text("Favorites"), displayMode: .inline).navigationBarItems(trailing: EditButton())
+                        VStack(alignment: .trailing){
+                            Spacer()
+                            HStack{
+                                Spacer()
+                                KeyboardButtonRow(calculator: self.calculator)
+                            }
+                        }
                     }
-                    .listStyle(PlainListStyle())
-                    .navigationBarTitle(Text("Favorites"), displayMode: .inline).navigationBarItems(trailing: EditButton())
                 }
+                
                 
             }
         }

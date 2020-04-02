@@ -11,7 +11,7 @@ import SwiftUI
 struct FavoriteCellView: View {
     @EnvironmentObject var userSettings: UserSettings
     @EnvironmentObject var keyboard: KeyboardController
-    @ObservedObject var calculator: Calculator = Calculator()
+    var calculator: Calculator
     var favorite: Calculation
     @State var operand1: String = ""
     @State var operand2: String = ""
@@ -23,16 +23,14 @@ struct FavoriteCellView: View {
                 Spacer()
                 StarButton(calculation: favorite)
             }
-            Group{
+            VStack{
                 SectionView(textfieldString: self.$operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString)
                 SectionView(textfieldString: self.$operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString)
-                
+                    if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
+                        ResultView(calculator:self.calculator, calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2)
+                    }
             }
-            if(self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
-                VStack(alignment: .trailing){
-                     ResultView(calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2)
-                }
-            }
+           
         }
         .padding()
     }
@@ -40,6 +38,6 @@ struct FavoriteCellView: View {
 
 struct FavoriteCellView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteCellView(favorite: calculationsData[0].calculations[0])
+        FavoriteCellView( calculator: Calculator(),favorite: calculationsData[0].calculations[0])
     }
 }

@@ -18,7 +18,7 @@ struct Calculation: Hashable, Codable, Identifiable {
     var firstOperandString: String
     var secondOperandString: String
     var resultString: String
-    var additionalString: String
+    var additionalString: String?
     var showCurrencySymbol: Bool
     var placePercentagesSymbolOn: String
     var defaultOperand1: String?
