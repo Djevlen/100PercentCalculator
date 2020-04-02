@@ -23,12 +23,6 @@ struct CalculationView: View {
         return self.calculation.secondOperandString
     }
     
-     var bindableResult: Binding<String> { Binding (
-        get: {  self.calculator.result },
-        set: { _ in }
-        )
-    }
-    
     @State private var operand1: String = ""
     @State private var operand2: String = ""
     
@@ -47,14 +41,14 @@ struct CalculationView: View {
                     SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
                     SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
                     if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
-                        ResultView(calculation: calculation, operand1: self.$operand1, operand2: self.$operand2)
+                        ResultView(calculation: calculation, operand1: self.$operand1, operand2: self.$operand2, calculator: self.calculator)
                     }
                 }
                 VStack(alignment: .trailing){
                     Spacer()
                     HStack{
                         Spacer()
-                        KeyboardButtonRow()
+                        KeyboardButtonRow(calculator: self.calculator)
                     }
                     
                 }

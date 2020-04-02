@@ -10,12 +10,12 @@ import SwiftUI
 
 struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
+    var calculator: Calculator
         var body: some View {
             Group{
                 if (self.keyboard.isPresent){
-                    
                     Button(action: {
-                        self.dismissKeyboard()
+                        self.copyResult()
                     }) {
                         VStack{
                         Image(systemName: "doc.on.doc")
@@ -44,11 +44,15 @@ struct KeyboardButtonRow: View {
             }
             .padding(.bottom, self.keyboard.height/2)
         }
+    
+    func copyResult(){
+        print("copy: \(self.calculator.result)")
+    }
     }
 
 struct KeyboardButtonRow_Previews: PreviewProvider {
     static var previews: some View {
         let keyboard = KeyboardController()
-        return KeyboardButtonRow().environmentObject(keyboard)
+        return KeyboardButtonRow(calculator: Calculator()).environmentObject(keyboard)
     }
 }
