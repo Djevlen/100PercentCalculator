@@ -40,7 +40,6 @@ struct CalculationView: View {
                 SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
                 ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
                     .onReceive(self.calculator.$isCalculating, perform: { (boolean) in
-                        print("boolean: \(boolean)")
                         self.isCalculating = boolean
                     })
                     .opacity(self.isCalculating ? 1 : 0)

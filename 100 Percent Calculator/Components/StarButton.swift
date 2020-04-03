@@ -20,9 +20,6 @@ struct StarButton: View {
                 .foregroundColor(.yellow)
         }
         .buttonStyle(BorderlessButtonStyle())
-        .alert(isPresented: self.$userSettings.favoriteLimitReached) {
-            Alert(title: Text("100% Pro Needed"), message: Text("Buy Pro to get unlimited favorites!"), dismissButton: .default(Text("Ok!")))
-        }
     }
 }
 

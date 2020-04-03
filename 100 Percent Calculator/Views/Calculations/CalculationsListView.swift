@@ -34,12 +34,17 @@ struct CalculationsListView: View {
                     
                 }
                 
+                
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("100% Percent Calculator", displayMode: .inline)
             .navigationBarItems(trailing: EditButton())
         }
+        .sheet(isPresented: self.$userSettings.favoriteLimitReached) {
+            iAPSheetView(isPresenting: self.$userSettings.favoriteLimitReached).environmentObject(self.userSettings)
+        }
     }
+    
     
     func getSection(from category: CalculationCategory) -> Int{
         return self.userSettings.data.firstIndex(of: category)!

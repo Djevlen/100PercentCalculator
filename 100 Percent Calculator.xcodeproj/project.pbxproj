@@ -26,6 +26,7 @@
 		E918A0132434CE85006B2BB6 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A0122434CE85006B2BB6 /* ViewExtensions.swift */; };
 		E918A0162435C3ED006B2BB6 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A0152435C3ED006B2BB6 /* KeyboardController.swift */; };
 		E918A01A24360A00006B2BB6 /* KeyboardButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */; };
+		E922B83724375559005511E5 /* iAPSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922B83624375559005511E5 /* iAPSheetView.swift */; };
 		E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93388FD242A5120007B7A51 /* EditDefaultsView.swift */; };
 		E938011E2424B94E00BA196F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938011D2424B94E00BA196F /* Calculator.swift */; };
 		E940F0F4242B3F0000BA2090 /* CalculationHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */; };
@@ -77,6 +78,7 @@
 		E918A0122434CE85006B2BB6 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		E918A0152435C3ED006B2BB6 /* KeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
 		E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButtonRow.swift; sourceTree = "<group>"; };
+		E922B83624375559005511E5 /* iAPSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAPSheetView.swift; sourceTree = "<group>"; };
 		E93388FD242A5120007B7A51 /* EditDefaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDefaultsView.swift; sourceTree = "<group>"; };
 		E938011D2424B94E00BA196F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHost.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		E90CD7C82420EBA800BA5274 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E922B83524375545005511E5 /* Sheets */,
 				E90CD7CB2420EBC000BA5274 /* Settings */,
 				E90CD7CA2420EBBA00BA5274 /* Favorites */,
 				E90CD7C92420EBB400BA5274 /* Calculations */,
@@ -217,6 +220,14 @@
 				E918A0152435C3ED006B2BB6 /* KeyboardController.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E922B83524375545005511E5 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				E922B83624375559005511E5 /* iAPSheetView.swift */,
+			);
+			path = Sheets;
 			sourceTree = "<group>";
 		};
 		E951B30624235B5600316662 /* Components */ = {
@@ -413,6 +424,7 @@
 				E9CC79292422B0930016D1A0 /* FavoritesView.swift in Sources */,
 				E918A01A24360A00006B2BB6 /* KeyboardButtonRow.swift in Sources */,
 				E9081168242E01BF00835623 /* IAPManager.swift in Sources */,
+				E922B83724375559005511E5 /* iAPSheetView.swift in Sources */,
 				E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */,
 				E938011E2424B94E00BA196F /* Calculator.swift in Sources */,
 				E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */,

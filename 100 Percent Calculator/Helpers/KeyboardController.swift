@@ -20,7 +20,6 @@ final class KeyboardController: ObservableObject {
         notificationCenter = center
         notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        print("inititting keyboard")
     }
     
     @objc func keyboardWillShow(notification: Notification){

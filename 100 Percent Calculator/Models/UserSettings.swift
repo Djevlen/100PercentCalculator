@@ -27,6 +27,7 @@ final class UserSettings: ObservableObject {
     @Published var thankUser: Bool              = false
     @Published var favoriteLimitReached: Bool   = false
     @Published var products: [SKProduct]? = nil
+    @Published var proProduct: SKProduct? = nil
     
     
     @Published var deletionWarningDismissed: Bool = false
@@ -112,12 +113,10 @@ final class UserSettings: ObservableObject {
                 case .success(let products):
                     if self.isProUser{
                         self.products = products.filter {!$0.productIdentifier.lowercased().contains("pro")}
-                        print("proUser er true, products er: \(String(describing: self.products))")
-                        
                     }else {
                         self.products = products
-                        print("proUser er false, products er: \(String(describing: self.products))")
                     }
+                    self.proProduct = products.first(where: {$0.productIdentifier.lowercased().contains("pro")})
                     self.hasLoadedProducts = true
                 case .failure(let error):
                     print("error: \(error)")
