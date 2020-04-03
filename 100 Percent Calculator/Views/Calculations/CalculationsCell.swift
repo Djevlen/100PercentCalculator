@@ -9,21 +9,14 @@
 import SwiftUI
 
 struct CalculationsCell: View {
-    @EnvironmentObject var userSettings: UserSettings
     var calculation: Calculation
-    var section: Int
 
-    var calculationIndex: Int {
-        userSettings.data[section].calculations.firstIndex(where: { $0.id == calculation.id })!
-    }
     var body: some View {
         HStack {
             StarButton(calculation: self.calculation)
                 .font(.title)
-
             Text(calculation.title)
                 .font(.body)
         }
-        .buttonStyle(PlainButtonStyle())
     }
 }

@@ -22,19 +22,14 @@ struct CalculationsListView: View {
                             ForEach(category.calculations){ calc in
                                 if(calc.isHidden == false){
                                     NavigationLink(destination: CalculationHost(calculation: calc)) {
-                                        CalculationsCell(calculation: calc, section: self.getSection(from: category))
+                                        CalculationsCell(calculation: calc)
                                     }
                                 }
                             }
                             .onDelete{self.hideCalculation(at: $0, in: category) }
-                            
                         }
-                        
                     }
-                    
                 }
-                
-                
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("100% Percent Calculator", displayMode: .inline)
