@@ -11,13 +11,11 @@ import SwiftUI
 struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
     var calculator: Calculator
-    
-    @State private var resultCopiedOpacity:Double  = 0.0
+    @State private var resultCopiedOpacity: Double  = 0.0
     
     var body: some View {
         Group{
             if (self.keyboard.isPresent){
-                if calculator.result.count > 0 {
                     ZStack{
                         Button(action: {
                             self.copyResult()
@@ -35,7 +33,6 @@ struct KeyboardButtonRow: View {
                             .offset(x: 0, y: -65)
                             .opacity(self.resultCopiedOpacity)
                     }
-                }
                 Button(action: {
                     self.done()
                 }) {
@@ -55,17 +52,18 @@ struct KeyboardButtonRow: View {
     }
     
     func copyResult(){
-        self.resultCopiedOpacity = 1
-        let copyResult = UIPasteboard.general
-        copyResult.string = self.calculator.result
-        withAnimation(.linear(duration: 2)) {
-            self.resultCopiedOpacity = 0
+        if self.calculator.result.count > 0{
+            self.resultCopiedOpacity = 1
+            let copyResult = UIPasteboard.general
+            copyResult.string = self.calculator.result
+            withAnimation(.linear(duration: 2)) {
+                self.resultCopiedOpacity = 0
+            }
         }
     }
     
     func done(){
         self.dismissKeyboard()
-        
     }
 }
 

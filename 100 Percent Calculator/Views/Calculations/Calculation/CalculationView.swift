@@ -14,17 +14,15 @@ struct CalculationView: View {
     var calculation: Calculation
     
     var firstOperandString: String {
-        print("default first: \(String(describing: self.calculation.defaultOperand1))")
         return self.calculation.firstOperandString
     }
     var secondOperandString: String {
-        print("default second: \(String(describing: self.calculation.defaultOperand2))")
-        
         return self.calculation.secondOperandString
     }
     
     @State private var operand1: String = ""
     @State private var operand2: String = ""
+    @State private var isCalculating: Bool = false
     
     
     var body: some View {
@@ -40,9 +38,13 @@ struct CalculationView: View {
             VStack{
                 SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
                 SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
-                if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
-                    ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
-                }
+                ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
+                    .onReceive(self.calculator.$isCalculating, perform: { (boolean) in
+                        print("boolean: \(boolean)")
+                        self.isCalculating = boolean
+                    })
+                    .opacity(self.isCalculating ? 1 : 0)
+                
             }
             VStack(alignment: .trailing){
                 Spacer()

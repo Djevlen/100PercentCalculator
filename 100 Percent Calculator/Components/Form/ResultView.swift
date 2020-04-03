@@ -27,7 +27,7 @@ struct ResultView: View {
     }
     
     var body: some View {
-        if(!self.operand1.isEmpty && !self.operand2.isEmpty){
+        if (self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
             self.calculator.calculateNewPrice(operand1: self.operand1, operand2: self.operand2)
         }
         return VStack{
