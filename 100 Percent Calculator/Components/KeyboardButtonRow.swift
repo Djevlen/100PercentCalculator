@@ -12,21 +12,30 @@ struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
     var calculator: Calculator
     
+    @State private var resultCopiedOpacity:Double  = 0.0
+    
     var body: some View {
         Group{
             if (self.keyboard.isPresent){
-                Button(action: {
-                    self.copyResult()
-                }) {
-                    VStack{
-                        Image(systemName: "doc.on.doc")
-                            .padding(.top, 10)
-                        Spacer()
+                if calculator.result.count > 0 {
+                    ZStack{
+                        Button(action: {
+                            self.copyResult()
+                        }) {
+                            VStack{
+                                Image(systemName: "doc.on.doc")
+                                    .padding(.top, 10)
+                                Spacer()
+                            }
+                        }
+                        .modifier(KeyboardButton())
+                        .buttonStyle(BorderlessButtonStyle())
+                        Text(self.calculator.result)
+                            .modifier(GreenRoundedRectangle())
+                            .offset(x: 0, y: -65)
+                            .opacity(self.resultCopiedOpacity)
                     }
                 }
-                .buttonStyle(BorderlessButtonStyle())
-                .modifier(Card(width: 100, height: 110))
-                
                 Button(action: {
                     self.done()
                 }) {
@@ -37,7 +46,7 @@ struct KeyboardButtonRow: View {
                     }
                 }
                 .buttonStyle(BorderlessButtonStyle())
-                .modifier(Card(width: 100, height: 110))
+                .modifier(KeyboardButton())
             }else{
                 EmptyView()
             }
@@ -46,13 +55,17 @@ struct KeyboardButtonRow: View {
     }
     
     func copyResult(){
+        self.resultCopiedOpacity = 1
         let copyResult = UIPasteboard.general
         copyResult.string = self.calculator.result
+        withAnimation(.linear(duration: 2)) {
+            self.resultCopiedOpacity = 0
+        }
     }
     
     func done(){
         self.dismissKeyboard()
-
+        
     }
 }
 

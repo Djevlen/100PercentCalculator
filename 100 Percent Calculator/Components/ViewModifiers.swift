@@ -8,6 +8,28 @@
 
 import SwiftUI
 
+struct KeyboardButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+        .frame(width: 100, height: 110)
+        .foregroundColor(.white)
+        .background(RoundedRectangle(cornerRadius: 10)
+        .foregroundColor(.blue))
+        .shadow(radius: 5)
+        
+    }
+}
+
+struct GreenRoundedRectangle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(10)
+            .foregroundColor(.white)
+            .background(RoundedRectangle(cornerRadius: 10)
+            .foregroundColor(.green))
+            .shadow(radius: 5)
+    }
+}
 //Card shape
 struct Card: ViewModifier {
     var width: CGFloat
@@ -21,6 +43,5 @@ struct Card: ViewModifier {
             .foregroundColor(.blue))
             .shadow(radius: 5)
     }
-    
 }
 
