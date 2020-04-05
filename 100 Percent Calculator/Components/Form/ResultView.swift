@@ -31,7 +31,10 @@ struct ResultView: View {
             self.calculator.calculateNewPrice(operand1: self.operand1, operand2: self.operand2)
         }
         return VStack{
+            self.resultString.count == 0 ? nil : Divider().background(Color.green).frame(height: 1)
+
             HStack{
+
                 Text(self.resultString)
                     .font(.title)
                 Spacer()

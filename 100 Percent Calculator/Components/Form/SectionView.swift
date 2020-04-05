@@ -54,6 +54,7 @@ struct SectionView: View{
                     self.withPercentage ?
                         Text("%") : nil
                 }
+                textfieldString.count > 0 ? nil : Divider().background(Color.red).frame(height: 1)
             }
             self.footer.count > 0 ?
                 HStack{

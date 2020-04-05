@@ -36,8 +36,11 @@ struct CalculationView: View {
             
             
             VStack{
-                SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
-                SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
+                VStack {
+                    SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
+                    SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
+                }.modifier(SectionViewGroup())
+                
                 ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
                     .onReceive(self.calculator.$isCalculating, perform: { (bool) in
                         self.isCalculating = bool

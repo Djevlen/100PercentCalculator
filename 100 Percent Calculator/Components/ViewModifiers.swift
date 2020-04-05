@@ -26,8 +26,15 @@ struct LargeTitleHeader: ViewModifier {
             .font(.largeTitle)
             .foregroundColor(.white)
             .padding(10)
-        .background(Rectangle().foregroundColor(Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)))
+            .background(Rectangle().foregroundColor(Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)))
+            .shadow(radius: 10)
+    }
+}
 
+struct SectionViewGroup: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding([.horizontal, .top], 10)
     }
 }
 
