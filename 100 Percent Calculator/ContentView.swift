@@ -38,20 +38,6 @@ struct ContentView: View {
     }
 }
 
-//extension to configure appearance
-extension UITabBarController {
-    override open func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let standardAppearance = UITabBarAppearance()
-        
-        // update the appearance
-        
-        
-        tabBar.standardAppearance = standardAppearance
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let userSettings = UserSettings(data:  calculationsData, favoriteCalculations: [Calculation]())

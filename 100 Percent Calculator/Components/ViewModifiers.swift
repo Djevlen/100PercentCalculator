@@ -20,13 +20,26 @@ struct KeyboardButton: ViewModifier {
     }
 }
 
-struct GreenRoundedRectangle: ViewModifier {
+struct LargeTitleHeader: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.white)
+            .padding(10)
+        .background(Rectangle().foregroundColor(Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)))
+
+    }
+}
+
+struct ModifiedRoundedRectangle: ViewModifier {
+    var color: Color
+    
     func body(content: Content) -> some View {
         content
             .padding(10)
             .foregroundColor(.white)
             .background(RoundedRectangle(cornerRadius: 10)
-            .foregroundColor(.green))
+            .foregroundColor(self.color))
             .shadow(radius: 5)
     }
 }

@@ -27,6 +27,8 @@
 		E918A0162435C3ED006B2BB6 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A0152435C3ED006B2BB6 /* KeyboardController.swift */; };
 		E918A01A24360A00006B2BB6 /* KeyboardButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */; };
 		E922B83724375559005511E5 /* iAPSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922B83624375559005511E5 /* iAPSheetView.swift */; };
+		E922B8392439CB6C005511E5 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922B8382439CB6C005511E5 /* UITabBarExtension.swift */; };
+		E922B83B2439CC86005511E5 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922B83A2439CC86005511E5 /* UINavigationBarExtension.swift */; };
 		E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93388FD242A5120007B7A51 /* EditDefaultsView.swift */; };
 		E938011E2424B94E00BA196F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938011D2424B94E00BA196F /* Calculator.swift */; };
 		E940F0F4242B3F0000BA2090 /* CalculationHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */; };
@@ -79,6 +81,8 @@
 		E918A0152435C3ED006B2BB6 /* KeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
 		E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButtonRow.swift; sourceTree = "<group>"; };
 		E922B83624375559005511E5 /* iAPSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAPSheetView.swift; sourceTree = "<group>"; };
+		E922B8382439CB6C005511E5 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
+		E922B83A2439CC86005511E5 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
 		E93388FD242A5120007B7A51 /* EditDefaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDefaultsView.swift; sourceTree = "<group>"; };
 		E938011D2424B94E00BA196F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		E940F0F3242B3EFF00BA2090 /* CalculationHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationHost.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				E918A0122434CE85006B2BB6 /* ViewExtensions.swift */,
+				E922B8382439CB6C005511E5 /* UITabBarExtension.swift */,
+				E922B83A2439CC86005511E5 /* UINavigationBarExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 				E918A01A24360A00006B2BB6 /* KeyboardButtonRow.swift in Sources */,
 				E9081168242E01BF00835623 /* IAPManager.swift in Sources */,
 				E922B83724375559005511E5 /* iAPSheetView.swift in Sources */,
+				E922B8392439CB6C005511E5 /* UITabBarExtension.swift in Sources */,
 				E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */,
 				E938011E2424B94E00BA196F /* Calculator.swift in Sources */,
 				E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */,
@@ -441,6 +448,7 @@
 				E90F7AB22423849A00C31994 /* SectionView.swift in Sources */,
 				E9DE21D824325FCB00D6B35F /* ViewModifiers.swift in Sources */,
 				E918A0132434CE85006B2BB6 /* ViewExtensions.swift in Sources */,
+				E922B83B2439CC86005511E5 /* UINavigationBarExtension.swift in Sources */,
 				E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */,
 				E90CD7D02421026400BA5274 /* Calculation.swift in Sources */,
 				E9081162242DD93700835623 /* iAPView.swift in Sources */,

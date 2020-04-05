@@ -55,7 +55,7 @@ struct iAPSheetView: View {
                 self.isPresenting = false
             }) {
                 Text("No thanks!")
-                    .modifier(GreenRoundedRectangle())
+                    .modifier(ModifiedRoundedRectangle(color: .red))
             }
         }
     }

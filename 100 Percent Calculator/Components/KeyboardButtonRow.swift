@@ -29,7 +29,7 @@ struct KeyboardButtonRow: View {
                         .modifier(KeyboardButton())
                         .buttonStyle(BorderlessButtonStyle())
                         Text(self.calculator.result)
-                            .modifier(GreenRoundedRectangle())
+                            .modifier(ModifiedRoundedRectangle(color: .green))
                             .offset(x: 0, y: -65)
                             .opacity(self.resultCopiedOpacity)
                     }

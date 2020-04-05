@@ -21,8 +21,8 @@ struct CalculationHost: View {
                     EditDefaultsView(calculation: self.calculation)
                 }
             }
-        .navigationBarTitle(Text(self.calculation.title), displayMode: .inline)
-        .navigationBarItems(trailing: EditButton())
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarItems(trailing: EditButton())
     }
 }
 

@@ -28,23 +28,24 @@ struct CalculationView: View {
     var body: some View {
         VStack {
             HStack{
-                Text(self.calculation.title)
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                Spacer()
-                StarButton(calculation: self.calculation)
-                    .font(.largeTitle)
-            }
+                    Text(self.calculation.title)
+                        .fontWeight(.heavy)
+                    Spacer()
+                    StarButton(calculation: self.calculation)                        
+            }.modifier(LargeTitleHeader())
+            
+            
             VStack{
                 SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
                 SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
                 ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
-                    .onReceive(self.calculator.$isCalculating, perform: { (boolean) in
-                        self.isCalculating = boolean
+                    .onReceive(self.calculator.$isCalculating, perform: { (bool) in
+                        self.isCalculating = bool
                     })
                     .opacity(self.isCalculating ? 1 : 0)
                 
             }
+            Spacer()
             VStack(alignment: .trailing){
                 Spacer()
                 HStack{
@@ -52,15 +53,15 @@ struct CalculationView: View {
                     KeyboardButtonRow(calculator: self.calculator)
                 }
             }
+            Spacer()
         }
         .font(.title)
-        .padding(.horizontal)
     }
     
 }
 
 struct CalculationView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculationView(calculation: calculationsData[0].calculations[0])
+        CalculationView(calculation: calculationsData[0].calculations[0]).environmentObject(KeyboardController())
     }
 }

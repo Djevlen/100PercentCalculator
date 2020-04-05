@@ -25,8 +25,13 @@ struct EditDefaultsView: View {
     
     var body: some View {
         VStack{
-            Text("Default Values")
-                .font(.largeTitle)
+            HStack {
+                Text("Default Values")
+                .fontWeight(.heavy)
+
+                Spacer()
+            }.modifier(LargeTitleHeader())
+            
             HStack{
                 Text(self.calculation.firstOperandString)
                     .font(.footnote)
@@ -47,12 +52,11 @@ struct EditDefaultsView: View {
                     self.save()
                 }) {
                     Text("Save")
-                    .padding()
+                        .padding()
                 }
             }
             Spacer()
         }
-        .padding(.horizontal)
     }
 }
 
