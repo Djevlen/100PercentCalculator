@@ -148,6 +148,7 @@
 		E90CD7C82420EBA800BA5274 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E9DE21D724325FCB00D6B35F /* ViewModifiers.swift */,
 				E922B83524375545005511E5 /* Sheets */,
 				E90CD7CB2420EBC000BA5274 /* Settings */,
 				E90CD7CA2420EBBA00BA5274 /* Favorites */,
@@ -241,7 +242,6 @@
 			children = (
 				E90F7AB02423848A00C31994 /* Form */,
 				E951B3042423597800316662 /* StarButton.swift */,
-				E9DE21D724325FCB00D6B35F /* ViewModifiers.swift */,
 				E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */,
 			);
 			path = Components;

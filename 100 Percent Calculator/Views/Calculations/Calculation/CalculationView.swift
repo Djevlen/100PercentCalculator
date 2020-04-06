@@ -20,8 +20,8 @@ struct CalculationView: View {
         return self.calculation.secondOperandString
     }
     
-    @State private var operand1: String = ""
-    @State private var operand2: String = ""
+    @State private var operand1: String = "100"
+    @State private var operand2: String = "01"
     @State private var isCalculating: Bool = false
     
     
@@ -39,15 +39,15 @@ struct CalculationView: View {
                 VStack {
                     SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
                     SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
-                }.modifier(SectionViewGroup())
+                }
                 
                 ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
+                    .modifier(LargeTitleHeader(radius: 5))
                     .onReceive(self.calculator.$isCalculating, perform: { (bool) in
                         self.isCalculating = bool
                     })
                     .opacity(self.isCalculating ? 1 : 0)
-                
-            }
+            }.modifier(SectionViewGroup())
             Spacer()
             VStack(alignment: .trailing){
                 Spacer()

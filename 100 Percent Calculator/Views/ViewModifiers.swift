@@ -21,12 +21,13 @@ struct KeyboardButton: ViewModifier {
 }
 
 struct LargeTitleHeader: ViewModifier {
+    var radius: CGFloat = 0.0
     func body(content: Content) -> some View {
         content
             .font(.largeTitle)
             .foregroundColor(.white)
             .padding(10)
-            .background(Rectangle().foregroundColor(Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)))
+            .background(RoundedRectangle(cornerRadius: self.radius).foregroundColor(Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)))
             .shadow(radius: 10)
     }
 }
@@ -34,7 +35,7 @@ struct LargeTitleHeader: ViewModifier {
 struct SectionViewGroup: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding([.horizontal, .top], 10)
+            .padding([.horizontal, .top, .bottom], 10)
     }
 }
 
