@@ -35,7 +35,7 @@ struct LargeTitleHeader: ViewModifier {
 struct SectionViewGroup: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding([.horizontal, .top, .bottom], 10)
+            .padding(10)
     }
 }
 

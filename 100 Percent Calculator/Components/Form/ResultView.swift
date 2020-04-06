@@ -26,20 +26,27 @@ struct ResultView: View {
         }
     }
     
+    var withPercentage: Bool {
+        return self.calculation.placePercentagesSymbolOn.elementsEqual(self.resultString)
+    }
+    
     var body: some View {
         if (self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
             self.calculator.calculateNewPrice(operand1: self.operand1, operand2: self.operand2)
         }
         return VStack{
             self.resultString.count == 0 ? nil : Divider().background(Color.green).frame(height: 1)
-
             HStack{
-
                 Text(self.resultString)
                     .font(.title)
+                    .underline()
+                Spacer()
+            }
+            HStack{
                 Spacer()
                 Text(self.calculator.result)
                     .font(.largeTitle)
+                self.withPercentage ? Text("%") : nil
             }
             if(self.additionalResultString.count > 0){
                 HStack{

@@ -10,66 +10,46 @@ import SwiftUI
 
 
 struct SectionView: View{
+    @Environment(\.colorScheme) var colorScheme
+
     @Binding var textfieldString: String
-    var header: String = ""
-    var textFieldDisabled: Bool = false
-    var footer: String = ""
     var calculation: Calculation
     var placeholder: String
     var withPercentage: Bool {
         return self.calculation.placePercentagesSymbolOn.elementsEqual(self.placeholder)
     }
-    #warning("animate this placeholder -> Text transition")
-    
-//    private var currencyFormatter: NumberFormatter = {
-//        let currencyFormatter = NumberFormatter()
-//        currencyFormatter.numberStyle = .currency
-//        currencyFormatter.locale = Locale.current
-//        return currencyFormatter
-//    }()
+    @State private var headerOpacity: Double = 0.1
     
     var body: some View {
-        VStack{
-            HStack{
-                Text(self.header)
+        VStack(alignment: .trailing) {
+            if(!textfieldString.isEmpty){
+                Text(self.placeholder)
                     .font(.title)
-                    .fontWeight(.black)
-                Spacer()
-                
-            }
-            VStack(alignment: .trailing) {
-                HStack {
-                    if(!textfieldString.isEmpty && !self.textFieldDisabled){
-                        Text(self.placeholder)
-                        .font(.footnote)
-                    }
-                    if(self.textFieldDisabled){
-                        Text(self.placeholder)
-                        .font(.largeTitle)
-                    }
-                    TextField(self.placeholder, text: $textfieldString)
-                        .multilineTextAlignment(.trailing)
-                        .keyboardType(.numberPad)
-                        .disabled(self.textFieldDisabled)
-                    self.withPercentage ?
-                        Text("%") : nil
+                    .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                    //.foregroundColor(colorScheme == .light ? Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0) : Color.init(red: 255/255.0, green: 0/255.0, blue: 38/255.0))
+                    .opacity(self.headerOpacity)
+                    .onAppear{
+                        withAnimation(.easeIn(duration: 1)){
+                            self.headerOpacity = 1.0
+                        }
                 }
-                textfieldString.count > 0 ? nil : Divider().background(Color.red).frame(height: 1)
-            }
-            self.footer.count > 0 ?
-                HStack{
-                    Spacer()
-                    Text(self.footer)
-                        .font(.caption)
-                        .fontWeight(.light)
+                .onDisappear{
+                    self.headerOpacity = 0.1
                 }
-                : nil
+            }
+            HStack {
+                TextField(self.placeholder, text: $textfieldString)
+                    .multilineTextAlignment(.trailing)
+                    .keyboardType(.numberPad)
+                self.withPercentage ? Text("%") : nil
+            }
+            textfieldString.count > 0 ? nil : Divider().background(Color.red).frame(height: 1)
         }
     }
 }
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(textfieldString: .constant("811"), header: "header",footer: "footer", calculation: calculationsData[0].calculations[0], placeholder: "placeholder")
+        SectionView(textfieldString: .constant("811"), calculation: calculationsData[0].calculations[0], placeholder: "placeholder")
     }
 }
