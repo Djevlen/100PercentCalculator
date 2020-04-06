@@ -40,7 +40,7 @@ struct SectionViewGroup: ViewModifier {
 }
 
 struct ModifiedRoundedRectangle: ViewModifier {
-    var color: Color
+    var color: Color = Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)
     
     func body(content: Content) -> some View {
         content

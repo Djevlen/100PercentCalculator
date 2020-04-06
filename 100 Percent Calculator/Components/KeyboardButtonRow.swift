@@ -10,7 +10,7 @@ import SwiftUI
 
 struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
-    var calculator: Calculator
+    var calculator: Calculator = Calculator()
     @State private var resultCopiedOpacity: Double  = 0.0
     
     var body: some View {

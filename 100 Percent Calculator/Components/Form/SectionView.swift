@@ -26,7 +26,6 @@ struct SectionView: View{
                 Text(self.placeholder)
                     .font(.title)
                     .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
-                    //.foregroundColor(colorScheme == .light ? Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0) : Color.init(red: 255/255.0, green: 0/255.0, blue: 38/255.0))
                     .opacity(self.headerOpacity)
                     .onAppear{
                         withAnimation(.easeIn(duration: 1)){
@@ -41,6 +40,7 @@ struct SectionView: View{
                 TextField(self.placeholder, text: $textfieldString)
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.numberPad)
+                    .font(.title)
                 self.withPercentage ? Text("%") : nil
             }
             textfieldString.count > 0 ? nil : Divider().background(Color.red).frame(height: 1)

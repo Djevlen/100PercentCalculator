@@ -32,7 +32,7 @@ struct CalculationsListView: View {
                 }
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("100% Percent Calculator", displayMode: .inline)
+            .navigationBarTitle("Calculations", displayMode: .automatic)
             .navigationBarItems(trailing: EditButton())
         }
         .sheet(isPresented: self.$userSettings.favoriteLimitReached) {

@@ -24,27 +24,27 @@ struct EditDefaultsView: View {
     }
     
     var body: some View {
-        VStack{
+        ZStack{
+            VStack{
             HStack {
-                Text("Default Values")
+                Text(self.calculation.title)
                 .fontWeight(.heavy)
-
                 Spacer()
             }.modifier(LargeTitleHeader())
-            
-            HStack{
-                Text(self.calculation.firstOperandString)
-                    .font(.footnote)
-                TextField(self.calculation.firstOperandString, text: $operand1)
-                    .multilineTextAlignment(.trailing)
-                    .keyboardType(.decimalPad)
+            HStack {
+                Text("Default Values")
+                    .font(.largeTitle)
+                .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                .fontWeight(.heavy)
+                    .padding(.horizontal, 10)
+                Spacer()
             }
-            HStack{
-                Text(self.calculation.secondOperandString)
-                    .font(.footnote)
-                TextField(self.calculation.secondOperandString, text: $operand2)
-                    .multilineTextAlignment(.trailing)
-                    .keyboardType(.decimalPad)
+            
+            VStack{
+                VStack {
+                    SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.calculation.firstOperandString)
+                    SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.calculation.secondOperandString)
+                }.modifier(SectionViewGroup())
             }
             HStack{
                 Spacer()
@@ -54,8 +54,18 @@ struct EditDefaultsView: View {
                     Text("Save")
                         .padding()
                 }
+            .modifier(ModifiedRoundedRectangle())
+            .padding()
             }
             Spacer()
+        }
+        VStack(alignment: .trailing){
+            Spacer()
+            HStack{
+                Spacer()
+                KeyboardButtonRow()
+            }
+        }
         }
     }
 }

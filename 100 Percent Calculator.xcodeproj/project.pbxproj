@@ -27,7 +27,6 @@
 		E918A0162435C3ED006B2BB6 /* KeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A0152435C3ED006B2BB6 /* KeyboardController.swift */; };
 		E918A01A24360A00006B2BB6 /* KeyboardButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */; };
 		E922B83724375559005511E5 /* iAPSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922B83624375559005511E5 /* iAPSheetView.swift */; };
-		E922B8392439CB6C005511E5 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922B8382439CB6C005511E5 /* UITabBarExtension.swift */; };
 		E922B83B2439CC86005511E5 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922B83A2439CC86005511E5 /* UINavigationBarExtension.swift */; };
 		E93388FE242A5120007B7A51 /* EditDefaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93388FD242A5120007B7A51 /* EditDefaultsView.swift */; };
 		E938011E2424B94E00BA196F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938011D2424B94E00BA196F /* Calculator.swift */; };
@@ -37,6 +36,7 @@
 		E951B3022423584000316662 /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3012423584000316662 /* FavoriteCellView.swift */; };
 		E951B3052423597800316662 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951B3042423597800316662 /* StarButton.swift */; };
 		E99D93042428B74F009305BB /* NoFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D93032428B74F009305BB /* NoFavoritesView.swift */; };
+		E9AF6A2F243BA7560044A8DF /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF6A2E243BA7560044A8DF /* FavoritesListView.swift */; };
 		E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */; };
 		E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */; };
 		E9B13E4C2420C7BC00DE8BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E4B2420C7BC00DE8BC5 /* ContentView.swift */; };
@@ -81,7 +81,6 @@
 		E918A0152435C3ED006B2BB6 /* KeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardController.swift; sourceTree = "<group>"; };
 		E918A01924360A00006B2BB6 /* KeyboardButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButtonRow.swift; sourceTree = "<group>"; };
 		E922B83624375559005511E5 /* iAPSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAPSheetView.swift; sourceTree = "<group>"; };
-		E922B8382439CB6C005511E5 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
 		E922B83A2439CC86005511E5 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
 		E93388FD242A5120007B7A51 /* EditDefaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDefaultsView.swift; sourceTree = "<group>"; };
 		E938011D2424B94E00BA196F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		E951B3012423584000316662 /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
 		E951B3042423597800316662 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 		E99D93032428B74F009305BB /* NoFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoritesView.swift; sourceTree = "<group>"; };
+		E9AF6A2E243BA7560044A8DF /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
 		E9B13E442420C7BC00DE8BC5 /* 100 Percent Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "100 Percent Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B13E472420C7BC00DE8BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9B13E492420C7BC00DE8BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +174,7 @@
 				E9CC79282422B0930016D1A0 /* FavoritesView.swift */,
 				E951B3012423584000316662 /* FavoriteCellView.swift */,
 				E99D93032428B74F009305BB /* NoFavoritesView.swift */,
+				E9AF6A2E243BA7560044A8DF /* FavoritesListView.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -215,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				E918A0122434CE85006B2BB6 /* ViewExtensions.swift */,
-				E922B8382439CB6C005511E5 /* UITabBarExtension.swift */,
 				E922B83A2439CC86005511E5 /* UINavigationBarExtension.swift */,
 			);
 			path = Extensions;
@@ -431,7 +431,6 @@
 				E918A01A24360A00006B2BB6 /* KeyboardButtonRow.swift in Sources */,
 				E9081168242E01BF00835623 /* IAPManager.swift in Sources */,
 				E922B83724375559005511E5 /* iAPSheetView.swift in Sources */,
-				E922B8392439CB6C005511E5 /* UITabBarExtension.swift in Sources */,
 				E9B13E482420C7BC00DE8BC5 /* AppDelegate.swift in Sources */,
 				E938011E2424B94E00BA196F /* Calculator.swift in Sources */,
 				E9B13E4A2420C7BC00DE8BC5 /* SceneDelegate.swift in Sources */,
@@ -440,6 +439,7 @@
 				E9D3DDBD24221E590009DF21 /* UserSettings.swift in Sources */,
 				E90CD7DD24214DF100BA5274 /* CalculationsCell.swift in Sources */,
 				E9081158242CA34C00835623 /* AboutView.swift in Sources */,
+				E9AF6A2F243BA7560044A8DF /* FavoritesListView.swift in Sources */,
 				E940F0F6242B650200BA2090 /* SettingsListView.swift in Sources */,
 				E90CD7D92421126400BA5274 /* JsonData.swift in Sources */,
 				E940F0F8242B67FA00BA2090 /* PrivacyPolicyView.swift in Sources */,

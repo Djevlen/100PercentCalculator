@@ -10,40 +10,17 @@ import SwiftUI
 
 struct FavoritesView: View {
     @EnvironmentObject var userSettings: UserSettings
-    @ObservedObject var calculator: Calculator = Calculator()
 
-    
     var body: some View {
         Group {
-            //user has no favorites
             if(userSettings.favoriteCalculations.isEmpty){
                 NoFavoritesView()
             }else{
                 NavigationView{
-                    ZStack {
-                        List{
-                            ForEach(userSettings.favoriteCalculations){ favorite in
-                                FavoriteCellView(calculator: self.calculator, favorite: favorite)
-                            }
-                        .onMove(perform: moveCell)
-                        }
-                        .listStyle(PlainListStyle())
-                        .navigationBarTitle(Text("Favorites"), displayMode: .inline).navigationBarItems(trailing: EditButton())
-                        VStack(alignment: .trailing){
-                            Spacer()
-                            HStack{
-                                Spacer()
-                                KeyboardButtonRow(calculator: self.calculator)
-                            }
-                        }
-                    }
+                    FavoritesListView()
                 }
             }
         }
-    }
-    
-    func moveCell(from source: IndexSet, to destination: Int){
-        userSettings.favoriteCalculations.move(fromOffsets: source, toOffset: destination)
     }
 }
 
