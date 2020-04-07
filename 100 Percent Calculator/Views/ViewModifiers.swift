@@ -64,7 +64,7 @@ struct FavoriteTitleHeader: ViewModifier {
 struct FavoriteCellBody: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(2)
+            .padding(10)
             .background(
                 Rectangle().stroke(lineWidth: 1).foregroundColor(Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)).shadow(color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0), radius: 1, x: 0, y: 0)
             )

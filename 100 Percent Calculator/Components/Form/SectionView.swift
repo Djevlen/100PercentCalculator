@@ -54,7 +54,7 @@ struct SectionView: View{
                 }
                 TextField(self.placeholder, text: $textfieldString)
                     .multilineTextAlignment(.trailing)
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)
                     .font(compactMode ? .callout : .title)
                 self.withPercentage ? Text("%").font(compactMode ? .callout : .title) : nil
             }

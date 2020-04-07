@@ -16,7 +16,8 @@
                 "defaultOperand1": "20",
                 "defaultOperand2": null,
                 "isFavorite": true,
-                "isHidden": false
+                "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
             },
             {
                 "title": "Hva var rabatten?",
@@ -30,7 +31,8 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": true,
-                "isHidden": false
+                "isHidden": false,
+                "calcToPerform": "lol"
             }
         ]
     },
@@ -52,7 +54,8 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
+                "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
             },
             {
                 "title": "Hvor mye er ...",
@@ -66,7 +69,8 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
+                "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
             },
             {
                 "title": "Hvor mange prosent å legge til?",
@@ -80,7 +84,9 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
+                "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
+                
             }
         ]
     },
@@ -102,7 +108,9 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
+                "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
+                
             },
             {
                 "title": "Vis pris uten MVA",
@@ -116,7 +124,9 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
+               "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
+                
             }
         ]
     },
@@ -138,7 +148,9 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
+               "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
+                
             },
             {
                 "title": "Pris med dekningsgrad",
@@ -152,7 +164,9 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
+               "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
+                
             }
         ]
     },
@@ -174,7 +188,9 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
+               "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
+                
             },
             {
                 "title": "Hvor mye tips fikk jeg?",
@@ -188,8 +204,8 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-                "isHidden": false
-            }
+               "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"}
         ]
     }
 ]

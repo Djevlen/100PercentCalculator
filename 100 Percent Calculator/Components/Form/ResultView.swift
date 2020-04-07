@@ -33,11 +33,11 @@ struct ResultView: View {
     
     var body: some View {
         if (self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
-            self.calculator.calculateNewPrice(operand1: self.operand1, operand2: self.operand2)
+            self.calculator.performCalculation(calcToPerform: self.calculation.calcToPerform, operand1: self.operand1, operand2: self.operand2)
         }
         return VStack{
-            self.resultString.count == 0 ? nil : Divider().background(Color.green).frame(height: 1)
             if (!compactMode){
+                self.resultString.count == 0 ? nil : Divider().background(Color.green).frame(height: 1)
                 HStack{
                     Text(self.resultString)
                         .font(.title)

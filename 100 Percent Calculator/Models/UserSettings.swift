@@ -21,7 +21,7 @@ final class UserSettings: ObservableObject {
     @Published var startOnFavorites: Bool       = true
     @Published var unfavoriteTimer: Bool        = true
     @Published var restoredCalculations: Bool   = false
-    
+    @Published var restoredCalculationsCount: Int = 0
     
     @Published var isProUser: Bool              = false
     @Published var hasLoadedProducts: Bool      = false
@@ -31,13 +31,9 @@ final class UserSettings: ObservableObject {
     @Published var proProduct: SKProduct? = nil
     
     
-    @Published var deletionWarningDismissed: Bool = false
-    
-    
     init(data: [CalculationCategory], favoriteCalculations: [Calculation]) {
         self.data = data
         self.favoriteCalculations = favoriteCalculations
-        self.selectedTab = self.startOnFavorites ? "Favorites" : "Calculations"
         populateFavorites()
     }
     
@@ -92,9 +88,11 @@ final class UserSettings: ObservableObject {
         self.save()
     }
     func restoreCalculations(){
+        var count: Int = 0
         for (indexCategory, category) in self.data.enumerated() {
             for (indexCalc, calc) in self.data[indexCategory].calculations.enumerated() {
                 if calc.isHidden {
+                    count += 1
                     self.data[indexCategory].calculations[indexCalc].isHidden.toggle()
                 }
             }
@@ -102,6 +100,7 @@ final class UserSettings: ObservableObject {
                 self.data[indexCategory].isHidden.toggle()
             }
         }
+        self.restoredCalculationsCount = count
         self.restoredCalculations = true
     }
     

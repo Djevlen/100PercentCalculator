@@ -25,6 +25,7 @@ struct Calculation: Hashable, Codable, Identifiable {
     var defaultOperand2: String?
     var isFavorite: Bool
     var isHidden: Bool
+    var calcToPerform: String
 }
 
 /*
