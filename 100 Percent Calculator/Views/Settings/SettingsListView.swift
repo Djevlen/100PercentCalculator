@@ -22,6 +22,9 @@ struct SettingsListView: View {
 //                    Toggle(isOn: $userSettings.useCurrency) {
 //                        Text("Use Currency")
 //                    }
+                    Toggle(isOn: $userSettings.compactFavorites) {
+                        Text("Compact Favorites")
+                    }
                     Toggle(isOn: $userSettings.startOnFavorites) {
                         Text("Start app in Favorites")
                     }

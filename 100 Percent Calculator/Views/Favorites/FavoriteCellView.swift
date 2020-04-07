@@ -17,27 +17,27 @@ struct FavoriteCellView: View {
     @State var operand2: String = ""
     
     var body: some View {
-        VStack{
+        VStack(spacing: 1){
             HStack{
                 Text(favorite.title)
                 Spacer()
                 StarButton(calculation: favorite)
-            }
-            VStack{
-                SectionView(textfieldString: self.$operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString)
-                SectionView(textfieldString: self.$operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString)
-                    if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
-                        ResultView(calculator:self.calculator, calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2)
-                    }
-            }
-           
+            }.modifier(FavoriteTitleHeader())
+            VStack(spacing: 1){
+                SectionView(textfieldString: self.$operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString, compactMode: self.userSettings.compactFavorites)
+            SectionView(textfieldString: self.$operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString, compactMode: self.userSettings.compactFavorites)
+                if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
+                    ResultView(calculator:self.calculator, calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2, compactMode: self.userSettings.compactFavorites)
+                }
+            }.modifier(FavoriteCellBody())
         }
-        .padding()
+        .listRowBackground(Color.clear)
     }
 }
 
 struct FavoriteCellView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteCellView( calculator: Calculator(),favorite: calculationsData[0].calculations[0])
+        let userSettings = UserSettings(data: calculationsData, favoriteCalculations: calculationsData[0].calculations)
+        return FavoriteCellView( calculator: Calculator(),favorite: calculationsData[0].calculations[0]).environmentObject(userSettings)
     }
 }

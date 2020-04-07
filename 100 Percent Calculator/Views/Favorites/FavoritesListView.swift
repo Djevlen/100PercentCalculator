@@ -18,9 +18,9 @@ struct FavoritesListView: View {
                 ForEach(userSettings.favoriteCalculations){ favorite in
                     FavoriteCellView(calculator: self.calculator, favorite: favorite)
                 }
-            .onMove(perform: moveCell)
+                .onMove(perform: moveCell)
             }
-            .listStyle(PlainListStyle())
+            .listStyle(GroupedListStyle())
             VStack(alignment: .trailing){
                 Spacer()
                 HStack{

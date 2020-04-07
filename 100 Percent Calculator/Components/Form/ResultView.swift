@@ -13,6 +13,7 @@ struct ResultView: View {
     var calculation: Calculation
     @Binding var operand1: String
     @Binding var operand2: String
+    var compactMode: Bool = false
     
     var resultString: String {
         self.calculation.resultString
@@ -36,17 +37,26 @@ struct ResultView: View {
         }
         return VStack{
             self.resultString.count == 0 ? nil : Divider().background(Color.green).frame(height: 1)
-            HStack{
-                Text(self.resultString)
-                    .font(.title)
-                    .underline()
-                Spacer()
+            if (!compactMode){
+                HStack{
+                    Text(self.resultString)
+                        .font(.title)
+                        .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                    Spacer()
+                }
             }
             HStack{
-                Spacer()
+                if (!compactMode){
+                    Spacer()
+                }else{
+                    Text(self.resultString)
+                    .font(.subheadline)
+                    .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                    Spacer()
+                }
                 Text(self.calculator.result)
                     .font(.largeTitle)
-                self.withPercentage ? Text("%") : nil
+                self.withPercentage ? Text("%").font(.largeTitle) : nil
             }
             if(self.additionalResultString.count > 0){
                 HStack{

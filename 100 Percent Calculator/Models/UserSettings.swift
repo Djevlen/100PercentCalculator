@@ -17,9 +17,10 @@ final class UserSettings: ObservableObject {
     @Published var tabs = ["Calculations", "Favorites", "Settings"]
     @Published var selectedTab = "Favorites"
     @Published var useCurrency: Bool            = true
+    @Published var compactFavorites: Bool       = true
     @Published var startOnFavorites: Bool       = true
     @Published var unfavoriteTimer: Bool        = true
-    @Published var restoredCalculations: Bool  = false
+    @Published var restoredCalculations: Bool   = false
     
     
     @Published var isProUser: Bool              = false
