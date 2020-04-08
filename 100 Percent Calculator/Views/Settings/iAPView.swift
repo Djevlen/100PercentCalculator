@@ -31,24 +31,11 @@ struct iAPView: View {
                         }
                     }
                 }else{
-                    //TODO: dette bør være en automagisk greie som spinner og laster inn stæsj
-                    Button(action: {
-                        self.userSettings.loadProducts()
-                    }){
-                        VStack(alignment: .center){
-                            Image(systemName: "arrow.clockwise.circle")
-                            Text("Reload")
-                                .multilineTextAlignment(.center)
-                        }
-                        .font(.largeTitle)
-                    }
-                    .modifier(Card(width: 150, height: 150))
+                    FetchingProductsView()
+                    .onAppear(perform: self.userSettings.loadProducts)
                 }
             }
             .listRowInsets(EdgeInsets())
-            .onAppear {
-                self.userSettings.hasLoadedProducts ? nil : self.userSettings.loadProducts()
-            }
             Button(action: {
                 self.restorePro()
             }){

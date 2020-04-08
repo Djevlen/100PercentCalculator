@@ -42,9 +42,16 @@ struct SettingsListView: View {
                     AboutView()
                     Button(action: {
                         let url = URL(string: "https://apps.apple.com/us/app/100-percent-calculator/id1080209973?ls=1")
-                        UIApplication.shared.open(url!)
+                        var components = URLComponents(url: url!, resolvingAgainstBaseURL: false)
+                        components?.queryItems = [
+                          URLQueryItem(name: "action", value: "write-review")
+                        ]
+                        guard let reviewURL = components?.url else {
+                          return
+                        }
+                        UIApplication.shared.open(reviewURL)
                     }) {
-                        Text("Leave a review ")
+                        Text("Write a Review")
                     }
                     Button(action: {
                         let url = URL(string: "https://www.instagram.com/thomasajajaj/")
