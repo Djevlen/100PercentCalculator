@@ -35,6 +35,7 @@ final class UserSettings: ObservableObject {
         self.data = data
         self.favoriteCalculations = favoriteCalculations
         populateFavorites()
+        loadProducts()
     }
     
     //puts favorites from json to favorites array
@@ -137,7 +138,7 @@ final class UserSettings: ObservableObject {
     // MARK: Saving JSON
     func save(){
         let encoder = JSONEncoder()
-        let url = self.getDocumentsDirectory().appendingPathComponent("PersonalCalculationsData.json")
+        let url = self.getDocumentsDirectory().appendingPathComponent("UserEditedCalculationsData.json")
         
         if let encoded = try? encoder.encode(self.data) {
             if let json = String(data: encoded, encoding: .utf8) {

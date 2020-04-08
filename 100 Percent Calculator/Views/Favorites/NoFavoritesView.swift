@@ -9,17 +9,30 @@
 import SwiftUI
 
 struct NoFavoritesView: View {
+    @State private var starBounce: CGFloat = 1.0
+    
     var body: some View {
         VStack(alignment: .center){
-            Image(systemName: "star")
+            Image(systemName: "star.fill")
                 .font(.largeTitle)
                 .foregroundColor(.yellow)
+                .scaleEffect(starBounce)
+                .animation(Animation.easeInOut(duration: 3).repeatForever())
+                .padding()
+                .shadow(radius: 5)
             Text("You have no favorites.")
             Text("When you add favorites you will find them here.")
                 .multilineTextAlignment(.center)
-
         }
-    .padding()
+        .padding()
+        .onAppear{
+            print("appeparing")
+            self.starBounce = 1.5
+        }
+        .onDisappear{
+            print("sidfs")
+            self.starBounce = 1.0
+        }
     }
 }
 

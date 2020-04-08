@@ -13,7 +13,7 @@ var calculationsData: [CalculationCategory] = load("CalculationsData.json")
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     let fileManager = FileManager.default
-    let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("PersonalCalculationsData.json")
+    let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("UserEditedCalculationsData.json")
     if fileManager.fileExists(atPath: url.path){
         data = fileManager.contents(atPath: url.path)!
     }else {

@@ -124,7 +124,7 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-               "isHidden": false,
+                "isHidden": false,
                 "calcToPerform": "CalculateNewPrice"
                 
             }
@@ -148,7 +148,7 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-               "isHidden": false,
+                "isHidden": false,
                 "calcToPerform": "CalculateNewPrice"
                 
             },
@@ -164,7 +164,7 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-               "isHidden": false,
+                "isHidden": false,
                 "calcToPerform": "CalculateNewPrice"
                 
             }
@@ -188,7 +188,7 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-               "isHidden": false,
+                "isHidden": false,
                 "calcToPerform": "CalculateNewPrice"
                 
             },
@@ -204,7 +204,7 @@
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
-               "isHidden": false,
+                "isHidden": false,
                 "calcToPerform": "CalculateNewPrice"}
         ]
     }
