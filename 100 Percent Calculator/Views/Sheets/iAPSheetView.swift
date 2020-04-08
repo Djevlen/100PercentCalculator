@@ -43,7 +43,7 @@ struct iAPSheetView: View {
                     HStack{
                         Text("Current Pro Features")
                             .font(.title)
-                            .underline(true, color: .primaryApp)
+                            .underline(true, color: .underline)
                         Spacer()
                     }
                     Text("- No Ads.")
@@ -55,7 +55,7 @@ struct iAPSheetView: View {
                     self.isPresenting = false
                 }) {
                     Text("No thanks!")
-                        .modifier(ModifiedRoundedRectangle(color: .red))
+                        .modifier(ModifiedRoundedRectangle())
                 }.padding()
             }
         }

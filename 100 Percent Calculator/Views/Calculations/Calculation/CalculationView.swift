@@ -27,38 +27,35 @@ struct CalculationView: View {
     
     var body: some View {
         ScrollView{
-        ZStack{
-            VStack {
-                HStack{
-                    Text(self.calculation.title)
-                        .fontWeight(.heavy)
+            ZStack{
+                VStack {
+                    HStack{
+                        Text(self.calculation.title)
+                            .fontWeight(.heavy)
+                        Spacer()
+                        StarButton(calculation: self.calculation)                        
+                    }.modifier(LargeTitleHeader())
+                    VStack{
+                        VStack {
+                            SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
+                            SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
+                        }.modifier(SectionViewGroup())
+                        ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
+                            .modifier(LargeTitleHeader(radius: 5))
+                            .padding(.horizontal, 5)
+                            .onReceive(self.calculator.$isCalculating, perform: { (bool) in
+                                self.isCalculating = bool
+                            })
+                            .opacity(self.isCalculating ? 1 : 0)
+                    }
                     Spacer()
-                    StarButton(calculation: self.calculation)                        
-                }.modifier(LargeTitleHeader())
-                VStack{
-                    VStack {
-                        SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
-                        SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
-                    }.modifier(SectionViewGroup())
-                    ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
-                        .modifier(LargeTitleHeader(radius: 5))
-                        .padding(.horizontal, 5)
-                        .onReceive(self.calculator.$isCalculating, perform: { (bool) in
-                            self.isCalculating = bool
-                        })
-                        .opacity(self.isCalculating ? 1 : 0)
                 }
-                Spacer()
+                
             }
             VStack(alignment: .trailing){
-                Spacer()
-                HStack{
-                    Spacer()
-                    KeyboardButtonRow(calculator: self.calculator)
-                }
+                KeyboardButtonRow(calculator: self.calculator)
             }
         }
-    }
     }
     
 }

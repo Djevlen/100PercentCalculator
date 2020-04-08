@@ -41,7 +41,7 @@ struct ResultView: View {
                 HStack{
                     Text(self.resultString)
                         .font(.title)
-                        .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                        .underline(true, color: .underline)
                     Spacer()
                 }
             }
@@ -51,7 +51,7 @@ struct ResultView: View {
                 }else{
                     Text(self.resultString)
                     .font(.subheadline)
-                        .underline(true, color: .primaryApp)
+                        .underline(true, color: .underline)
                     Spacer()
                 }
                 Text(self.calculator.result)

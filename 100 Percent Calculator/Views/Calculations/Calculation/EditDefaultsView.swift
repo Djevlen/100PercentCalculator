@@ -26,46 +26,42 @@ struct EditDefaultsView: View {
     var body: some View {
         ZStack{
             VStack{
-            HStack {
-                Text(self.calculation.title)
-                .fontWeight(.heavy)
-                Spacer()
-            }.modifier(LargeTitleHeader())
-            HStack {
-                Text("Default Values")
-                    .font(.largeTitle)
-                .underline(true, color: .primaryApp)
-                .fontWeight(.heavy)
-                    .padding(.horizontal, 10)
-                Spacer()
-            }
-            
-            VStack{
-                VStack {
-                    SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.calculation.firstOperandString)
-                    SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.calculation.secondOperandString)
-                }.modifier(SectionViewGroup())
-            }
-            HStack{
-                Spacer()
-                Button(action: {
-                    self.save()
-                }) {
-                    Text("Save")
-                        .padding()
+                HStack {
+                    Text(self.calculation.title)
+                        .fontWeight(.heavy)
+                    Spacer()
+                }.modifier(LargeTitleHeader())
+                HStack {
+                    Text("Default Values")
+                        .font(.largeTitle)
+                        .underline(true, color: .underline)
+                        .fontWeight(.heavy)
+                        .padding(.horizontal, 10)
+                    Spacer()
                 }
-            .modifier(ModifiedRoundedRectangle())
-            .padding()
-            }
-            Spacer()
-        }
-        VStack(alignment: .trailing){
-            Spacer()
-            HStack{
+                
+                VStack{
+                    VStack {
+                        SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.calculation.firstOperandString)
+                        SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.calculation.secondOperandString)
+                    }.modifier(SectionViewGroup())
+                }
+                HStack{
+                    Spacer()
+                    Button(action: {
+                        self.save()
+                    }) {
+                        Text("Save")
+                            .padding()
+                    }
+                    .modifier(ModifiedRoundedRectangle())
+                    .padding()
+                }
                 Spacer()
+            }
+            VStack(alignment: .trailing){
                 KeyboardButtonRow()
             }
-        }
         }
     }
 }

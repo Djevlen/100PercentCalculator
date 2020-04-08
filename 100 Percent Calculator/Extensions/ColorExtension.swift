@@ -11,4 +11,5 @@ import SwiftUI
 
 extension Color {
     static let primaryApp = Color("AppPrimary")
+    static let underline = Color("underline")
 }

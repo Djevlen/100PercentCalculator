@@ -12,43 +12,50 @@ struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
     var calculator: Calculator = Calculator()
     @State private var resultCopiedOpacity: Double  = 0.0
+    var bottomButtonPadding: CGFloat = 30
     
     var body: some View {
-        Group{
+        GeometryReader{ geometry in
             if (self.keyboard.isPresent){
-                    ZStack{
-                        Button(action: {
-                            self.copyResult()
-                        }) {
-                            VStack{
+                VStack{
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        ZStack{
+                            Button(action: {
+                                self.copyResult()
+                            }) {
                                 Image(systemName: "doc.on.doc")
-                                    .padding(.top, 10)
-                                Spacer()
+                                    .padding()
                             }
+                            .padding(.bottom, self.bottomButtonPadding)
+                            .modifier(KeyboardButton())
+                            .buttonStyle(BorderlessButtonStyle())
+                            Text(self.calculator.result)
+                                .modifier(ModifiedRoundedRectangle(color: .green))
+                                .offset(x: 0, y: -65)
+                                .opacity(self.resultCopiedOpacity)
                         }
+                        Button(action: {
+                            self.done()
+                        }) {
+                            Image(systemName: "checkmark")
+                                .padding()
+                        }
+                        .padding(.bottom, self.bottomButtonPadding)
                         .modifier(KeyboardButton())
                         .buttonStyle(BorderlessButtonStyle())
-                        Text(self.calculator.result)
-                            .modifier(ModifiedRoundedRectangle(color: .green))
-                            .offset(x: 0, y: -65)
-                            .opacity(self.resultCopiedOpacity)
                     }
-                Button(action: {
-                    self.done()
-                }) {
-                    VStack{
-                        Image(systemName: "checkmark")
-                            .padding(.top, 10)
-                        Spacer()
-                    }
-                }
-                .buttonStyle(BorderlessButtonStyle())
-                .modifier(KeyboardButton())
+                    
+                }.edgesIgnoringSafeArea(.vertical)
+                    .offset(x: 0, y: -(self.keyboard.height-geometry.safeAreaInsets.bottom)+self.bottomButtonPadding)
+                    .transition(.move(edge: .bottom))
+                    .animation(.spring())
             }else{
                 EmptyView()
             }
         }
-        .padding(.bottom, self.keyboard.height/2)
+        
     }
     
     func copyResult(){

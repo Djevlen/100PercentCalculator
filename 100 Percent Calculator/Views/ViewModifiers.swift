@@ -11,7 +11,6 @@ import SwiftUI
 struct KeyboardButton: ViewModifier {
     func body(content: Content) -> some View {
         content
-        .frame(width: 100, height: 110)
         .foregroundColor(.white)
         .background(RoundedRectangle(cornerRadius: 10)
         .foregroundColor(.primaryApp))
@@ -40,7 +39,7 @@ struct SectionViewGroup: ViewModifier {
 }
 
 struct ModifiedRoundedRectangle: ViewModifier {
-    var color: Color = Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)
+    var color: Color = .primaryApp
     
     func body(content: Content) -> some View {
         content

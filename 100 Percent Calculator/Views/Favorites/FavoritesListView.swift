@@ -22,11 +22,7 @@ struct FavoritesListView: View {
             }
             .listStyle(GroupedListStyle())
             VStack(alignment: .trailing){
-                Spacer()
-                HStack{
-                    Spacer()
-                    KeyboardButtonRow(calculator: self.calculator)
-                }
+                KeyboardButtonRow(calculator: self.calculator)
             }
         }
         .navigationBarTitle(Text("Favorites"), displayMode: .automatic)
@@ -41,6 +37,7 @@ struct FavoritesListView: View {
 struct FavoritesListView_Previews: PreviewProvider {
     static var previews: some View {
         let userSettings = UserSettings(data: calculationsData, favoriteCalculations: calculationsData[0].calculations)
-        return FavoritesListView().environmentObject(userSettings)
+        let keyboard = KeyboardController()
+        return FavoritesListView().environmentObject(userSettings).environmentObject(keyboard)
     }
 }

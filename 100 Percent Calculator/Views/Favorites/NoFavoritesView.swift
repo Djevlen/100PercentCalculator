@@ -25,11 +25,9 @@ struct NoFavoritesView: View {
         }
         .padding()
         .onAppear{
-            print("appeparing")
             self.starBounce = 1.5
         }
         .onDisappear{
-            print("sidfs")
             self.starBounce = 1.0
         }
     }
