@@ -34,7 +34,7 @@ struct EditDefaultsView: View {
             HStack {
                 Text("Default Values")
                     .font(.largeTitle)
-                .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                .underline(true, color: .primaryApp)
                 .fontWeight(.heavy)
                     .padding(.horizontal, 10)
                 Spacer()

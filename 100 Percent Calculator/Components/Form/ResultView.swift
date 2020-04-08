@@ -51,7 +51,7 @@ struct ResultView: View {
                 }else{
                     Text(self.resultString)
                     .font(.subheadline)
-                    .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                        .underline(true, color: .primaryApp)
                     Spacer()
                 }
                 Text(self.calculator.result)

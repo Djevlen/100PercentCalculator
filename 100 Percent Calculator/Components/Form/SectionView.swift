@@ -26,7 +26,7 @@ struct SectionView: View{
             if(!textfieldString.isEmpty && !compactMode){
                 Text(self.placeholder)
                     .font(.title)
-                    .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                    .underline(true, color: .primaryApp)
                     .opacity(self.headerOpacity)
                     .onAppear{
                         withAnimation(.easeIn(duration: 1)){
@@ -41,7 +41,7 @@ struct SectionView: View{
                 if (!textfieldString.isEmpty && compactMode){
                     Text(self.placeholder)
                         .font(.subheadline)
-                        .underline(true, color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0))
+                        .underline(true, color: .primaryApp)
                         .opacity(self.headerOpacity)
                         .onAppear{
                             withAnimation(.easeIn(duration: 1)){

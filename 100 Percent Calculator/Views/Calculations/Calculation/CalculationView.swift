@@ -26,6 +26,7 @@ struct CalculationView: View {
     
     
     var body: some View {
+        ScrollView{
         ZStack{
             VStack {
                 HStack{
@@ -58,6 +59,8 @@ struct CalculationView: View {
             }
         }
     }
+    }
+    
 }
 
 struct CalculationView_Previews: PreviewProvider {

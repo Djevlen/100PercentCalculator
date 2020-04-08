@@ -14,7 +14,7 @@ struct KeyboardButton: ViewModifier {
         .frame(width: 100, height: 110)
         .foregroundColor(.white)
         .background(RoundedRectangle(cornerRadius: 10)
-        .foregroundColor(.blue))
+        .foregroundColor(.primaryApp))
         .shadow(radius: 5)
         
     }
@@ -27,7 +27,7 @@ struct LargeTitleHeader: ViewModifier {
             .font(.largeTitle)
             .foregroundColor(.white)
             .padding(10)
-            .background(RoundedRectangle(cornerRadius: self.radius).foregroundColor(Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)))
+            .background(RoundedRectangle(cornerRadius: self.radius).foregroundColor(.primaryApp))
             .shadow(radius: 10)
     }
 }
@@ -66,7 +66,7 @@ struct FavoriteCellBody: ViewModifier {
         content
             .padding(10)
             .background(
-                Rectangle().stroke(lineWidth: 1).foregroundColor(Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0)).shadow(color: Color.init(red: 38/255.0, green: 0/255.0, blue: 255/255.0), radius: 1, x: 0, y: 0)
+                Rectangle().stroke(lineWidth: 1).foregroundColor(.primaryApp).shadow(color: .primaryApp, radius: 1, x: 0, y: 0)
             )
             .padding(.horizontal, 3)
     }
@@ -82,7 +82,7 @@ struct Card: ViewModifier {
             .frame(width: self.width, height: self.height)
             .foregroundColor(.white)
             .background(RoundedRectangle(cornerRadius: 10)
-            .foregroundColor(.blue))
+            .foregroundColor(.primaryApp))
             .shadow(radius: 5)
     }
 }
