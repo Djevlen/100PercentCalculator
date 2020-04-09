@@ -10,7 +10,7 @@ import SwiftUI
 
 struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
-    var calculator: Calculator = Calculator()
+    var calculator: Calculator?
     @State private var resultCopiedOpacity: Double  = 0.0
     var bottomButtonPadding: CGFloat = 30
     
@@ -21,7 +21,7 @@ struct KeyboardButtonRow: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        Text(self.calculator.result)
+                        Text(self.calculator?.result ?? "")
                             .modifier(ModifiedRoundedRectangle(color: .green))
                             .opacity(self.resultCopiedOpacity)
                     }.offset(x: 0, y: 0)
@@ -64,10 +64,10 @@ struct KeyboardButtonRow: View {
     }
     
     func copyResult(){
-        if self.calculator.result.count > 0{
+        if self.calculator?.result.count ?? 0 > 0{
             self.resultCopiedOpacity = 1
             let copyResult = UIPasteboard.general
-            copyResult.string = self.calculator.result
+            copyResult.string = self.calculator?.result ?? ""
             withAnimation(.easeInOut(duration: 1)) {
                 self.resultCopiedOpacity = 0
             }

@@ -35,36 +35,40 @@ struct ResultView: View {
         if (self.calculator.canCalculate(operand1: self.operand1, operand2: self.operand2)){
             self.calculator.performCalculation(calcToPerform: self.calculation.calcToPerform, operand1: self.operand1, operand2: self.operand2)
         }
+        
         return VStack{
-            if (!compactMode){
-                self.resultString.count == 0 ? nil : Divider().background(Color.green).frame(height: 1)
-                HStack{
-                    Text(self.resultString)
-                        .font(.title)
-                        .underline(true, color: .underline)
-                    Spacer()
-                }
-            }
-            HStack{
+            if self.calculator.isCalculating {
                 if (!compactMode){
-                    Spacer()
-                }else{
-                    Text(self.resultString)
-                    .font(.subheadline)
-                        .underline(true, color: .underline)
-                    Spacer()
+                    HStack{
+                        Text(self.resultString)
+                            .font(.title)
+                            .underline(true, color: .underline)
+                        Spacer()
+                    }
                 }
-                Text(self.calculator.result)
-                    .font(.largeTitle)
-                self.withPercentage ? Text("%").font(.largeTitle) : nil
-            }
-            if(self.additionalResultString.count > 0){
                 HStack{
-                    Spacer()
-                    Text(self.additionalResultString + " " + self.calculator.additionalResult)
+                    if (!compactMode){
+                        Spacer()
+                    }else{
+                        Text(self.resultString)
                         .font(.subheadline)
+                            .underline(true, color: .underline)
+                        Spacer()
+                    }
+                    Text(self.calculator.result)
+                        .font(.largeTitle)
+                    self.withPercentage ? Text("%").font(.largeTitle) : nil
+                }
+                if(self.additionalResultString.count > 0){
+                    HStack{
+                        Spacer()
+                        Text(self.additionalResultString + " " + self.calculator.additionalResult)
+                            .font(.subheadline)
+                    }
                 }
             }
+            EmptyView()
+            
         }
     }
 }

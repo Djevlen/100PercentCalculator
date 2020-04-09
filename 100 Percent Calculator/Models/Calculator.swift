@@ -14,7 +14,7 @@ class Calculator: ObservableObject{
     @Published var additionalResult: String = ""
     @Published var isCalculating: Bool = false
     
-    
+    //check if the calculator accepts the operands, and is ready to calculate on the given operands
     func canCalculate(operand1: String, operand2: String) -> Bool{
         guard operand1.count > 0 && operand2.count > 0 else{
             self.result = ""
@@ -31,6 +31,7 @@ class Calculator: ObservableObject{
         return true
     }
     
+    //this functions broadcasts the result of a calculation in the current locale
     func setResultInLocale(result: Double, additionalResult: Double){
         let numberFormatter = NumberFormatter()
         numberFormatter.locale = .current
@@ -45,25 +46,31 @@ class Calculator: ObservableObject{
     }
     
     func performCalculation(calcToPerform: String, operand1: String, operand2: String){
+        let dotOperand1 = dotify(operand1)
+        let dotOperand2 = dotify(operand2)
+        guard let operand1 = Double(dotOperand1), let operand2 = Double(dotOperand2) else{
+            self.isCalculating = false
+            return
+        }
+        
         switch calcToPerform {
         case "CalculateNewPrice":
+            self.isCalculating = true
             calculateNewPrice(operand1: operand1, operand2: operand2)
         default:
+            self.isCalculating = false
             print("dette er defauuuulu!")
         }
         
     }
     
-    func calculateNewPrice(operand1: String, operand2: String){
-        #warning("This goes to the future 'determineFunctionCall' funcion")
-        let dotOperand1 = operand1.replacingOccurrences(of: ",", with: ".")
-        let dotOperand2 = operand2.replacingOccurrences(of: ",", with: ".")
-        guard let operand1 = Double(dotOperand1), let operand2 = Double(dotOperand2) else{
-            self.isCalculating = false
-            return
-        }
-        self.isCalculating = true
-        
+    //replaces commas with dots
+    func dotify(_ operand: String) -> String{
+        operand.replacingOccurrences(of: ",", with: ".")
+    }
+    
+    //MARK: - Calculations
+    func calculateNewPrice(operand1: Double, operand2: Double){
         let result = operand1 - ((operand2/100) * operand1 )
         let additionalResult = (operand2 / 100) * operand1
         

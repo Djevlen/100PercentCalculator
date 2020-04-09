@@ -15,6 +15,9 @@ struct FavoriteCellView: View {
     var favorite: Calculation
     @State var operand1: String = ""
     @State var operand2: String = ""
+    @State private var isCalculating: Bool = false
+    @State private var resultOpacity: Double = 0.0
+    
     
     var body: some View {
         VStack(spacing: 1){
@@ -25,11 +28,17 @@ struct FavoriteCellView: View {
             }.modifier(FavoriteTitleHeader())
             VStack(spacing: 1){
                 SectionView(textfieldString: self.$operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString, compactMode: self.userSettings.compactFavorites)
-            SectionView(textfieldString: self.$operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString, compactMode: self.userSettings.compactFavorites)
-                if(self.calculator.canCalculate(operand1: operand1, operand2: operand2)){
-                    ResultView(calculator:self.calculator, calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2, compactMode: self.userSettings.compactFavorites)
-                }
+                SectionView(textfieldString: self.$operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString, compactMode: self.userSettings.compactFavorites)
             }.modifier(FavoriteCellBody())
+            VStack{
+                ResultView(calculator:self.calculator, calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2, compactMode: self.userSettings.compactFavorites)
+                    .opacity(self.resultOpacity)
+                    .onAppear(perform: {
+                        withAnimation(.easeIn(duration: 5)){
+                            self.resultOpacity = 1
+                        }
+                    })
+            }
         }
         .listRowBackground(Color.clear)
     }
