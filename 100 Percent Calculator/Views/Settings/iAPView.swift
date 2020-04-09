@@ -31,7 +31,7 @@ struct iAPView: View {
                         }
                     }
                 }else{
-                    FetchingProductsView()
+                    Spinner()
                     .onAppear(perform: self.userSettings.loadProducts)
                 }
             }
