@@ -57,16 +57,15 @@ struct iAPSheetView: View {
                     }) {
                         Text("No thanks!")
                             .modifier(ModifiedRoundedRectangle(color: .red))
-                    }.padding()
+                    }
                     Button(action: {
                         self.isPresenting = false
                     }) {
                         ProductView(compactMode: true, product: self.userSettings.proProduct!)
                             .modifier(ModifiedRoundedRectangle())
-                        .padding()
-                    }.padding()
-                }
-                
+    
+                    }
+                }.padding()
             }
         }
     }

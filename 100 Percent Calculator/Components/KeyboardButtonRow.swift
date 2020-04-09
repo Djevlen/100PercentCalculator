@@ -16,9 +16,15 @@ struct KeyboardButtonRow: View {
     
     var body: some View {
         GeometryReader{ geometry in
-            if (self.keyboard.isPresent){
+            //if (self.keyboard.isPresent){
                 VStack{
                     Spacer()
+                    HStack{
+                        Spacer()
+                        Text(self.calculator.result)
+                            .modifier(ModifiedRoundedRectangle(color: .green))
+                            .opacity(self.resultCopiedOpacity)
+                    }.offset(x: 0, y: 0)
                     HStack{
                         Spacer()
                         ZStack{
@@ -31,10 +37,7 @@ struct KeyboardButtonRow: View {
                             .padding(.bottom, self.bottomButtonPadding)
                             .modifier(KeyboardButton())
                             .buttonStyle(BorderlessButtonStyle())
-                            Text(self.calculator.result)
-                                .modifier(ModifiedRoundedRectangle(color: .green))
-                                .offset(x: 0, y: -65)
-                                .opacity(self.resultCopiedOpacity)
+                            
                         }
                         Button(action: {
                             self.done()
@@ -45,15 +48,17 @@ struct KeyboardButtonRow: View {
                         .padding(.bottom, self.bottomButtonPadding)
                         .modifier(KeyboardButton())
                         .buttonStyle(BorderlessButtonStyle())
-                    }
-                    
-                }.edgesIgnoringSafeArea(.vertical)
-                    .offset(x: 0, y: -(self.keyboard.height-geometry.safeAreaInsets.bottom)+self.bottomButtonPadding)
-                    .transition(.move(edge: .bottom))
+                    }.transition(.move(edge: .bottom))
                     .animation(.spring())
-            }else{
-                EmptyView()
-            }
+                    
+                }
+                .padding(.horizontal)
+                .edgesIgnoringSafeArea(.vertical)
+                .offset(x: 0, y: -(self.keyboard.height-geometry.safeAreaInsets.bottom)+self.bottomButtonPadding)
+                
+            //}else{
+              //  EmptyView()
+            //}
         }
         
     }
@@ -63,7 +68,7 @@ struct KeyboardButtonRow: View {
             self.resultCopiedOpacity = 1
             let copyResult = UIPasteboard.general
             copyResult.string = self.calculator.result
-            withAnimation(.linear(duration: 2)) {
+            withAnimation(.easeInOut(duration: 1)) {
                 self.resultCopiedOpacity = 0
             }
         }
