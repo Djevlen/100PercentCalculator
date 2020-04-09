@@ -14,6 +14,7 @@ struct ProductView: View {
     @State private var showBuyError: Bool = false
     @State private var showIAPError: Bool = false
     @State private var iapErrorString = "An error occured."
+    var compactMode: Bool = false
 
     var product: SKProduct
     var localizedPrice: String {
@@ -21,6 +22,17 @@ struct ProductView: View {
         return price
     }
     var body: some View {
+        VStack{
+        if self.compactMode{
+            Button(action: {
+                if !self.purchase(product: self.product){
+                    self.showBuyError.toggle()
+                }
+            }){
+                Text("Buy!")
+            }
+            
+        }else{
             Button(action: {
                 if !self.purchase(product: self.product){
                     self.showBuyError.toggle()
@@ -40,9 +52,11 @@ struct ProductView: View {
                         .font(.body)
                         .multilineTextAlignment(.center)
                         .padding([.bottom, .horizontal])
-                }
+                }    
+
                 
-            }
+            }        .modifier(Card(width: 150, height: 250))
+
                 .alert(isPresented: self.$userSettings.thankUser){
                     Alert(title: Text("Thank You!"), message: Text("Your help is greatly appreciated! <3"), dismissButton: .default(Text("Dismiss!")))
                     //TODO : create thank you view?
@@ -56,7 +70,9 @@ struct ProductView: View {
                 Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
             }
                 
-        .modifier(Card(width: 150, height: 250))
+            }
+            
+        }
     }
     func applyFontWeight(for product: String) -> Font?{
         switch product {

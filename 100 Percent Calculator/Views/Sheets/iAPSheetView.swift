@@ -27,7 +27,7 @@ struct iAPSheetView: View {
                         ProductView(product: self.userSettings.proProduct!)
                             .padding()
                     }else{
-                        FetchingProductsView()
+                        Spinner()
                         .onAppear(perform: self.userSettings.loadProducts)
                     }
                 }
@@ -51,12 +51,22 @@ struct iAPSheetView: View {
                     Text("")
                     Text("With more features on the way!")
                 }.padding()
-                Button(action: {
-                    self.isPresenting = false
-                }) {
-                    Text("No thanks!")
-                        .modifier(ModifiedRoundedRectangle())
-                }.padding()
+                HStack{
+                    Button(action: {
+                        self.isPresenting = false
+                    }) {
+                        Text("No thanks!")
+                            .modifier(ModifiedRoundedRectangle(color: .red))
+                    }.padding()
+                    Button(action: {
+                        self.isPresenting = false
+                    }) {
+                        ProductView(compactMode: true, product: self.userSettings.proProduct!)
+                            .modifier(ModifiedRoundedRectangle())
+                        .padding()
+                    }.padding()
+                }
+                
             }
         }
     }

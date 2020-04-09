@@ -26,7 +26,7 @@ struct CalculationView: View {
     
     
     var body: some View {
-        ScrollView{
+//        ScrollView{
             ZStack{
                 VStack {
                     HStack{
@@ -50,13 +50,13 @@ struct CalculationView: View {
                     }
                     Spacer()
                 }
-                
+                VStack(alignment: .trailing){
+                    KeyboardButtonRow(calculator: self.calculator)
+                }
             }
-            VStack(alignment: .trailing){
-                KeyboardButtonRow(calculator: self.calculator)
-            }
+            
         }
-    }
+//    }
     
 }
 
