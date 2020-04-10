@@ -13,11 +13,18 @@ struct iAPView: View {
     @EnvironmentObject var userSettings: UserSettings
     @State private var showIAPError: Bool = false
     @State private var iapErrorString = "An error occured."
+    @State private var tryingToRestorePro = false
     @State private var proRestored: Bool = false
     
     
     var body: some View {
         Group{
+            if (self.tryingToRestorePro){
+                Spinner()
+                    .transition(.scale)
+                    .animation(.easeInOut(duration: 10))
+                .padding()
+            }else{
             HStack{
                 if self.userSettings.hasLoadedProducts && self.userSettings.products != nil {
                     ScrollView(.horizontal, showsIndicators: false){
@@ -36,12 +43,14 @@ struct iAPView: View {
                 }
             }
             .listRowInsets(EdgeInsets())
-            Button(action: {
-                self.restorePro()
-            }){
-                Text("Restore Pro Purchase")
             }
-            .disabled(self.userSettings.isProUser)
+                Button(action: {
+                    self.restorePro()
+                }){
+                    Text("Restore Pro Purchase")
+                }
+                .disabled(self.userSettings.isProUser)
+            
         }
         .alert(isPresented: $showIAPError){
             Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
@@ -53,6 +62,7 @@ struct iAPView: View {
     
     func restorePro() {
         print("tryint to restore purchase")
+        self.tryingToRestorePro = true
         IAPManager.shared.restorePurchases { (result) in
             DispatchQueue.main.async {
                 
@@ -69,8 +79,8 @@ struct iAPView: View {
                     
                 case .failure(let error): self.showIAPRelatedError(error)
                 }
+                self.tryingToRestorePro = false
             }
-            
         }
     }
     

@@ -14,8 +14,10 @@ struct ProductView: View {
     @State private var showBuyError: Bool = false
     @State private var showIAPError: Bool = false
     @State private var iapErrorString = "An error occured."
+    @State private var tryingToBuy = false
+    @State private var thankUser = false
     var compactMode: Bool = false
-
+    
     var product: SKProduct
     var localizedPrice: String {
         guard let price = IAPManager.shared.getPriceFormatted(for: product) else { return product.price.stringValue}
@@ -23,55 +25,59 @@ struct ProductView: View {
     }
     var body: some View {
         VStack{
-        if self.compactMode{
-            Button(action: {
-                if !self.purchase(product: self.product){
-                    self.showBuyError.toggle()
+            if self.compactMode{
+                Button(action: {
+                    if !self.purchase(product: self.product){
+                        self.showBuyError.toggle()
+                    }
+                }){
+                    if self.tryingToBuy{
+                        Spinner()
+                    }else{
+                        Text("Buy!")
+                    }
                 }
-            }){
-                Text("Buy!")
+            }else{
+                Button(action: {
+                    if !self.purchase(product: self.product){
+                        self.showBuyError.toggle()
+                    }
+                }) {
+                    if self.tryingToBuy{
+                        Spinner().padding()
+                    }else{
+                        VStack{
+                            Text("\(product.localizedTitle)")
+                                .font(.title)
+                                .padding([.top, .horizontal])
+                            Text("\(self.localizedPrice)")
+                                .font(.subheadline)
+                            Spacer()
+                            Image(systemName: getImageFrom(productID: product.productIdentifier))
+                                .font(self.applyFontWeight(for: product.productIdentifier))
+                            Spacer()
+                            Text("\(product.localizedDescription)")
+                                .font(.body)
+                                .multilineTextAlignment(.center)
+                                .padding([.bottom, .horizontal])
+                        }
+                    }
+                }
+                .modifier(Card(width: 150, height: 250))
+                    //alert for when the device is unable to buy stuff
+                    //ie parents locking a child's device etc
+                    .alert(isPresented: $showBuyError) {
+                        Alert(title: Text("Error Making Purchase"), message: Text("This device cannot make purchases"), dismissButton: .default(Text("Ok!")))
+                }
+                .alert(isPresented: $showIAPError){
+                    Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
+                }
+                
             }
             
-        }else{
-            Button(action: {
-                if !self.purchase(product: self.product){
-                    self.showBuyError.toggle()
-                }
-            }) {
-                VStack{
-                    Text("\(product.localizedTitle)")
-                        .font(.title)
-                        .padding([.top, .horizontal])
-                    Text("\(self.localizedPrice)")
-                        .font(.subheadline)
-                    Spacer()
-                    Image(systemName: getImageFrom(productID: product.productIdentifier))
-                        .font(self.applyFontWeight(for: product.productIdentifier))
-                    Spacer()
-                    Text("\(product.localizedDescription)")
-                        .font(.body)
-                        .multilineTextAlignment(.center)
-                        .padding([.bottom, .horizontal])
-                }    
-
-                
-            }        .modifier(Card(width: 150, height: 250))
-
-                .alert(isPresented: self.$userSettings.thankUser){
-                    Alert(title: Text("Thank You!"), message: Text("Your help is greatly appreciated! <3"), dismissButton: .default(Text("Dismiss!")))
-                    //TODO : create thank you view?
-                }
-                //alert for when the device is unable to buy stuff
-                //ie parents locking a child's device etc
-            .alert(isPresented: $showBuyError) {
-                Alert(title: Text("Error Making Purchase"), message: Text("This device cannot make purchases"), dismissButton: .default(Text("Ok!")))
-            }
-            .alert(isPresented: $showIAPError){
-                Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
-            }
-                
-            }
-            
+        }.alert(isPresented: self.$thankUser){
+                Alert(title: Text("Thank You!"), message: Text("Your help is greatly appreciated! <3"), dismissButton: .default(Text("Dismiss!")))
+                //TODO : create thank you view?
         }
     }
     func applyFontWeight(for product: String) -> Font?{
@@ -99,25 +105,25 @@ struct ProductView: View {
     
     func purchase(product: SKProduct) -> Bool {
         if !IAPManager.shared.canMakePayments() {
+            self.tryingToBuy = false
             return false
         } else {
-            //show timeoutview
-            //delegate?.willStartLongProcess()
+            self.tryingToBuy = true
             IAPManager.shared.buy(product: product) { (result) in
                 DispatchQueue.main.async {
-                    //remove timeoutview
-                    //self.delegate?.didFinishLongProcess()
+                    self.tryingToBuy = false
                     switch result {
-                    case .success(_): self.userSettings.productPurchased(product)
+                    case .success(_):
+                        self.userSettings.productPurchased(product)
+                        self.thankUser = true
+                        print("htnaks user: \(self.thankUser)")
                     case .failure(let error): self.showIAPRelatedError(error)
                     }
                 }
             }
             return true
         }
-        
     }
-
     
     func showIAPRelatedError(_ error: Error){
         print("got an error: \(error.localizedDescription)")

@@ -31,14 +31,6 @@ struct iAPSheetView: View {
                         .onAppear(perform: self.userSettings.loadProducts)
                     }
                 }
-                if (!self.userSettings.isProUser){
-                    Button(action: {
-                        //todo make this
-                    }){
-                        Text("Restore Pro Purchase")
-                            .padding()
-                    }
-                }
                 VStack(alignment: .leading){
                     HStack{
                         Text("Current Pro Features")

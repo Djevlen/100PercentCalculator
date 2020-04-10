@@ -25,7 +25,6 @@ final class UserSettings: ObservableObject {
     
     @Published var isProUser: Bool              = false
     @Published var hasLoadedProducts: Bool      = false
-    @Published var thankUser: Bool              = false
     @Published var favoriteLimitReached: Bool   = false
     @Published var products: [SKProduct]? = nil
     @Published var proProduct: SKProduct? = nil
@@ -128,7 +127,6 @@ final class UserSettings: ObservableObject {
     
     func productPurchased(_ product: SKProduct){
         print("the user bought this: \(product.localizedTitle)")
-        self.thankUser = true
         if product.productIdentifier.lowercased().contains("pro"){
             self.isProUser = true
             self.hasLoadedProducts = false
