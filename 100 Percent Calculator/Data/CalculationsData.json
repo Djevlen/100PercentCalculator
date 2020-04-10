@@ -32,7 +32,7 @@
                 "defaultOperand2": null,
                 "isFavorite": true,
                 "isHidden": false,
-                "calcToPerform": "lol"
+                "calcToPerform": "calculateDiscount"
             }
         ]
     },
@@ -47,30 +47,30 @@
                 "id": 21,
                 "firstOperandString": "Hvor mange prosent er",
                 "secondOperandString": "Av",
-                "resultString": "Det er ...",
+                "resultString": "Det er",
                 "additionalString": null,
                 "showCurrencySymbol": false,
-                "placePercentagesSymbolOn": "Hvor mange prosent er",
+                "placePercentagesSymbolOn": "Det er",
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"
+                "calcToPerform": "findPercent"
             },
             {
                 "title": "Hvor mye er ...",
                 "id": 22,
                 "firstOperandString": "Hva er",
                 "secondOperandString": "Av",
-                "resultString": "Det er ...",
+                "resultString": "Det er",
                 "additionalString": null,
                 "showCurrencySymbol": true,
-                "placePercentagesSymbolOn": "Det er ...",
+                "placePercentagesSymbolOn": "Hva er",
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"
+                "calcToPerform": "findPercentValue"
             },
             {
                 "title": "Hvor mange prosent å legge til?",
@@ -85,7 +85,7 @@
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"
+                "calcToPerform": "addPercent"
                 
             }
         ]
@@ -109,7 +109,7 @@
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"
+                "calcToPerform": "addTax"
                 
             },
             {
@@ -118,14 +118,14 @@
                 "firstOperandString": "Pris",
                 "secondOperandString": "MVA",
                 "resultString": "Pris uten MVA",
-                "additionalString": "Jeg sparte",
+                "additionalString": "Fjernet MVA-sum",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "MVA",
                 "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"
+                "calcToPerform": "removeTax"
                 
             }
         ]
@@ -149,7 +149,7 @@
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"
+                "calcToPerform": "contributionMargin"
                 
             },
             {
@@ -165,7 +165,7 @@
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"
+                "calcToPerform": "contributionMarginRatio"
                 
             }
         ]
@@ -189,7 +189,7 @@
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"
+                "calcToPerform": "calculateTip"
                 
             },
             {
@@ -205,7 +205,7 @@
                 "defaultOperand2": null,
                 "isFavorite": false,
                 "isHidden": false,
-                "calcToPerform": "CalculateNewPrice"}
+                "calcToPerform": "calculateTipReceived"}
         ]
     }
 ]

@@ -32,7 +32,7 @@ class Calculator: ObservableObject{
     }
     
     //this functions broadcasts the result of a calculation in the current locale
-    func setResultInLocale(result: Double, additionalResult: Double){
+    func setResultInLocale(result: Double, additionalResult: Double? = nil){
         let numberFormatter = NumberFormatter()
         numberFormatter.locale = .current
         numberFormatter.numberStyle = .decimal
@@ -40,7 +40,12 @@ class Calculator: ObservableObject{
         if let res = numberFormatter.string(from: NSNumber(value: result)){
             self.result = res
         }
-        if let addRes = numberFormatter.string(from: NSNumber(value: additionalResult)){
+        guard additionalResult != nil else {
+            self.additionalResult = ""
+            return
+            
+        }
+        if let addRes = numberFormatter.string(from: NSNumber(value: additionalResult!)){
             self.additionalResult = addRes
         }
     }
@@ -52,14 +57,33 @@ class Calculator: ObservableObject{
             self.isCalculating = false
             return
         }
-        
+        self.isCalculating = true
         switch calcToPerform {
         case "CalculateNewPrice":
-            self.isCalculating = true
             calculateNewPrice(operand1: operand1, operand2: operand2)
+        case "calculateDiscount":
+            calculateDiscount(operand1: operand1, operand2: operand2)
+        case "findPercent":
+            findPercent(operand1: operand1, operand2: operand2)
+        case "findPercentValue":
+            findPercentValue(operand1: operand1, operand2: operand2)
+        case "addPercent":
+            addPercent(operand1: operand1, operand2: operand2)
+        case "addTax":
+            addTax(operand1: operand1, operand2: operand2)
+        case "removeTax":
+            removeTax(operand1: operand1, operand2: operand2)
+        case "calculateTip":
+            calculateTip(operand1: operand1, operand2: operand2)
+        case "calculateTipReceived":
+            calculateTipReceived(operand1: operand1, operand2: operand2)
+        case "contributionMargin":
+            contributionMargin(operand1: operand1, operand2: operand2)
+        case "contributionMarginRatio":
+            contributionMarginRatio(operand1: operand1, operand2: operand2)
         default:
             self.isCalculating = false
-            print("dette er defauuuulu!")
+            print("Default")
         }
         
     }
@@ -73,6 +97,75 @@ class Calculator: ObservableObject{
     func calculateNewPrice(operand1: Double, operand2: Double){
         let result = operand1 - ((operand2/100) * operand1 )
         let additionalResult = (operand2 / 100) * operand1
+        
+        self.setResultInLocale(result: result, additionalResult: additionalResult)
+    }
+    
+    func calculateDiscount(operand1: Double, operand2: Double){
+        let result = (1-(operand2/operand1))*100
+        let additionalResult = operand1-operand2
+        
+        self.setResultInLocale(result: result, additionalResult: additionalResult)
+    }
+    
+    func findPercent(operand1: Double, operand2: Double){
+        let result = (operand1 / operand2) * 100
+        
+        self.setResultInLocale(result: result)
+    }
+    
+    func findPercentValue(operand1: Double, operand2: Double){
+        let result = operand2/100*operand1
+        
+        self.setResultInLocale(result: result)
+    }
+    
+    func addPercent(operand1: Double, operand2: Double){
+        let result = ((operand2 / operand1) - 1) * 100
+        
+        self.setResultInLocale(result: result)
+    }
+    
+    func addTax(operand1: Double, operand2: Double){
+        let result = operand1 * (1 + (operand2 / 100))
+        let additionalResult = (operand1 * (1 + (operand2 / 100))-operand1 )
+        
+        self.setResultInLocale(result: result, additionalResult: additionalResult)
+    }
+    
+    func removeTax(operand1: Double, operand2: Double){
+        let result = operand1 / (1 + (operand2 / 100))
+        let additionalResult = operand1 - (operand1 / (1 + (operand2 / 100)))
+        
+        self.setResultInLocale(result: result, additionalResult: additionalResult)
+    }
+    
+    func calculateTip(operand1: Double, operand2: Double){
+        let result = (operand1+(operand2/100)*operand1)-operand1
+        let additionalResult = operand1+(operand2/100)*operand1
+        
+        self.setResultInLocale(result: result, additionalResult: additionalResult)
+    }
+    
+    func calculateTipReceived(operand1: Double, operand2: Double){
+        let difference = operand2 - operand1
+        let result = (difference / operand1) * 100
+        let additionalResult = difference
+        
+        self.setResultInLocale(result: result, additionalResult: additionalResult)
+    }
+    
+    func contributionMargin(operand1: Double, operand2: Double){
+        let result = operand2-operand1
+        let additionalResult = ((operand2 - operand1)/operand2)*100
+        
+        self.setResultInLocale(result: result, additionalResult: additionalResult)
+    }
+    
+    func contributionMarginRatio(operand1: Double, operand2: Double){
+        let price = operand2 * (1 + (operand1 / 100))
+        let result = (operand2+(price-operand2))
+        let additionalResult = price-operand2
         
         self.setResultInLocale(result: result, additionalResult: additionalResult)
     }
