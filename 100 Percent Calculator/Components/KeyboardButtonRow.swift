@@ -12,33 +12,41 @@ struct KeyboardButtonRow: View {
     @EnvironmentObject var keyboard: KeyboardController
     var calculator: Calculator?
     @State private var resultCopiedOpacity: Double  = 0.0
+    @State private var calculatorResult: String = ""
     var bottomButtonPadding: CGFloat = 30
     
     var body: some View {
         GeometryReader{ geometry in
-            //if (self.keyboard.isPresent){
+            if (self.keyboard.isPresent){
+                VStack(alignment: .center){
+                    if (self.calculatorResult.count > 0){
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Text(self.calculatorResult)
+                            .font(.largeTitle)
+                            .padding()
+                            .modifier(ModifiedRoundedRectangle(color: .green))
+                            .opacity(self.resultCopiedOpacity)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+                }
                 VStack{
                     Spacer()
                     HStack{
                         Spacer()
-                        Text(self.calculator?.result ?? "")
-                            .modifier(ModifiedRoundedRectangle(color: .green))
-                            .opacity(self.resultCopiedOpacity)
-                    }.offset(x: 0, y: 0)
-                    HStack{
-                        Spacer()
-                        ZStack{
-                            Button(action: {
-                                self.copyResult()
-                            }) {
-                                Image(systemName: "doc.on.doc")
-                                    .padding()
-                            }
-                            .padding(.bottom, self.bottomButtonPadding)
-                            .modifier(KeyboardButton())
-                            .buttonStyle(BorderlessButtonStyle())
-                            
+                        Button(action: {
+                            self.copyResult()
+                        }) {
+                            Image(systemName: "doc.on.doc")
+                                .padding()
                         }
+                        .padding(.bottom, self.bottomButtonPadding)
+                        .modifier(KeyboardButton())
+                        .buttonStyle(BorderlessButtonStyle())
+                        
                         Button(action: {
                             self.done()
                         }) {
@@ -48,17 +56,17 @@ struct KeyboardButtonRow: View {
                         .padding(.bottom, self.bottomButtonPadding)
                         .modifier(KeyboardButton())
                         .buttonStyle(BorderlessButtonStyle())
-                    }.transition(.move(edge: .bottom))
-                    .animation(.spring())
-                    
+                    }
                 }
-                .padding(.horizontal)
-                .edgesIgnoringSafeArea(.vertical)
+                .transition(.move(edge: .bottom))
+                .animation(.spring())
                 .offset(x: 0, y: -(self.keyboard.height-geometry.safeAreaInsets.bottom)+self.bottomButtonPadding)
+                .padding(.horizontal)
                 
-            //}else{
-              //  EmptyView()
-            //}
+                
+            }else{
+                EmptyView()
+            }
         }
         
     }
@@ -68,8 +76,10 @@ struct KeyboardButtonRow: View {
             self.resultCopiedOpacity = 1
             let copyResult = UIPasteboard.general
             copyResult.string = self.calculator?.result ?? ""
-            withAnimation(.easeInOut(duration: 1)) {
+            self.calculatorResult = self.calculator?.result ?? ""
+            withAnimation(Animation.easeOut(duration: 1.5)){
                 self.resultCopiedOpacity = 0
+                self.calculatorResult = ""
             }
         }
     }
