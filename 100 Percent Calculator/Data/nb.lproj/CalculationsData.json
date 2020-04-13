@@ -1,0 +1,211 @@
+[{
+        "title": "Rabatt",
+        "id": 1,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Rabatt",
+                "id": 11,
+                "firstOperandString": "Pris før rabatt",
+                "secondOperandString": "Rabatt",
+                "resultString": "Den nye prisen er",
+                "additionalString": "Hvor rabatten var",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Rabatt",
+                "defaultOperand1": "20",
+                "defaultOperand2": null,
+                "isFavorite": true,
+                "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
+            },
+            {
+                "title": "Hva var rabatten?",
+                "id": 12,
+                "firstOperandString": "Pris",
+                "secondOperandString": "Pris etter rabatt",
+                "resultString": "Rabatten var",
+                "additionalString": "Jeg sparte",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Rabatten var",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": true,
+                "isHidden": false,
+                "calcToPerform": "calculateDiscount"
+            }
+        ]
+    },
+    {
+        "title": "Mengder",
+        "id": 2,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Hvor mange prosent er ...",
+                "id": 21,
+                "firstOperandString": "Hvor mange prosent er",
+                "secondOperandString": "Av",
+                "resultString": "Det er",
+                "additionalString": null,
+                "showCurrencySymbol": false,
+                "placePercentagesSymbolOn": "Det er",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "findPercent"
+            },
+            {
+                "title": "Hvor mye er ...",
+                "id": 22,
+                "firstOperandString": "Hva er",
+                "secondOperandString": "Av",
+                "resultString": "Det er",
+                "additionalString": null,
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Hva er",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "findPercentValue"
+            },
+            {
+                "title": "Hvor mange prosent å legge til?",
+                "id": 23,
+                "firstOperandString": "Hvis jeg har",
+                "secondOperandString": "Men vil ha",
+                "resultString": "Da må jeg legge til",
+                "additionalString": null,
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Da må jeg legge til",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "addPercent"
+                
+            }
+        ]
+    },
+    {
+        "title": "Merverdiavgift",
+        "id": 3,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Vis pris med MVA",
+                "id": 31,
+                "firstOperandString": "Pris uten MVA",
+                "secondOperandString": "MVA",
+                "resultString": "Pris med MVA",
+                "additionalString": "MVA-summen er",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "MVA",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "addTax"
+                
+            },
+            {
+                "title": "Vis pris uten MVA",
+                "id": 32,
+                "firstOperandString": "Pris",
+                "secondOperandString": "MVA",
+                "resultString": "Pris uten MVA",
+                "additionalString": "Fjernet MVA-sum",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "MVA",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "removeTax"
+                
+            }
+        ]
+    },
+    {
+        "title": "Dekningsgrad",
+        "id": 4,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Finn dekningsbidrag og dekningsgrad",
+                "id": 41,
+                "firstOperandString": "Innkjøp / Produksjonskonstand",
+                "secondOperandString": "Utsalgspris (uten MVA)",
+                "resultString": "Dekningsbidrag",
+                "additionalString": "Dekningsgraden er",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Dekningsgraden er",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "contributionMargin"
+                
+            },
+            {
+                "title": "Pris med dekningsgrad",
+                "id": 42,
+                "firstOperandString": "Dekningsgrad",
+                "secondOperandString": "Innkjøp / Produksjonskostnad",
+                "resultString": "Pris",
+                "additionalString": "Dekningsbidraget er",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Dekningsgrad",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "contributionMarginRatio"
+                
+            }
+        ]
+    },
+    {
+        "title": "Tips",
+        "id": 5,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Hvor mye skal jeg tipse?",
+                "id": 51,
+                "firstOperandString": "Å betale",
+                "secondOperandString": "Tips",
+                "resultString": "Jeg tipser",
+                "additionalString": "Den totale summen blir",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Tips",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "calculateTip"
+                
+            },
+            {
+                "title": "Hvor mye tips fikk jeg?",
+                "id": 52,
+                "firstOperandString": "Sum uten tips",
+                "secondOperandString": "Sum med tips",
+                "resultString": "Tips mottatt",
+                "additionalString": "Hvor tipset tilsvarer",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Tips mottatt",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "calculateTipReceived"}
+        ]
+    }
+]

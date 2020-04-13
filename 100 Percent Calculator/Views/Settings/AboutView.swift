@@ -22,7 +22,7 @@ struct AboutView: View {
                 
             Text("Thank you for downloading it - I hope it helps you out! 😊")
             Text("")
-            Text("I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying PRO, giving me a tip, or maybe leaving a positive review by pressing the button below.")
+            Text("I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying Pro, giving me a tip, or maybe leaving a positive review by pressing the button below.")
                 .font(.body)
             Text("")
             Text("- Thomas ❤️")

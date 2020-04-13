@@ -14,7 +14,6 @@
 		E9081166242DFB8000835623 /* iap_productIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9081165242DFB8000835623 /* iap_productIDs.plist */; };
 		E9081168242E01BF00835623 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081167242E01BF00835623 /* IAPManager.swift */; };
 		E908116A242E33FA00835623 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081169242E33FA00835623 /* ProductView.swift */; };
-		E90CD7C72420E4C000BA5274 /* CalculationsData.json in Resources */ = {isa = PBXBuildFile; fileRef = E90CD7C62420E4C000BA5274 /* CalculationsData.json */; };
 		E90CD7CD2420EBD100BA5274 /* CalculationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */; };
 		E90CD7D02421026400BA5274 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7CF2421026400BA5274 /* Calculation.swift */; };
 		E90CD7D92421126400BA5274 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CD7D82421126400BA5274 /* JsonData.swift */; };
@@ -51,6 +50,7 @@
 		E9D3DDBD24221E590009DF21 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3DDBC24221E590009DF21 /* UserSettings.swift */; };
 		E9DE21D824325FCB00D6B35F /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE21D724325FCB00D6B35F /* ViewModifiers.swift */; };
 		E9DF92F92444617600A167D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9DF92FB2444617600A167D6 /* Localizable.strings */; };
+		E9DF92FE24447EAF00A167D6 /* CalculationsData.json in Resources */ = {isa = PBXBuildFile; fileRef = E9DF930024447EAF00A167D6 /* CalculationsData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,6 @@
 		E9081165242DFB8000835623 /* iap_productIDs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = iap_productIDs.plist; sourceTree = "<group>"; };
 		E9081167242E01BF00835623 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		E9081169242E33FA00835623 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
-		E90CD7C62420E4C000BA5274 /* CalculationsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CalculationsData.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		E90CD7CC2420EBD100BA5274 /* CalculationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListView.swift; sourceTree = "<group>"; };
 		E90CD7CF2421026400BA5274 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		E90CD7D82421126400BA5274 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
@@ -114,6 +113,8 @@
 		E9DF92FA2444617600A167D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9DF92FC244461BC00A167D6 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E9DF92FD244461BC00A167D6 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E9DF92FF24447EAF00A167D6 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nb; path = nb.lproj/CalculationsData.json; sourceTree = "<group>"; };
+		E9DF930124447F6500A167D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/CalculationsData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +147,7 @@
 		E90CD7C52420E47300BA5274 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				E90CD7C62420E4C000BA5274 /* CalculationsData.json */,
+				E9DF930024447EAF00A167D6 /* CalculationsData.json */,
 				E9081165242DFB8000835623 /* iap_productIDs.plist */,
 				E908115F242CEF7900835623 /* apiKeys.plist */,
 			);
@@ -418,7 +419,7 @@
 				E9081166242DFB8000835623 /* iap_productIDs.plist in Resources */,
 				E9DF92F92444617600A167D6 /* Localizable.strings in Resources */,
 				E9B13E4E2420C7BF00DE8BC5 /* Assets.xcassets in Resources */,
-				E90CD7C72420E4C000BA5274 /* CalculationsData.json in Resources */,
+				E9DF92FE24447EAF00A167D6 /* CalculationsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +509,15 @@
 				E9DF92FD244461BC00A167D6 /* nb */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E9DF930024447EAF00A167D6 /* CalculationsData.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9DF92FF24447EAF00A167D6 /* nb */,
+				E9DF930124447F6500A167D6 /* en */,
+			);
+			name = CalculationsData.json;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

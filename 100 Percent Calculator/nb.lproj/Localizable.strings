@@ -11,7 +11,7 @@
 "Settings" = "Innstillinger";
 
 //iAPSheetView
-"Help keep the app ad-free, and enjoy all pro features - forever!" = "Hold appen reklamefri, og få alle nåværende og fremtidige pro-funksjoner!";
+"Help keep the app ad-free, and enjoy all pro features - forever!" = "Hold appen reklamefri, og få alle nåværende og fremtidige Pro-funksjoner!";
 "Current Pro Features" = "Nåværende Pro-funksjoner";
 "- No Ads." = "- Ingen reklame.";
 "- Unlimited Favorites" = "- Ubegrensede favoritter";
@@ -23,7 +23,7 @@
 "Restore deleted calculations" = "Gjenopprett slettede kalkulasjoner";
 "Reset" = "Gjenopprett";
 "%lld Calculations restored" = "%lld kalkulasjoner gjenopprettet!";
-"Buy Pro to get all current and future pro features, and keep the app ad-free. Or consider skipping buying that coffee today and give me a tip below, so I can buy myself a coffee instead! ❤️ 😅" = "Kjøp Pro for å få alle nåværende og fremtidige PRO-funksjoner, og for å holde appen reklamefri. Eller vurdér å skippe den take-away-kaffen i dag, og gi meg et tips så jeg kan kjøpe meg en kaffe i stedet! ❤️ 😅";
+"Buy Pro to get all current and future pro features, and keep the app ad-free. Or consider skipping buying that coffee today and give me a tip below, so I can buy myself a coffee instead! ❤️ 😅" = "Kjøp Pro for å få alle nåværende og fremtidige Pro-funksjoner, og for å holde appen reklamefri. Eller vurdér å skippe den utekaffen i dag, og gi meg et tips så jeg kan kjøpe meg en kaffe i stedet! ❤️ 😅";
 "Why Pro?" = "Hvorfor pro?";
 "About" = "Om";
 "Write a Review" = "Skriv en omtale";
@@ -41,7 +41,7 @@
 "Hi! 👋" = "Hei! 👋";
 "I'm Thomas. I made this app with the help of my dotted friend Dent." = "Mitt navn er Thomas. Jeg lagde denne appen med god hjelp fra min prikkede venn Dent.";
 "Thank you for downloading it - I hope it helps you out! 😊" = "Takk for at du lastet den ned - Jeg håper den gjør det litt lettere å jobbe med prosenter. 😊";
-"I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying PRO, giving me a tip, or maybe leaving a positive review by pressing the button below." = "Jeg lever av å lage apper, og siden jeg har fjernet all reklame fra denne appen er jeg avhengig av at brukere kjøper PRO eller gir meg tips. Hvis du ikke har anledning til å kjøpe noe, hadde jeg satt stor pris på om du skrev en omtale i App Store ved å trykke på knappen under.";
+"I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying Pro, giving me a tip, or maybe leaving a positive review by pressing the button below." = "Jeg lever av å lage apper, og siden jeg har fjernet all reklame fra denne appen er jeg avhengig av at brukere kjøper Pro eller gir meg tips. Hvis du ikke har anledning til å kjøpe noe, hadde jeg satt stor pris på om du skrev en omtale i App Store ved å trykke på knappen under.";
 
 //iApView
 "Restore Pro Purchase" = "Gjenopprett Pro!";
@@ -64,3 +64,7 @@
 //EditDefaultsView
 "Default Values" = "Standard verdier";
 "Save" = "Lagre";
+
+
+//JsonData
+"Discount" = "Rabatt";
