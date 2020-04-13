@@ -57,6 +57,8 @@ struct ResultView: View {
                     }
                     Text(self.calculator.result)
                         .font(.largeTitle)
+                    .underline(true, color: .underline)
+
                     self.withPercentage ? Text("%").font(.largeTitle) : nil
                 }
                 if(self.additionalResultString.count > 0){

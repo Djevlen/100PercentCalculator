@@ -36,7 +36,6 @@ struct KeyboardButtonRow: View {
                 VStack{
                     Spacer()
                     HStack{
-                        Spacer()
                         Button(action: {
                             self.copyResult()
                         }) {
@@ -56,6 +55,8 @@ struct KeyboardButtonRow: View {
                         .padding(.bottom, self.bottomButtonPadding)
                         .modifier(KeyboardButton())
                         .buttonStyle(BorderlessButtonStyle())
+                        Spacer()
+
                     }
                 }
                 .transition(.move(edge: .bottom))

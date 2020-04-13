@@ -66,7 +66,7 @@ struct FavoriteCellBody: ViewModifier {
             .background(
                 Rectangle()
                     .colorInvert()
-                    .shadow(color: .underline, radius: 4, x: 3, y: 3)
+                    .shadow(color: .primaryApp, radius: 4, x: 3, y: 3)
             )
     }
 }

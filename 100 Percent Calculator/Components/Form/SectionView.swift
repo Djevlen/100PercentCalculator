@@ -58,13 +58,10 @@ struct SectionView: View{
                         .keyboardType(.decimalPad)
                         .font(compactMode ? .callout : .title)
                     self.withPercentage ? Text("%").font(compactMode ? .callout : .title) : nil
-                }.padding(.horizontal, 1)
-                    .overlay(
-                    textfieldString.count > 0 ? nil :
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.red, style: StrokeStyle())
-                )
+                }
+                .padding(.horizontal, 1)
             }
+            textfieldString.count > 0 ? nil : Divider().colorInvert()
         }
     }
 }
