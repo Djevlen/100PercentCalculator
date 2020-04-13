@@ -1,0 +1,210 @@
+[{
+        "title": "Korting",
+        "id": 1,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Prijs met korting",
+                "id": 11,
+                "firstOperandString": "Prijs zonder korting",
+                "secondOperandString": "Korting",
+                "resultString": "Nieuwe prijs is",
+                "additionalString": "Met een korting van",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Korting",
+                "defaultOperand1": "20",
+                "defaultOperand2": null,
+                "isFavorite": true,
+                "isHidden": false,
+                "calcToPerform": "CalculateNewPrice"
+            },
+            {
+                "title": "Hoe groot was de korting?",
+                "id": 12,
+                "firstOperandString": "Prijs",
+                "secondOperandString": "Prijs met korting",
+                "resultString": "De korting was",
+                "additionalString": "Ik bespaar",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "De korting was",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": true,
+                "isHidden": false,
+                "calcToPerform": "calculateDiscount"
+            }
+        ]
+    },
+    {
+        "title": "Verhoudingen",
+        "id": 2,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Welk percentage is...?",
+                "id": 21,
+                "firstOperandString": "Welk percentage is",
+                "secondOperandString": "Van",
+                "resultString": "Het is",
+                "additionalString": null,
+                "showCurrencySymbol": false,
+                "placePercentagesSymbolOn": "Het is",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "findPercent"
+            },
+            {
+                "title": "Hoe veel is ...",
+                "id": 22,
+                "firstOperandString": "Wat is",
+                "secondOperandString": "Van",
+                "resultString": "Het is",
+                "additionalString": null,
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Wat is",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "findPercentValue"
+            },
+            {
+                "title": "Hoeveel procent toe te voegen?",
+                "id": 23,
+                "firstOperandString": "Wanneer ik beschik over",
+                "secondOperandString": "Maar ik wil",
+                "resultString": "Dan is de hoeveelheid die ik moet toevoegen",
+                "additionalString": null,
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Dan is de hoeveelheid die ik moet toevoegen",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "addPercent"
+                
+            }
+        ]
+    },
+    {
+        "title": "Omzetbelasting (btw)",
+        "id": 3,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Laat Prijs Inclusief Belasting Zien",
+                "id": 31,
+                "firstOperandString": "Prijs zonder belasting",
+                "secondOperandString": "Belastingpercentage",
+                "resultString": "Prijs inclusief belasting",
+                "additionalString": "De totale belasting daarvan is",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Belastingpercentage",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "addTax"
+                
+            },
+            {
+                "title": "Laat Prijs Zonder Belasting Zien",
+                "id": 32,
+                "firstOperandString": "Prijs",
+                "secondOperandString": "Belastingpercentage",
+                "resultString": "Prijs zonder belasting",
+                "additionalString": "De totale hoeveelheid aan belasting die U verwijderd heeft is",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Belastingpercentage",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "removeTax"
+                
+            }
+        ]
+    },
+    {
+        "title": "Break-Even Analyse",
+        "id": 4,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Find Dekkingsbijdrage En Ratio",
+                "id": 41,
+                "firstOperandString": "Aankoop / Productiekosten",
+                "secondOperandString": "Selling Prijs (ex. BTW)",
+                "resultString": "Bijdrage Margin",
+                "additionalString": "De verhouding is",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "De verhouding is",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "contributionMargin"
+                
+            },
+            {
+                "title": "Prijs Met Dekkingsbijdrage Ratio",
+                "id": 42,
+                "firstOperandString": "Dekkingsbijdrage Ratio",
+                "secondOperandString": "Aankoop / Productiekosten",
+                "resultString": "Eenheid prijs",
+                "additionalString": "De Dekkingsbijdrage is",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Dekkingsbijdrage Ratio",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "contributionMarginRatio"
+            }
+        ]
+    },
+    {
+        "title": "Fooi",
+        "id": 5,
+        "isFavorite": false,
+        "isHidden": false,
+        "calculations": [
+            {
+                "title": "Hoeveel Fooi Moet Ik Geven?",
+                "id": 51,
+                "firstOperandString": "Te betalen",
+                "secondOperandString": "Fooi",
+                "resultString": "De hoeveelheid fooi die ik geef is",
+                "additionalString": "Leidend tot een totaalbedrag van",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Fooi",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "calculateTip"
+                
+            },
+            {
+                "title": "Hoeveel Fooi Heb Ik Gekregen",
+                "id": 52,
+                "firstOperandString": "Bedrag zonder fooi",
+                "secondOperandString": "Bedrag inclusief fooi",
+                "resultString": "Hoeveelheid gekregen fooi",
+                "additionalString": "De hoeveelheid gekregen fooi is",
+                "showCurrencySymbol": true,
+                "placePercentagesSymbolOn": "Hoeveelheid gekregen fooi",
+                "defaultOperand1": null,
+                "defaultOperand2": null,
+                "isFavorite": false,
+                "isHidden": false,
+                "calcToPerform": "calculateTipReceived"}
+        ]
+    }
+]

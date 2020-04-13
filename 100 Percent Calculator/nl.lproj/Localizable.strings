@@ -1,0 +1,66 @@
+/*
+  Localizable.strings
+  100 Percent Calculator
+
+  Created by Thomas Andre Johansen on 13/04/2020.
+  Copyright © 2020 Appkokeriet. All rights reserved.
+*/
+//ContentView
+"Calculations" = "Berekeningen";
+"Favorites" = "Favorieten";
+"Settings" = "Instellingen";
+
+//iAPSheetView
+"Help keep the app ad-free, and enjoy all pro features - forever!" = "Help de app advertentievrij te houden en geniet van alle pro functies - voor altijd!";
+"Current Pro Features" = "Huidige Pro-functies";
+"- No Ads." = "- Geen advertenties.";
+"- Unlimited Favorites" = "- Onbeperkte favorieten";
+"With more features on the way!" = "Met meer functies onderweg!";
+"No thanks!" = "Nee bedankt!";
+
+//SettingsListView
+"Compact Favorites" = "Compacte favorieten";
+"Restore deleted calculations" = "Herstel verwijderde berekeningen";
+"Reset" = "Gereset";
+"%lld Calculations restored" = "%lld berekeningen gereset!";
+"Buy Pro to get all current and future pro features, and keep the app ad-free. Or consider skipping buying that coffee today and give me a tip below, so I can buy myself a coffee instead! ❤️ 😅" = "Sorry voor het Engels! 😳 Buy Pro to get all current and future pro features, and keep the app ad-free. Or consider skipping buying that coffee today and give me a tip below, so I can buy myself a coffee instead! ❤️ 😅";
+"Why Pro?" = "Waarom pro?";
+"About" = "Informatie";
+"Write a Review" = "Schrijf een recensie";
+"Dent and I on Instagram!" = "Dent en ik op Instagram";
+"Report a bug" = "Feedback en bug report";
+"Privacy Policy" = "Privacybeleid";
+"Settings" = "Instellingen";
+
+//PrivacyPolicyView
+"Privacy is very important to me, and is taken very seriously. In this app I do not collect any of your identifiable data, nor sell, rent or give away any information regarding your use of the 100% app." = "Privacy is very important to me, and is taken very seriously. In this app I do not collect any of your identifiable data, nor sell, rent or give away any information regarding your use of the 100% app.";
+"Apple provides developers with anonymous information intended to help developers make the apps be the best apps they can be." = "Apple provides developers with anonymous information intended to help developers make the apps be the best apps they can be..";
+"Privacy Policy" = "Privacybeleid";
+
+//AboutView
+"Hi! 👋" = "Hoi ! 👋";
+"I'm Thomas. I made this app with the help of my dotted friend Dent." = "Ik ben Thomas. Sorry voor het Engels! 😳 I made this app with the help of my dotted friend Dent.";
+"Thank you for downloading it - I hope it helps you out! 😊" = "Thank you for downloading it - I hope it helps you out! 😊";
+"I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying Pro, giving me a tip, or maybe leaving a positive review by pressing the button below." = "I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying Pro, giving me a tip, or maybe leaving a positive review by pressing the button below.";
+
+//iApView
+"Restore Pro Purchase" = "Herstel pro!";
+"Error" = "Fout";
+"Restored" = "Hersteld";
+"Pro has been restored. Thank you! ❤️" = "Pro is hersteld Bedankt! ❤️";
+"No Products to Restore" = "Geen producten om te herstellen";
+
+//ProductView
+"Buy!" = "Kopen!";
+"Error Making Purchase" = "Fout bij het maken van een aankoop";
+"This device cannot make purchases" = "Dit apparaat kan geen aankopen doen";
+"Thank You!" = "Bedankt!";
+"Your help is greatly appreciated! ❤️" = "Uw hulp wordt enorm gewaardeerd! ❤️";
+
+//NoFavoritesView
+"You have no favorites." = "Je hebt geen favorieten.";
+"When you add favorites you will find them here." = "Wanneer u favorieten toevoegt, vindt u ze hier.";
+
+//EditDefaultsView
+"Default Values" = "Standaard waarden";
+"Save" = "Opgeslagen";

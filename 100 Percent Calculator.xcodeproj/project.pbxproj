@@ -115,6 +115,9 @@
 		E9DF92FD244461BC00A167D6 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9DF92FF24447EAF00A167D6 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nb; path = nb.lproj/CalculationsData.json; sourceTree = "<group>"; };
 		E9DF930124447F6500A167D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/CalculationsData.json; sourceTree = "<group>"; };
+		E9DF9302244484C800A167D6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E9DF9303244484C800A167D6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nl; path = nl.lproj/CalculationsData.json; sourceTree = "<group>"; };
+		E9DF9304244484C800A167D6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +396,7 @@
 				en,
 				Base,
 				nb,
+				nl,
 			);
 			mainGroup = E9B13E3B2420C7BC00DE8BC5;
 			packageReferences = (
@@ -498,6 +502,7 @@
 			children = (
 				E9B13E532420C7BF00DE8BC5 /* Base */,
 				E9DF92FC244461BC00A167D6 /* nb */,
+				E9DF9302244484C800A167D6 /* nl */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 			children = (
 				E9DF92FA2444617600A167D6 /* en */,
 				E9DF92FD244461BC00A167D6 /* nb */,
+				E9DF9304244484C800A167D6 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 			children = (
 				E9DF92FF24447EAF00A167D6 /* nb */,
 				E9DF930124447F6500A167D6 /* en */,
+				E9DF9303244484C800A167D6 /* nl */,
 			);
 			name = CalculationsData.json;
 			sourceTree = "<group>";
