@@ -11,6 +11,8 @@ import SwiftUI
 struct FavoritesListView: View {
     @EnvironmentObject var userSettings: UserSettings
     @ObservedObject var calculator: Calculator = Calculator()
+    @EnvironmentObject var keyboard: KeyboardController
+
 
     var body: some View {
         ZStack {
@@ -19,7 +21,7 @@ struct FavoritesListView: View {
                     FavoriteCellView(calculator: self.calculator, favorite: favorite)
                 }
                 .onMove(perform: moveCell)
-            }
+            }.padding(.bottom, (self.keyboard.height-self.getSafeAreaInsets()))
             .listStyle(GroupedListStyle())
             VStack(alignment: .trailing){
                 KeyboardButtonRow(calculator: self.calculator)
