@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  100 Percent Calculator
+
+  Created by Thomas Andre Johansen on 13/04/2020.
+  Copyright © 2020 Appkokeriet. All rights reserved.
+*/
+//ContentView
+"Calculations" = "Kalkuleringer";
+"Favorites" = "Favoritter";
+"Settings" = "Innstillinger";
+
+//iAPSheetView
+"Help keep the app ad-free, and enjoy all pro features - forever!" = "Hold appen reklamefri, og få alle nåværende og fremtidige pro-funksjoner!";
+"Current Pro Features" = "Nåværende Pro-funksjoner";
+"- No Ads." = "- Ingen reklame.";
+"- Unlimited Favorites" = "- Ubegrensede favoritter";
+"With more features on the way!" = "Med flere funksjoner på vei!";
+"No thanks!" = "Nei, takk!";
+
+//SettingsListView
+"Compact Favorites" = "Kompakte favoritter";
+"Restore deleted calculations" = "Gjenopprett slettede kalkulasjoner";
+"Reset" = "Gjenopprett";
+"%lld Calculations restored" = "%lld kalkulasjoner gjenopprettet!";
+"Buy Pro to get all current and future pro features, and keep the app ad-free. Or consider skipping buying that coffee today and give me a tip below, so I can buy myself a coffee instead! ❤️ 😅" = "Kjøp Pro for å få alle nåværende og fremtidige PRO-funksjoner, og for å holde appen reklamefri. Eller vurdér å skippe den take-away-kaffen i dag, og gi meg et tips så jeg kan kjøpe meg en kaffe i stedet! ❤️ 😅";
+"Why Pro?" = "Hvorfor pro?";
+"About" = "Om";
+"Write a Review" = "Skriv en omtale";
+"Dent and I on Instagram!" = "Dent og meg på Instagram!";
+"Report a bug" = "Rapporter feil";
+"Privacy Policy" = "Personvernerklæring";
+"Settings" = "Innstillinger";
+
+//PrivacyPolicyView
+"Privacy is very important to me, and is taken very seriously. In this app I do not collect any of your identifiable data, nor sell, rent or give away any information regarding your use of the 100% app." = "Personvern er viktig for meg, og noe jeg tar svært seriøst. I denne appen samler jeg ingen identifiserbar informasjon om deg som bruker, og jeg hverken selger eller gir bort informasjon om din bruk av denne appen.";
+"Apple provides developers with anonymous information intended to help developers make the apps be the best apps they can be." = "Apple gir utviklere (meg) anonymisert informasjon om din bruk av denne appen. Denne informasjon kan brukes for å sørge for at denne appen fungerer best mulig. Informasjonen er ikke sporbar.";
+"Privacy Policy" = "Personvernerklæring";
+
+//AboutView
+"Hi! 👋" = "Hei! 👋";
+"I'm Thomas. I made this app with the help of my dotted friend Dent." = "Mitt navn er Thomas. Jeg lagde denne appen med god hjelp fra min prikkede venn Dent.";
+"Thank you for downloading it - I hope it helps you out! 😊" = "Takk for at du lastet den ned - Jeg håper den gjør det litt lettere å jobbe med prosenter. 😊";
+"I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying PRO, giving me a tip, or maybe leaving a positive review by pressing the button below." = "Jeg lever av å lage apper, og siden jeg har fjernet all reklame fra denne appen er jeg avhengig av at brukere kjøper PRO eller gir meg tips. Hvis du ikke har anledning til å kjøpe noe, hadde jeg satt stor pris på om du skrev en omtale i App Store ved å trykke på knappen under.";
+
+//iApView
+"Restore Pro Purchase" = "Gjenopprett Pro!";
+"Error" = "Error";
+"Restored" = "Gjenopprettet";
+"Pro has been restored. Thank you! ❤️" = "Pro har blitt gjenopprettet. Takk! ❤️";
+"No Products to Restore" = "Fant ingen produkter å gjenopprette";
+
+//ProductView
+"Buy!" = "Kjøp!";
+"Error Making Purchase" = "En feil oppstod i kjøprsprosessen";
+"This device cannot make purchases" = "Denne enheten kan ikke gjennomføre kjøp";
+"Thank You!" = "Tusen takk!";
+"Your help is greatly appreciated! ❤️" = "Jeg setter stor pris på ditt bidrag! ❤️";
+
+//NoFavoritesView
+"You have no favorites." = "Du har ingen favoritter.";
+"When you add favorites you will find them here." = "Når du legger til favoritter vil de vises her.";
+
+//EditDefaultsView
+"Default Values" = "Standard verdier";
+"Save" = "Lagre";

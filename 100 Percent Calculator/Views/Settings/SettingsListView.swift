@@ -30,7 +30,7 @@ struct SettingsListView: View {
                     }
                 }
                 Section(header: Image(systemName: "cart") ){
-                    Text("I don't like ads, so I removed them. Please consider buying PRO or giving a tip by pressing the blue cards below. Thank you! ❤️ ")
+                    Text("Buy Pro to get all current and future pro features, and keep the app ad-free. Or consider skipping buying that coffee today and give me a tip below, so I can buy myself a coffee instead! ❤️ 😅")
                     Button(action: {
                         self.userSettings.favoriteLimitReached = true
                     }) {

@@ -56,7 +56,7 @@ struct iAPView: View {
             Alert(title: Text("Error"), message: Text(iapErrorString), dismissButton: .default(Text("Ok!")))
         }
         .alert(isPresented: $proRestored){
-            Alert(title: Text("Restored"), message: Text("Pro has been restored. Thank you! <3"), dismissButton: .default(Text("Ok!")))
+            Alert(title: Text("Restored"), message: Text("Pro has been restored. Thank you! ❤️"), dismissButton: .default(Text("Ok!")))
         }
     }
     
@@ -65,7 +65,6 @@ struct iAPView: View {
         self.tryingToRestorePro = true
         IAPManager.shared.restorePurchases { (result) in
             DispatchQueue.main.async {
-                
                 switch result {
                 case .success(let success):
                     if success {

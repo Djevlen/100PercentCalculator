@@ -76,7 +76,7 @@ struct ProductView: View {
             }
             
         }.alert(isPresented: self.$thankUser){
-                Alert(title: Text("Thank You!"), message: Text("Your help is greatly appreciated! <3"), dismissButton: .default(Text("Dismiss!")))
+                Alert(title: Text("Thank You!"), message: Text("Your help is greatly appreciated! ❤️"), dismissButton: .default(Text("Dismiss!")))
                 //TODO : create thank you view?
         }
     }
