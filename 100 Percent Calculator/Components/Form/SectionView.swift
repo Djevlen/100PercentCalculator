@@ -52,13 +52,19 @@ struct SectionView: View{
                         self.headerOpacity = 0.1
                     }
                 }
-                TextField(self.placeholder, text: $textfieldString)
-                    .multilineTextAlignment(.trailing)
-                    .keyboardType(.decimalPad)
-                    .font(compactMode ? .callout : .title)
-                self.withPercentage ? Text("%").font(compactMode ? .callout : .title) : nil
+                HStack{
+                    TextField(self.placeholder, text: $textfieldString)
+                        .multilineTextAlignment(.trailing)
+                        .keyboardType(.decimalPad)
+                        .font(compactMode ? .callout : .title)
+                    self.withPercentage ? Text("%").font(compactMode ? .callout : .title) : nil
+                }.padding(.horizontal, 1)
+                    .overlay(
+                    textfieldString.count > 0 ? nil :
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.red, style: StrokeStyle())
+                )
             }
-            textfieldString.count > 0 ? nil : Divider().background(Color.red).frame(height: 1)
         }
     }
 }

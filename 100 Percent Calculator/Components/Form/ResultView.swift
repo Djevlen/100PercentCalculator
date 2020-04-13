@@ -67,8 +67,6 @@ struct ResultView: View {
                     }
                 }
             }
-            EmptyView()
-            
         }
     }
 }

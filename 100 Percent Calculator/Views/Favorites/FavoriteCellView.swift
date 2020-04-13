@@ -24,15 +24,13 @@ struct FavoriteCellView: View {
                 Spacer()
                 StarButton(calculation: favorite)
             }.modifier(FavoriteTitleHeader())
-            VStack(spacing: 1){
+            VStack(spacing: 5){
                 SectionView(textfieldString: self.$operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString, compactMode: self.userSettings.compactFavorites)
                 SectionView(textfieldString: self.$operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString, compactMode: self.userSettings.compactFavorites)
-            }.modifier(FavoriteCellBody())
-            VStack{
                 ResultView(calculator:self.calculator, calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2, compactMode: self.userSettings.compactFavorites)
-            }
+            }.modifier(FavoriteCellBody())
         }
-        .listRowBackground(Color.clear)
+        .listRowBackground(Color.primary.colorInvert())
     }
 }
 

@@ -56,7 +56,6 @@ struct FavoriteTitleHeader: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(userSettings.compactFavorites ? .headline : .largeTitle)
-            .padding(.horizontal, 5)
     }
 }
 
@@ -65,9 +64,10 @@ struct FavoriteCellBody: ViewModifier {
         content
             .padding(10)
             .background(
-                Rectangle().stroke(lineWidth: 1).foregroundColor(.primaryApp).shadow(color: .primaryApp, radius: 1, x: 0, y: 0)
+                Rectangle()
+                    .colorInvert()
+                    .shadow(color: .underline, radius: 4, x: 3, y: 3)
             )
-            .padding(.horizontal, 3)
     }
 }
 
