@@ -53,9 +53,13 @@ struct iAPSheetView: View {
                     Button(action: {
                         self.isPresenting = false
                     }) {
-                        ProductView(compactMode: true, product: self.userSettings.proProduct!)
-                            .modifier(ModifiedRoundedRectangle())
-    
+                        if self.userSettings.proProduct != nil {
+                            ProductView(compactMode: true, product: self.userSettings.proProduct!)
+                                                    .modifier(ModifiedRoundedRectangle())
+                        }else{
+                            Spinner()
+                        }
+                        
                     }
                 }.padding()
             }
