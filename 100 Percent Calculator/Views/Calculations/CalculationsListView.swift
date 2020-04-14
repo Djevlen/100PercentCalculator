@@ -34,7 +34,7 @@ struct CalculationsListView: View {
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Calculations", displayMode: .automatic)
             .navigationBarItems(trailing: EditButton())
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: self.$userSettings.favoriteLimitReached) {
             iAPSheetView(isPresenting: self.$userSettings.favoriteLimitReached).environmentObject(self.userSettings)
         }

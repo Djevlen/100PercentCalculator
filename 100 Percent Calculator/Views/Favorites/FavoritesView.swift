@@ -18,7 +18,7 @@ struct FavoritesView: View {
             }else{
                 NavigationView{
                     FavoritesListView()
-                }
+                }.navigationViewStyle(StackNavigationViewStyle())
             }
         }
     }

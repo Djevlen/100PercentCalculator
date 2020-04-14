@@ -72,7 +72,8 @@ struct SettingsListView: View {
             }
             .navigationBarTitle(Text("Settings"))
             .listStyle(GroupedListStyle())
-        }.sheet(isPresented: self.$userSettings.favoriteLimitReached) {
+        }.navigationViewStyle(StackNavigationViewStyle())
+            .sheet(isPresented: self.$userSettings.favoriteLimitReached) {
             iAPSheetView(isPresenting: self.$userSettings.favoriteLimitReached).environmentObject(self.userSettings)
         }
     }
