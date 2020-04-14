@@ -26,7 +26,13 @@ struct FavoriteCellView: View {
             }.modifier(FavoriteTitleHeader())
             VStack(spacing: 5){
                 SectionView(textfieldString: self.$operand1, calculation: self.favorite, placeholder: self.favorite.firstOperandString, compactMode: self.userSettings.compactFavorites)
+                    .onAppear{
+                        self.operand1 = self.favorite.defaultOperand1 ?? ""
+                }
                 SectionView(textfieldString: self.$operand2, calculation: self.favorite, placeholder: self.favorite.secondOperandString, compactMode: self.userSettings.compactFavorites)
+                .onAppear{
+                        self.operand2 = self.favorite.defaultOperand2 ?? ""
+                }
                 ResultView(calculator:self.calculator, calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2, compactMode: self.userSettings.compactFavorites)
             }.modifier(FavoriteCellBody())
         }

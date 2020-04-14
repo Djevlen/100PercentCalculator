@@ -38,7 +38,13 @@ struct CalculationView: View {
                     VStack{
                         VStack {
                             SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.firstOperandString)
+                                .onAppear{
+                                    self.operand1 = self.calculation.defaultOperand1 ?? ""
+                            }
                             SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.secondOperandString)
+                                .onAppear{
+                                    self.operand2 = self.calculation.defaultOperand2 ?? ""
+                            }
                         }.modifier(SectionViewGroup())
                         ResultView(calculator:self.calculator, calculation: self.calculation, operand1: self.$operand1, operand2: self.$operand2)
                             .modifier(LargeTitleHeader(radius: 5))

@@ -18,9 +18,14 @@ struct EditDefaultsView: View {
     
     private func save(){
         guard operand1.count > 0 || operand2.count > 0 else{
+            self.userSettings.resetDefaultOperandValues(for: self.calculation)
             return
         }
         self.userSettings.saveDefaultOperandValue(calculation: self.calculation, operands: (operand1, operand2))
+    }
+    
+    private func reset(){
+        self.userSettings.resetDefaultOperandValues(for: self.calculation)
     }
     
     var body: some View {
@@ -43,11 +48,24 @@ struct EditDefaultsView: View {
                 VStack{
                     VStack {
                         SectionView(textfieldString: $operand1, calculation: self.calculation, placeholder: self.calculation.firstOperandString)
+                            .onAppear{
+                                    self.operand1 = self.calculation.defaultOperand1 ?? ""
+                            }
                         SectionView(textfieldString: $operand2, calculation: self.calculation, placeholder: self.calculation.secondOperandString)
+                        .onAppear{
+                                self.operand2 = self.calculation.defaultOperand2 ?? ""
+                        }
                     }.modifier(SectionViewGroup())
                 }
                 HStack{
                     Spacer()
+                    Button(action: {
+                        self.reset()
+                    }) {
+                        Text("Reset")
+                            .padding()
+                    }
+                    .modifier(ModifiedRoundedRectangle())
                     Button(action: {
                         self.save()
                     }) {
@@ -55,8 +73,7 @@ struct EditDefaultsView: View {
                             .padding()
                     }
                     .modifier(ModifiedRoundedRectangle())
-                    .padding()
-                }
+                }.padding()
                 Spacer()
             }
             VStack(alignment: .trailing){

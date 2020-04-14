@@ -77,14 +77,34 @@ final class UserSettings: ObservableObject {
         guard let calcIndex = self.data[section].calculations.firstIndex(where: {$0.id == calculation.id}) else {
             return
         }
-        if(operands.operand1.count > 0){
-            self.data[section].calculations[calcIndex].defaultOperand1 = operands.operand1
+        let favorite = self.favoriteCalculations.firstIndex(of: calculation)
+        if favorite != nil {
+            self.favoriteCalculations[favorite!].defaultOperand1 = operands.operand1.count > 0 ? operands.operand1 : nil
+            self.favoriteCalculations[favorite!].defaultOperand2 = operands.operand2.count > 0 ? operands.operand2 : nil
         }
-        if(operands.operand2.count > 0){
-            self.data[section].calculations[calcIndex].defaultOperand2 = operands.operand2
-        }
+        self.data[section].calculations[calcIndex].defaultOperand1 = operands.operand1.count > 0 ? operands.operand1 : nil
+        self.data[section].calculations[calcIndex].defaultOperand2 = operands.operand2.count > 0 ? operands.operand2 : nil
+        
         self.save()
     }
+    
+    func resetDefaultOperandValues(for calculation: Calculation){
+        guard let section = self.data.firstIndex(where: {$0.calculations.contains(calculation)}) else {
+            return
+        }
+        guard let calcIndex = self.data[section].calculations.firstIndex(where: {$0.id == calculation.id}) else {
+            return
+        }
+        let favorite = self.favoriteCalculations.firstIndex(of: calculation)
+        if favorite != nil {
+            self.favoriteCalculations[favorite!].defaultOperand1 = nil
+            self.favoriteCalculations[favorite!].defaultOperand2 = nil
+            
+        }
+        self.data[section].calculations[calcIndex].defaultOperand1 = nil
+        self.data[section].calculations[calcIndex].defaultOperand2 = nil
+    }
+    
     func restoreCalculations(){
         var count: Int = 0
         for (indexCategory, category) in self.data.enumerated() {
