@@ -13,7 +13,7 @@
                 "additionalString": "With a discount of",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Discount",
-                "defaultOperand1": "20",
+                "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": true,
                 "isHidden": false,

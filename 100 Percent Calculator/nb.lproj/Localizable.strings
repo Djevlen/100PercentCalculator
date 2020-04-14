@@ -39,8 +39,9 @@
 
 //AboutView
 "Hi! 👋" = "Hei! 👋";
-"I'm Thomas. I made this app with the help of my dotted friend Dent." = "Mitt navn er Thomas. Jeg lagde denne appen med god hjelp fra min prikkede venn Dent.";
-"Thank you for downloading it - I hope it helps you out! 😊" = "Takk for at du lastet den ned - Jeg håper den gjør det litt lettere å jobbe med prosenter. 😊";
+"I'm Thomas. I run a one-man indie app-development studio, with my trusted, dotted buddy Dent by my side."
+ = "Mitt navn er Thomas. Jeg driver mitt eget apputviklingsfirma, med min prikkede bestevenn Dent.";
+"Thank you for downloading the 100% Percent Calculator app - I hope it helps you out! 😊" = "Takk for at du lastet ned 100%-appen - Jeg håper den gjør det litt lettere å jobbe med prosenter. 😊";
 "I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying Pro, giving me a tip, or maybe leaving a positive review by pressing the button below." = "Jeg lever av å lage apper, og siden jeg har fjernet all reklame fra denne appen er jeg avhengig av at brukere kjøper Pro eller gir meg tips. Hvis du ikke har anledning til å kjøpe noe, hadde jeg satt stor pris på om du skrev en omtale i App Store ved å trykke på knappen under.";
 
 //iApView

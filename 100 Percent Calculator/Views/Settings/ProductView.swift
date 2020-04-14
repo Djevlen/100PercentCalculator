@@ -116,7 +116,6 @@ struct ProductView: View {
                     case .success(_):
                         self.userSettings.productPurchased(product)
                         self.thankUser = true
-                        print("htnaks user: \(self.thankUser)")
                     case .failure(let error): self.showIAPRelatedError(error)
                     }
                 }

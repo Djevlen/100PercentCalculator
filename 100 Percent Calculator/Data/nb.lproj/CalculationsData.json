@@ -13,7 +13,7 @@
                 "additionalString": "Hvor rabatten var",
                 "showCurrencySymbol": true,
                 "placePercentagesSymbolOn": "Rabatt",
-                "defaultOperand1": "20",
+                "defaultOperand1": null,
                 "defaultOperand2": null,
                 "isFavorite": true,
                 "isHidden": false,

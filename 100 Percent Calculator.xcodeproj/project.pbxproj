@@ -91,6 +91,9 @@
 		E940F0F7242B67FA00BA2090 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		E951B3012423584000316662 /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
 		E951B3042423597800316662 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
+		E96605A72445963900CF394F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E96605A82445963900CF394F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/CalculationsData.json; sourceTree = "<group>"; };
+		E96605A92445963A00CF394F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E99D93032428B74F009305BB /* NoFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoritesView.swift; sourceTree = "<group>"; };
 		E9A663E5243E0D4B009F854F /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		E9AF6A2E243BA7560044A8DF /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
@@ -397,6 +400,7 @@
 				Base,
 				nb,
 				nl,
+				de,
 			);
 			mainGroup = E9B13E3B2420C7BC00DE8BC5;
 			packageReferences = (
@@ -503,6 +507,7 @@
 				E9B13E532420C7BF00DE8BC5 /* Base */,
 				E9DF92FC244461BC00A167D6 /* nb */,
 				E9DF9302244484C800A167D6 /* nl */,
+				E96605A72445963900CF394F /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 				E9DF92FA2444617600A167D6 /* en */,
 				E9DF92FD244461BC00A167D6 /* nb */,
 				E9DF9304244484C800A167D6 /* nl */,
+				E96605A92445963A00CF394F /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				E9DF92FF24447EAF00A167D6 /* nb */,
 				E9DF930124447F6500A167D6 /* en */,
 				E9DF9303244484C800A167D6 /* nl */,
+				E96605A82445963900CF394F /* de */,
 			);
 			name = CalculationsData.json;
 			sourceTree = "<group>";

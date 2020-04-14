@@ -1,0 +1,66 @@
+/*
+  Localizable.strings
+  100 Percent Calculator
+
+  Created by Thomas Andre Johansen on 13/04/2020.
+  Copyright © 2020 Appkokeriet. All rights reserved.
+*/
+//ContentView
+"Calculations" = "Rechnen";
+"Favorites" = "Favoriten";
+"Settings" = "Einstellungen";
+
+//iAPSheetView
+"Help keep the app ad-free, and enjoy all pro features - forever!" = "Helfen Sie mit, die App werbefrei zu halten, und genießen Sie alle Pro-Funktionen - für immer!";
+"Current Pro Features" = "Aktuelle Pro-Funktionen";
+"- No Ads." = "- Keine Anzeigen.";
+"- Unlimited Favorites" = "- Unbegrenzte Anzahl von Favoriten";
+"With more features on the way!" = "Mit mehr Funktionen auf dem Weg!";
+"No thanks!" = "Nein danke!";
+
+//SettingsListView
+"Compact Favorites" = "Kompakte Favoriten";
+"Restore deleted calculations" = "Gelöschte Berechnungen wiederherstellen";
+"Reset" = "Zurücksetzen";
+"%lld Calculations restored" = "%lld Berechnungen wiederhergestellt!";
+"Buy Pro to get all current and future pro features, and keep the app ad-free. Or consider skipping buying that coffee today and give me a tip below, so I can buy myself a coffee instead! ❤️ 😅" = "Kaufen Sie Pro, um alle aktuellen und zukünftigen Pro-Funktionen zu erhalten und die App werbefrei zu halten. Oder erwägen Sie, den Kaffee heute nicht zu kaufen und geben Sie mir unten einen Tipp, damit ich mir stattdessen einen Kaffee kaufen kann!";
+"Why Pro?" = "Warum pro?";
+"About" = "Informationen";
+"Write a Review" = "Eine Rezension schreiben";
+"Dent and I on Instagram!" = "Dent und ich auf Instagram!";
+"Report a bug" = "Einen Fehler melden";
+"Privacy Policy" = "Datenschutzerklärung";
+"Settings" = "Einstellungen";
+
+//PrivacyPolicyView
+"Privacy is very important to me, and is taken very seriously. In this app I do not collect any of your identifiable data, nor sell, rent or give away any information regarding your use of the 100% app." = "Privacy is very important to me, and is taken very seriously. In this app I do not collect any of your identifiable data, nor sell, rent or give away any information regarding your use of the 100% app.";
+"Apple provides developers with anonymous information intended to help developers make the apps be the best apps they can be." = "Apple provides developers with anonymous information intended to help developers make the apps be the best apps they can be..";
+"Privacy Policy" = "Privacybeleid";
+
+//AboutView
+"Hi! 👋" = "Hallo ! 👋";
+"I'm Thomas. I run a one-man indie app-development studio, with my trusted, dotted buddy Dent by my side." = "Ich heiße Thomas. Ich leite ein Ein-Mann-Studio für die Entwicklung von Indie-Apps, mit meinem vertrauten, gepunkteten Kumpel Dent an meiner Seite.";
+"Thank you for downloading the 100% Percent Calculator app - I hope it helps you out! 😊" = "Vielen Dank für das Herunterladen der 100%-Prozent-Rechner-App - ich hoffe, sie hilft Ihnen weiter! 😊";
+"I (try to) make a living by making apps, and I decided to remove all ads from this app, so I'd be really thankful if you'd consider buying Pro, giving me a tip, or maybe leaving a positive review by pressing the button below." = "Ich (versuche) meinen Lebensunterhalt mit Apps zu verdienen, und ich habe beschlossen, alle Anzeigen aus dieser App zu entfernen. Ich wäre Ihnen also sehr dankbar, wenn Sie sich überlegen würden, Pro zu kaufen, mir einen Tipp zu geben oder vielleicht eine positive Rezension zu hinterlassen, indem Sie auf die Schaltfläche unten klicken.";
+
+//iApView
+"Restore Pro Purchase" = "Pro-Kauf wiederherstellen";
+"Error" = "Fehler";
+"Restored" = "Restauriert";
+"Pro has been restored. Thank you! ❤️" = "Pro wurde wiederhergestellt. Ich danke Ihnen! ❤️";
+"No Products to Restore" = "Keine Produkte zum Wiederherstellen";
+
+//ProductView
+"Buy!" = "Kaufen!";
+"Error Making Purchase" = "Fehler beim Kauf";
+"This device cannot make purchases" = "Dieses Gerät kann keine Käufe tätigen";
+"Thank You!" = "Ich danke Ihnen!";
+"Your help is greatly appreciated! ❤️" = "Ich schätze deine Hilfe sehr! ❤️";
+
+//NoFavoritesView
+"You have no favorites." = "Sie haben keine Favoriten.";
+"When you add favorites you will find them here." = "Wenn Sie Favoriten hinzufügen, finden Sie diese hier.";
+
+//EditDefaultsView
+"Default Values" = "Standardwerte";
+"Save" = "Speichern";

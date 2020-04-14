@@ -83,7 +83,6 @@ class Calculator: ObservableObject{
             contributionMarginRatio(operand1: operand1, operand2: operand2)
         default:
             self.isCalculating = false
-            print("Default")
         }
         
     }
