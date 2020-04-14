@@ -15,7 +15,7 @@
                 "placePercentagesSymbolOn": "Korting",
                 "defaultOperand1": null,
                 "defaultOperand2": null,
-                "isFavorite": true,
+                "isFavorite": false,
                 "isHidden": false,
                 "calcToPerform": "CalculateNewPrice"
             },
@@ -30,7 +30,7 @@
                 "placePercentagesSymbolOn": "De korting was",
                 "defaultOperand1": null,
                 "defaultOperand2": null,
-                "isFavorite": true,
+                "isFavorite": false,
                 "isHidden": false,
                 "calcToPerform": "calculateDiscount"
             }
