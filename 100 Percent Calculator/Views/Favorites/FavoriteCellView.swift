@@ -34,7 +34,9 @@ struct FavoriteCellView: View {
                         self.operand2 = self.favorite.defaultOperand2 ?? ""
                 }
                 ResultView(calculator:self.calculator, calculation: self.favorite, operand1: self.$operand1, operand2: self.$operand2, compactMode: self.userSettings.compactFavorites)
-            }.modifier(FavoriteCellBody())
+            }.modifier(FavoriteCellBody()).onTapGesture {
+                        self.dismissKeyboard()
+            }
         }
         .listRowBackground(Color.primary.colorInvert())
     }

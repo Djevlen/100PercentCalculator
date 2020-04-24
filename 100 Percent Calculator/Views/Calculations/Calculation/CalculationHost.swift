@@ -11,18 +11,20 @@ import SwiftUI
 struct CalculationHost: View {
     @Environment(\.editMode) var mode
     var calculation: Calculation
-
-
+    
+    
     var body: some View {
-            VStack{
-                if self.mode?.wrappedValue == .inactive {
-                    CalculationView(calculation: self.calculation)
-                } else {
-                    EditDefaultsView(calculation: self.calculation)
-                }
+        VStack{
+            if self.mode?.wrappedValue == .inactive {
+                CalculationView(calculation: self.calculation)
+            } else {
+                EditDefaultsView(calculation: self.calculation)
             }
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(trailing: EditButton())
+        }.onTapGesture {
+            self.dismissKeyboard()
+        }
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarItems(trailing: EditButton())
     }
 }
 

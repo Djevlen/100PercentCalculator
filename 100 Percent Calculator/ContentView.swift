@@ -18,7 +18,7 @@ struct ContentView: View {
                 .tabItem{
                     Image(systemName: "percent")
                     Text("Calculations")
-            }
+                }
             .tag("Calculations")
             
             FavoritesView()

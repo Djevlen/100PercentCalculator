@@ -59,9 +59,9 @@ struct CalculationView: View {
                 VStack(alignment: .trailing){
                     KeyboardButtonRow(calculator: self.calculator)
                 }
-            }
-            
         }
+            
+    }
 //    }
     
 }
