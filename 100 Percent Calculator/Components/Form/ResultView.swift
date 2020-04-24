@@ -14,6 +14,8 @@ struct ResultView: View {
     @Binding var operand1: String
     @Binding var operand2: String
     var compactMode: Bool = false
+    @State private var resultCopiedOpacity: Double  = 0.0
+    @State private var calculatorResult: String = ""
     
     var resultString: String {
         self.calculation.resultString
@@ -36,7 +38,8 @@ struct ResultView: View {
             self.calculator.performCalculation(calcToPerform: self.calculation.calcToPerform, operand1: self.operand1, operand2: self.operand2)
         }
         
-        return VStack{
+        return ZStack{
+            VStack{
             if self.calculator.isCalculating {
                 if (!compactMode){
                     HStack{
@@ -68,6 +71,31 @@ struct ResultView: View {
                             .font(.subheadline)
                     }
                 }
+                }
+                
+            }
+            if self.resultCopiedOpacity > 0{
+                           HStack{
+                               Spacer()
+                               Text(self.calculatorResult)
+                                .font(self.compactMode ? .title : .largeTitle)
+                               .modifier(ModifiedRoundedRectangle(color: .green))
+                               .opacity(self.resultCopiedOpacity)
+                               Spacer()
+                           }
+                       }
+        }.onTapGesture {
+            self.copyResult()
+        }
+    }
+    
+    func copyResult(){
+        if self.calculator.result.count > 0{
+            self.resultCopiedOpacity = 1
+            self.calculatorResult = self.calculator.copyResult()
+            withAnimation(Animation.easeOut(duration: 1.5)){
+                self.resultCopiedOpacity = 0
+                self.calculatorResult = ""
             }
         }
     }

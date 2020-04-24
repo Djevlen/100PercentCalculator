@@ -44,6 +44,7 @@
 		E9B13E512420C7BF00DE8BC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E502420C7BF00DE8BC5 /* Preview Assets.xcassets */; };
 		E9B13E542420C7BF00DE8BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E522420C7BF00DE8BC5 /* LaunchScreen.storyboard */; };
 		E9B13E5F2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */; };
+		E9B63AE524531DDC00C6994D /* CalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B63AE424531DDB00C6994D /* CalculatorTest.swift */; };
 		E9CC79292422B0930016D1A0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC79282422B0930016D1A0 /* FavoritesView.swift */; };
 		E9D3DDBB24220C400009DF21 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3DDBA24220C400009DF21 /* CalculationView.swift */; };
 		E9D3DDBD24221E590009DF21 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3DDBC24221E590009DF21 /* UserSettings.swift */; };
@@ -107,6 +108,7 @@
 		E9B13E5A2420C7BF00DE8BC5 /* 100 Percent CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "100 Percent CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00_Percent_CalculatorTests.swift; sourceTree = "<group>"; };
 		E9B13E602420C7BF00DE8BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B63AE424531DDB00C6994D /* CalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTest.swift; sourceTree = "<group>"; };
 		E9CC79282422B0930016D1A0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		E9D3DDBA24220C400009DF21 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 		E9D3DDBC24221E590009DF21 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 			children = (
 				E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */,
 				E9B13E602420C7BF00DE8BC5 /* Info.plist */,
+				E9B63AE424531DDB00C6994D /* CalculatorTest.swift */,
 			);
 			path = "100 Percent CalculatorTests";
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B13E5F2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift in Sources */,
+				E9B63AE524531DDC00C6994D /* CalculatorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 86;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"100 Percent Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = 4Z57UTV2LU;
 				ENABLE_PREVIEWS = YES;
@@ -663,7 +667,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculator;
 				PRODUCT_NAME = "100%";
 				SWIFT_VERSION = 5.0;
@@ -676,7 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 86;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"100 Percent Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = 4Z57UTV2LU;
 				ENABLE_PREVIEWS = YES;
@@ -685,7 +689,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculator;
 				PRODUCT_NAME = "100%";
 				SWIFT_VERSION = 5.0;

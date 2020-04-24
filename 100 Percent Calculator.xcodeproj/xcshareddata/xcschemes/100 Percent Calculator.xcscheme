@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9B13E432420C7BC00DE8BC5"
-               BuildableName = "100 Percent Calculator.app"
+               BuildableName = "100%.app"
                BlueprintName = "100 Percent Calculator"
                ReferencedContainer = "container:100 Percent Calculator.xcodeproj">
             </BuildableReference>
@@ -44,6 +44,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      enableAddressSanitizer = "YES"
+      enableASanStackUseAfterReturn = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -55,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9B13E432420C7BC00DE8BC5"
-            BuildableName = "100 Percent Calculator.app"
+            BuildableName = "100%.app"
             BlueprintName = "100 Percent Calculator"
             ReferencedContainer = "container:100 Percent Calculator.xcodeproj">
          </BuildableReference>
@@ -76,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9B13E432420C7BC00DE8BC5"
-            BuildableName = "100 Percent Calculator.app"
+            BuildableName = "100%.app"
             BlueprintName = "100 Percent Calculator"
             ReferencedContainer = "container:100 Percent Calculator.xcodeproj">
          </BuildableReference>

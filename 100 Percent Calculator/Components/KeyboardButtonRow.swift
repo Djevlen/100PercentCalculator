@@ -24,10 +24,10 @@ struct KeyboardButtonRow: View {
                         HStack{
                             Spacer()
                             Text(self.calculatorResult)
-                            .font(.largeTitle)
-                            .padding()
-                            .modifier(ModifiedRoundedRectangle(color: .green))
-                            .opacity(self.resultCopiedOpacity)
+                                .font(.largeTitle)
+                                .padding()
+                                .modifier(ModifiedRoundedRectangle(color: .green))
+                                .opacity(self.resultCopiedOpacity)
                             Spacer()
                         }
                         Spacer()
@@ -56,7 +56,7 @@ struct KeyboardButtonRow: View {
                         .modifier(KeyboardButton())
                         .buttonStyle(BorderlessButtonStyle())
                         Spacer()
-
+                        
                     }
                 }
                 .transition(.move(edge: .bottom))
@@ -75,9 +75,7 @@ struct KeyboardButtonRow: View {
     func copyResult(){
         if self.calculator?.result.count ?? 0 > 0{
             self.resultCopiedOpacity = 1
-            let copyResult = UIPasteboard.general
-            copyResult.string = self.calculator?.result ?? ""
-            self.calculatorResult = self.calculator?.result ?? ""
+            self.calculatorResult = self.calculator?.copyResult() ?? ""
             withAnimation(Animation.easeOut(duration: 1.5)){
                 self.resultCopiedOpacity = 0
                 self.calculatorResult = ""

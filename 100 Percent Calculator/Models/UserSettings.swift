@@ -24,15 +24,13 @@ final class UserSettings: ObservableObject {
     @Published var isProUser: Bool              = false
     @Published var hasLoadedProducts: Bool      = false
     @Published var favoriteLimitReached: Bool   = false
-    @Published var products: [SKProduct]? = nil
-    @Published var proProduct: SKProduct? = nil
+
     
     
     init(data: [CalculationCategory], favoriteCalculations: [Calculation]) {
         self.data = data
         self.favoriteCalculations = favoriteCalculations
         populateFavorites()
-        loadProducts()
     }
     
     //puts favorites from json to favorites array
@@ -122,34 +120,7 @@ final class UserSettings: ObservableObject {
         self.restoredCalculations = true
     }
     
-    // MARK: In-App Purchases
-    func loadProducts(){
-        IAPManager.shared.getProducts { (result) in
-            print("getting products")
-            DispatchQueue.main.async {
-                switch result{
-                case .success(let products):
-                    if self.isProUser{
-                        self.products = products.filter {!$0.productIdentifier.lowercased().contains("pro")}
-                    }else {
-                        self.products = products
-                    }
-                    self.proProduct = products.first(where: {$0.productIdentifier.lowercased().contains("pro")})
-                    self.hasLoadedProducts = true
-                case .failure(let error):
-                    print("error: \(error)")
-                }
-            }
-        }
-    }
     
-    func productPurchased(_ product: SKProduct){
-        print("the user bought this: \(product.localizedTitle)")
-        if product.productIdentifier.lowercased().contains("pro"){
-            self.isProUser = true
-            self.hasLoadedProducts = false
-        }
-    }
     
     // MARK: Saving JSON
     func save(){

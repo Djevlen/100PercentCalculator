@@ -111,12 +111,17 @@ struct ProductView: View {
             self.tryingToBuy = true
             IAPManager.shared.buy(product: product) { (result) in
                 DispatchQueue.main.async {
-                    self.tryingToBuy = false
                     switch result {
                     case .success(_):
-                        self.userSettings.productPurchased(product)
+                        print("the user bought this: \(product.localizedTitle)")
+                        if product.productIdentifier.lowercased().contains("pro"){
+                            self.userSettings.isProUser = true
+                            self.userSettings.hasLoadedProducts = false
+                        }
                         self.thankUser = true
-                    case .failure(let error): self.showIAPRelatedError(error)
+                    case .failure(let error):
+                        self.tryingToBuy = false
+                        self.showIAPRelatedError(error)
                     }
                 }
             }
@@ -125,7 +130,6 @@ struct ProductView: View {
     }
     
     func showIAPRelatedError(_ error: Error){
-        print("got an error: \(error.localizedDescription)")
         self.iapErrorString = error.localizedDescription
         self.showIAPError = true
     }

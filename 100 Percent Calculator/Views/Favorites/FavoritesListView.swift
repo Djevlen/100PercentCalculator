@@ -21,7 +21,7 @@ struct FavoritesListView: View {
                     FavoriteCellView(calculator: self.calculator, favorite: favorite)
                 }
                 .onMove(perform: moveCell)
-            }.padding(.bottom, (self.keyboard.height-self.getSafeAreaInsets()))
+            }.padding(.bottom, (self.keyboard.height == 0 ? 0 : self.keyboard.height-self.getSafeAreaInsets()))
             .listStyle(GroupedListStyle())
             VStack(alignment: .trailing){
                 KeyboardButtonRow(calculator: self.calculator)

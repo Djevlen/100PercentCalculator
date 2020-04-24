@@ -92,6 +92,14 @@ class Calculator: ObservableObject{
         operand.replacingOccurrences(of: ",", with: ".")
     }
     
+    //MARK: - Copy
+    
+    func copyResult() -> String {
+        let copyResult = UIPasteboard.general
+        copyResult.string = self.result
+        return self.result
+    }
+    
     //MARK: - Calculations
     func calculateNewPrice(operand1: Double, operand2: Double){
         let result = operand1 - ((operand2/100) * operand1 )
