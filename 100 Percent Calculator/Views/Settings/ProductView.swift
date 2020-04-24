@@ -119,7 +119,9 @@ struct ProductView: View {
                             self.userSettings.hasLoadedProducts = false
                         }
                         self.thankUser = true
-                    case .failure(let error): self.showIAPRelatedError(error)
+                    case .failure(let error):
+                        self.tryingToBuy = false
+                        self.showIAPRelatedError(error)
                     }
                 }
             }
@@ -128,7 +130,6 @@ struct ProductView: View {
     }
     
     func showIAPRelatedError(_ error: Error){
-        print("got an error: \(error.localizedDescription)")
         self.iapErrorString = error.localizedDescription
         self.showIAPError = true
     }

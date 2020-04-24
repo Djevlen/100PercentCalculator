@@ -151,7 +151,9 @@ extension IAPManager: SKPaymentTransactionObserver {
             if let error = transaction.error as? SKError {
                 if error.code != .paymentCancelled {
                     onBuyProductHandler?(.failure(error))
-                } 
+                } else {
+                    onBuyProductHandler?(.failure(IAPManagerError.paymentWasCancelled))
+                }
             }
             SKPaymentQueue.default().finishTransaction(transaction)
              
