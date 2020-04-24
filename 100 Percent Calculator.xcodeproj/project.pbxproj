@@ -43,8 +43,7 @@
 		E9B13E4E2420C7BF00DE8BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E4D2420C7BF00DE8BC5 /* Assets.xcassets */; };
 		E9B13E512420C7BF00DE8BC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E502420C7BF00DE8BC5 /* Preview Assets.xcassets */; };
 		E9B13E542420C7BF00DE8BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B13E522420C7BF00DE8BC5 /* LaunchScreen.storyboard */; };
-		E9B13E5F2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */; };
-		E9B63AE524531DDC00C6994D /* CalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B63AE424531DDB00C6994D /* CalculatorTest.swift */; };
+		E9B63AE524531DDC00C6994D /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B63AE424531DDB00C6994D /* CalculatorTests.swift */; };
 		E9CC79292422B0930016D1A0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC79282422B0930016D1A0 /* FavoritesView.swift */; };
 		E9D3DDBB24220C400009DF21 /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3DDBA24220C400009DF21 /* CalculationView.swift */; };
 		E9D3DDBD24221E590009DF21 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3DDBC24221E590009DF21 /* UserSettings.swift */; };
@@ -106,9 +105,8 @@
 		E9B13E532420C7BF00DE8BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9B13E552420C7BF00DE8BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9B13E5A2420C7BF00DE8BC5 /* 100 Percent CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "100 Percent CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00_Percent_CalculatorTests.swift; sourceTree = "<group>"; };
 		E9B13E602420C7BF00DE8BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9B63AE424531DDB00C6994D /* CalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTest.swift; sourceTree = "<group>"; };
+		E9B63AE424531DDB00C6994D /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		E9CC79282422B0930016D1A0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		E9D3DDBA24220C400009DF21 /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 		E9D3DDBC24221E590009DF21 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -315,9 +313,8 @@
 		E9B13E5D2420C7BF00DE8BC5 /* 100 Percent CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9B13E5E2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift */,
 				E9B13E602420C7BF00DE8BC5 /* Info.plist */,
-				E9B63AE424531DDB00C6994D /* CalculatorTest.swift */,
+				E9B63AE424531DDB00C6994D /* CalculatorTests.swift */,
 			);
 			path = "100 Percent CalculatorTests";
 			sourceTree = "<group>";
@@ -485,8 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9B13E5F2420C7BF00DE8BC5 /* _00_Percent_CalculatorTests.swift in Sources */,
-				E9B63AE524531DDC00C6994D /* CalculatorTest.swift in Sources */,
+				E9B63AE524531DDC00C6994D /* CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +665,7 @@
 				);
 				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculator;
+				PRODUCT_MODULE_NAME = OneHundredPercent;
 				PRODUCT_NAME = "100%";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -691,6 +688,7 @@
 				);
 				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculator;
+				PRODUCT_MODULE_NAME = OneHundredPercent;
 				PRODUCT_NAME = "100%";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -711,11 +709,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Appkokeriet.-00-Percent-CalculatorTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculatorTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/100 Percent Calculator.app/100 Percent Calculator";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/100%.app/100%";
 			};
 			name = Debug;
 		};
@@ -733,11 +731,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Appkokeriet.-00-Percent-CalculatorTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Appkokeriet.100PercentCalculatorTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/100 Percent Calculator.app/100 Percent Calculator";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/100%.app/100%";
 			};
 			name = Release;
 		};
