@@ -21,13 +21,13 @@ class IAPManager: NSObject {
     var onReceiveProductsHandler: ((Result<[SKProduct], IAPManagerError>) -> Void)?
     var onBuyProductHandler: ((Result<Bool, Error>) -> Void)?
     var restoredProducts: Int = 0
+    var products : [SKProduct]?
+    var proProduct : SKProduct?
 
-    
     private override init(){
         super.init()
     }
     
-
     func getProducts(withHandler productsReceiveHandler: @escaping (_ result: Result<[SKProduct], IAPManagerError>) -> Void) {
         // Keep the handler (closure) that will be called when requesting for
         // products on the App Store is finished.
@@ -80,7 +80,26 @@ class IAPManager: NSObject {
         onBuyProductHandler = handler
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
-
+    
+    func loadProducts(userSettings: UserSettings){
+        IAPManager.shared.getProducts { (result) in
+            print("getting products")
+            DispatchQueue.main.async {
+                switch result{
+                case .success(let products):
+                    if userSettings.isProUser{
+                        self.products = products.filter {!$0.productIdentifier.lowercased().contains("pro")}
+                    }else {
+                        self.products = products
+                    }
+                    self.proProduct = products.first(where: {$0.productIdentifier.lowercased().contains("pro")})
+                    userSettings.hasLoadedProducts = true
+                case .failure(let error):
+                    print("error: \(error)")
+                }
+            }
+        }
+    }
 }
 
 extension IAPManager: SKProductsRequestDelegate {

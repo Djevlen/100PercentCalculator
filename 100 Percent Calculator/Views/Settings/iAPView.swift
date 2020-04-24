@@ -16,40 +16,40 @@ struct iAPView: View {
     @State private var tryingToRestorePro = false
     @State private var proRestored: Bool = false
     
-    
     var body: some View {
         Group{
             if (self.tryingToRestorePro){
                 Spinner()
-                    .transition(.scale)
-                    .animation(.easeInOut(duration: 10))
-                .padding()
+                    .padding()
             }else{
-            HStack{
-                if self.userSettings.hasLoadedProducts && self.userSettings.products != nil {
-                    ScrollView(.horizontal, showsIndicators: false){
-                        HStack{
-                            ForEach(self.userSettings.products!, id:\.self){ product in
-                                Group{
-                                    ProductView(product: product)
-                                        .padding()
+                HStack{
+                    if self.userSettings.hasLoadedProducts && IAPManager.shared.products != nil{
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack{
+                                ForEach(IAPManager.shared.products!, id:\.self){ product in
+                                    Group{
+                                        ProductView(product: product)
+                                            .padding()
+                                    }
                                 }
                             }
                         }
+                    }else{
+                        Spinner()
+                        .padding()
+                            .onAppear{
+                                IAPManager.shared.loadProducts(userSettings: self.userSettings)
+                        }
                     }
-                }else{
-                    Spinner()
-                    .onAppear(perform: self.userSettings.loadProducts)
                 }
+                .listRowInsets(EdgeInsets())
             }
-            .listRowInsets(EdgeInsets())
+            Button(action: {
+                self.restorePro()
+            }){
+                Text("Restore Pro Purchase")
             }
-                Button(action: {
-                    self.restorePro()
-                }){
-                    Text("Restore Pro Purchase")
-                }
-                .disabled(self.userSettings.isProUser)
+            .disabled(self.userSettings.isProUser)
             
         }
         .alert(isPresented: $showIAPError){

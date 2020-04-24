@@ -23,12 +23,14 @@ struct iAPSheetView: View {
                     .font(.subheadline)
                     .padding()
                 HStack{
-                    if self.userSettings.hasLoadedProducts && self.userSettings.proProduct != nil {
-                        ProductView(product: self.userSettings.proProduct!)
+                    if self.userSettings.hasLoadedProducts && IAPManager.shared.proProduct != nil {
+                        ProductView(product: IAPManager.shared.proProduct!)
                             .padding()
                     }else{
                         Spinner()
-                        .onAppear(perform: self.userSettings.loadProducts)
+                            .onAppear{
+                                IAPManager.shared.loadProducts(userSettings: self.userSettings)
+                            }
                     }
                 }
                 VStack(alignment: .leading){
@@ -53,8 +55,8 @@ struct iAPSheetView: View {
                     Button(action: {
                         self.isPresenting = false
                     }) {
-                        if self.userSettings.proProduct != nil {
-                            ProductView(compactMode: true, product: self.userSettings.proProduct!)
+                        if IAPManager.shared.proProduct != nil {
+                            ProductView(compactMode: true, product: IAPManager.shared.proProduct!)
                                                     .modifier(ModifiedRoundedRectangle())
                         }else{
                             Spinner()
